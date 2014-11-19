@@ -1,0 +1,168 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class Bugger : MonoBehaviour {
+	System.Random _Random;
+
+	public Transform Target;
+	public Sprite[] sprites;
+	public float framesPerSecond;
+	public float moveSpeed;
+	public float turnSpeed;
+	
+	protected Animator _anim;
+
+	private float Health = 1;
+	private bool Dying = false;
+
+	private int _id;
+	private BoxCollider2D _boxCollider;
+	private SpriteRenderer spriteRenderer;
+	private Vector3 moveDirection;
+	public Vector3 _floatOffset;
+	private double _PermanentOffsetMax = 3.0;
+	private double _RandomBuzzOffsetMax = 10.0;
+	private bool _facingRight = false;
+	private Color _teamColor = Color.white;
+	public float AttackCooldown = 1.0f;
+	public float _attackTimer = 0.0f;
+
+	// Use this for initialization
+	void Start () {
+		if(Target == null)
+		{
+			var player = GameObject.Find("Player");
+			if(player != null)
+			{
+				Target = GameObject.Find("Player").transform;
+			}
+		}
+
+		_anim = GetComponent<Animator>();
+		_boxCollider = GetComponent<BoxCollider2D>();
+		_id = transform.GetInstanceID();
+
+		_Random = new System.Random(System.DateTime.UtcNow.Millisecond);
+		float x = (float)(_Random.NextDouble()*_PermanentOffsetMax - _PermanentOffsetMax/2.0);
+		float y = (float)(_Random.NextDouble()*_PermanentOffsetMax - _PermanentOffsetMax/2.0);
+		_floatOffset = new Vector3(x, y, 0);
+
+		spriteRenderer = renderer as SpriteRenderer;
+		moveDirection = Vector3.right;
+		spriteRenderer.color = _teamColor;
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		_attackTimer -= Time.deltaTime;
+
+		if(sprites.Length > 0)
+		{
+			int index = (int)(Time.timeSinceLevelLoad * framesPerSecond);
+			index = index % sprites.Length;
+			spriteRenderer.sprite = sprites[ index ];
+		}
+		
+		// 1
+		Vector3 currentPosition = transform.position;
+		// 2
+		if(Target == null)
+		{
+			//move toward mouse click
+			//Vector3 moveToward = Camera.main.ScreenToWorldPoint( Input.mousePosition );
+			Vector3 moveToward = transform.position;
+			moveDirection = moveToward - currentPosition;
+			moveDirection.z = 0; 
+			//moveDirection.Normalize();
+
+			/*
+			if( Input.GetButton("Fire1") ) {
+				// 3
+				Vector3 moveToward = Camera.main.ScreenToWorldPoint( Input.mousePosition );
+				// 4
+				moveDirection = moveToward - currentPosition;
+				moveDirection.z = 0; 
+				moveDirection.Normalize();
+			}
+			*/
+		}
+		else
+		{
+			float x = (float)(_Random.NextDouble()*_RandomBuzzOffsetMax - _RandomBuzzOffsetMax/2.0);
+			float y = (float)(_Random.NextDouble()*_RandomBuzzOffsetMax - _RandomBuzzOffsetMax/2.0);
+			Vector3 buzzOffset = new Vector3(x, y, 0.0f);
+			Vector3 moveToward = Target.position + _floatOffset + buzzOffset;
+			// 4
+			moveDirection = moveToward - currentPosition;
+			moveDirection.z = 0; 
+			moveDirection.Normalize();		
+		}
+		
+		Vector3 target = moveDirection * moveSpeed + currentPosition;
+		transform.position = Vector3.Lerp( currentPosition, target, Time.deltaTime );
+		
+		float targetAngle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
+		transform.rotation = 
+			Quaternion.Slerp( transform.rotation, 
+			                 Quaternion.Euler( 0, 0, targetAngle ), 
+			                 turnSpeed * Time.deltaTime );
+	}
+
+	void OnCollisionEnter2D(Collision2D collision)
+	{
+		bool validTarget = (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Player");
+		if(validTarget && !Dying && collision.gameObject.tag != gameObject.tag && _attackTimer < 0)
+		{
+			collision.gameObject.SendMessage("ApplyDamage", new DamageDescription(){
+				AttackDamage = 1,
+				AttackDirectionIsRight = _facingRight,
+				AttackerId = _id,
+				AttackForce = new Vector2(200, 200)
+			});
+
+			_attackTimer = AttackCooldown;
+		}
+	}
+
+	public void ApplyDamage(DamageDescription damage)
+	{
+		//Debug.Log("Damage taken: " + damage);
+		
+		//rigidbody2D.AddForce(new Vector2(300 * bullet.TotalDamage, 0));
+		//_anim.SetBool("Dying", true);
+		if(_anim != null)
+		{
+			_anim.SetTrigger("Die");
+			_boxCollider.enabled = false;
+	
+			damage.Reflect(_id, 0.5f, 0.2f);
+			Destroy(gameObject, 0.75f);
+		}
+	}
+
+	public void SetTeam(string teamName)
+	{
+		switch(teamName)		
+		{
+		case "Red":
+			_teamColor = Color.red;
+			break;
+		case "Blue":
+			_teamColor = Color.blue;
+			break;
+		default:
+			_teamColor = Color.white;
+			break;
+		}
+		
+		if(spriteRenderer != null)
+		{
+			spriteRenderer.color = _teamColor;
+		}
+	}
+
+	public void SetTarget(Transform newTarget)
+	{
+		Target = newTarget;
+	}
+}
