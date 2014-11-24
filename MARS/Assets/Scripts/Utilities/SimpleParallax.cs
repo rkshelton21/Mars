@@ -16,6 +16,8 @@ public class SimpleParallax : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
+		if (Cam == null)
+			Cam = GameObject.Find ("Main Camera").transform;
 		_initialX = transform.position.x;
 		_initialY = transform.position.y;
 
@@ -24,7 +26,7 @@ public class SimpleParallax : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () 
+	void FixedUpdate () 
 	{
 		var p = transform.position;
 		if(FollowCamera)
@@ -52,7 +54,7 @@ public class SimpleParallax : MonoBehaviour {
 		}
 
 		var newPos = p;
-		//transform.position = Vector3.Lerp( transform.position, p, Time.deltaTime );
+		//transform.position = Vector3.Lerp( transform.position, p, 0.02f );
 		transform.position = p;
 
 		//var diff = camera.transform.position.x - activesprite.transform.position.x;

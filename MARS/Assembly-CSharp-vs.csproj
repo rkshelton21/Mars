@@ -69,6 +69,8 @@
      <Compile Include="Assets\Scripts\Utilities\CameraTest.cs" />
      <Compile Include="Assets\Scripts\Utilities\CurveExtended.cs" />
      <Compile Include="Assets\Scripts\Utilities\DamageDescription.cs" />
+     <Compile Include="Assets\Scripts\Utilities\DisableTagsOnPlay.cs" />
+     <Compile Include="Assets\Scripts\Utilities\EnableChildrenOnPlay.cs" />
      <Compile Include="Assets\Scripts\Utilities\Follow.cs" />
      <Compile Include="Assets\Scripts\Utilities\HealthBar.cs" />
      <Compile Include="Assets\Scripts\Utilities\IDamageResponse.cs" />

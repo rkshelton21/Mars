@@ -27,7 +27,9 @@ public class CharController2D : MonoBehaviour {
 	public float _TimeOffGround = 0f;
 	protected float offsetFrom45ForSlopes = 10;
 	private bool _IsOnRegularGround = false;
-
+	private Vector3 _position_current;
+	private Vector3 _position_previous;
+	private float _movement_speed;
 	/**************************************************************/
 	public virtual void ProcessInput(){}
 	public virtual void Init(){}
@@ -135,8 +137,50 @@ public class CharController2D : MonoBehaviour {
 		}
 
 		_anim.SetFloat("verticalSpeed", _body.velocity.y);
-		_anim.SetFloat("Speed", Mathf.Abs(_move));
+		//_anim.SetFloat("Speed", Mathf.Abs(_body.));
 		_anim.SetFloat("TimeInAir", _TimeOffGround);
+
+		var cur_speed = Mathf.Abs(_move);
+		var notWalking = cur_speed < 0.01f;
+		var sliding = notWalking && IsGrounded && Mathf.Abs (_movement_speed) > 0.001f;
+
+		//if sliding
+		if(sliding)
+		{
+			if(_facingRight)
+			{
+				if(_movement_speed > 0)
+				{
+					_anim.SetFloat("Sliding", 4.0f); //Slide Right Facing Right
+				}
+				else
+				{
+					_anim.SetFloat("Sliding", 2.0f); //Slide Left Facing Right
+				}
+			}
+			else
+			{
+				if(_movement_speed > 0)
+				{
+					_anim.SetFloat("Sliding", 3.0f); //Slide Right Facing Left
+				}
+				else
+				{
+					_anim.SetFloat("Sliding", 1.0f); //Slide Left Facing Left
+				}
+			}
+
+			//set current speed manually
+			//cur_speed = _movement_speed;
+			//DebugVelocity.x = cur_speed;
+		}
+		else
+		{
+			_anim.SetFloat("Sliding", 0.0f);
+		}
+
+		_anim.SetFloat("Speed", cur_speed);
+
 	}
 
 	void PerformJumpIfRequired()
@@ -200,7 +244,7 @@ public class CharController2D : MonoBehaviour {
 		//don't slide down slopes, if on regular ground, negate gravity
 		if(IsGrounded)
 		{
-			//_body.AddForce(new Vector2(0.0f, 30.0f));
+			//_body.AddForce(new Vector2(0.0f, 2.0f));
 		}
 		
 		_body.velocity = new Vector2(appliedMovement*MaxSpeed, _body.velocity.y);
@@ -216,6 +260,14 @@ public class CharController2D : MonoBehaviour {
 		_IsOnRegularGround = false;
 		_attacking = false;
 		//GroundTest = IsGrounded;
+	}
+
+	void FixedUpdate()
+	{
+		_position_previous = _position_current;
+		_position_current = _body.position;
+		
+		_movement_speed = (_position_current.x - _position_previous.x) * Time.fixedTime;
 	}
 
 	public void SetTeam(string teamName)
