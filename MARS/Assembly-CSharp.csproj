@@ -88,6 +88,7 @@
      <Compile Include="Assets\Scripts\Utilities\Parallax.cs" />
      <Compile Include="Assets\Scripts\Utilities\Particles\DustParticles.cs" />
      <Compile Include="Assets\Scripts\Utilities\PlayerControlledBasic.cs" />
+     <Compile Include="Assets\Scripts\Utilities\RepeatSpriteBoundary.cs" />
      <Compile Include="Assets\Scripts\Utilities\SimpleParallax.cs" />
      <Compile Include="Assets\Scripts\Utilities\Spawner.cs" />
      <Compile Include="Assets\Scripts\Utilities\Tile.cs" />

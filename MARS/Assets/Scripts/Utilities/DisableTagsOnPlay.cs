@@ -8,7 +8,7 @@ public class DisableTagsOnPlay : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		Purge ();
 	}
 
 	private void Purge()
