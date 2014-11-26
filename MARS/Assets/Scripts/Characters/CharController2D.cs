@@ -2,8 +2,9 @@ using UnityEngine;
 using System.Collections;
 
 public class CharController2D : MonoBehaviour {
-	public Vector2 DebugVelocity = new Vector2();
+	public Vector3 DebugVelocity = new Vector3();
 	/**************************************************************/
+	public bool UseForceMovement = false;
 	protected Animator _anim;
 	public AudioClip ImpactClip;
 	protected Rigidbody2D _body = null;
@@ -12,11 +13,12 @@ public class CharController2D : MonoBehaviour {
 
 	public float MaxSpeed = 5.0f;
 	public float JumpSpeed = 20.0f;
-	private float _move = 0.0f;
-	protected bool _facingRight = true;
+	protected float _move = 0.0f;
+	public bool _facingRight = true;
 	public bool _doubleJump = false;
 	protected bool _ignoreLeftInput = false;
 	protected bool _ignoreRightInput = false;
+	private float _velocityModifier = 0.0f;
 
 	public float AttackCooldown = 1.0f;
 	public float _attackTimer = 0.0f;
@@ -29,7 +31,7 @@ public class CharController2D : MonoBehaviour {
 	private bool _IsOnRegularGround = false;
 	private Vector3 _position_current;
 	private Vector3 _position_previous;
-	private float _movement_speed;
+	protected float _movement_speed;
 	/**************************************************************/
 	public virtual void ProcessInput(){}
 	public virtual void Init(){}
@@ -38,17 +40,8 @@ public class CharController2D : MonoBehaviour {
 	//public virtual void Pre_FixedUpdate() {}
 	public virtual void Pre_Update() {}
 	public virtual void ApplyDamage(DamageDescription damage) {}
-	public virtual void Turn()
-	{
-		if(_move > 0 && !_facingRight && !_attacking)
-		{
-			Flip ();
-		}
-		else if(_move < 0 && _facingRight && !_attacking)
-		{
-			Flip ();
-		}
-	}
+	public virtual void Turn() {}
+
 	/**************************************************************/
 
 	// Use this for initialization
@@ -114,7 +107,7 @@ public class CharController2D : MonoBehaviour {
 		set{}
 	}
 
-	void UpdateAnimations()
+	public virtual void UpdateAnimations()
 	{
 		if(IsGrounded)
 		{
@@ -139,48 +132,6 @@ public class CharController2D : MonoBehaviour {
 		_anim.SetFloat("verticalSpeed", _body.velocity.y);
 		//_anim.SetFloat("Speed", Mathf.Abs(_body.));
 		_anim.SetFloat("TimeInAir", _TimeOffGround);
-
-		var cur_speed = Mathf.Abs(_move);
-		var notWalking = cur_speed < 0.01f;
-		var sliding = notWalking && IsGrounded && Mathf.Abs (_movement_speed) > 0.001f;
-
-		//if sliding
-		if(sliding)
-		{
-			if(_facingRight)
-			{
-				if(_movement_speed > 0)
-				{
-					_anim.SetFloat("Sliding", 4.0f); //Slide Right Facing Right
-				}
-				else
-				{
-					_anim.SetFloat("Sliding", 2.0f); //Slide Left Facing Right
-				}
-			}
-			else
-			{
-				if(_movement_speed > 0)
-				{
-					_anim.SetFloat("Sliding", 3.0f); //Slide Right Facing Left
-				}
-				else
-				{
-					_anim.SetFloat("Sliding", 1.0f); //Slide Left Facing Left
-				}
-			}
-
-			//set current speed manually
-			//cur_speed = _movement_speed;
-			//DebugVelocity.x = cur_speed;
-		}
-		else
-		{
-			_anim.SetFloat("Sliding", 0.0f);
-		}
-
-		_anim.SetFloat("Speed", cur_speed);
-
 	}
 
 	void PerformJumpIfRequired()
@@ -216,6 +167,11 @@ public class CharController2D : MonoBehaviour {
 		}
 	}
 
+	public virtual void PerformTurnIfRequired()
+	{
+
+	}
+
 	void Update()
 	{
 		ProcessInput ();
@@ -233,7 +189,7 @@ public class CharController2D : MonoBehaviour {
 			_doubleJump = false;
 		
 		PerformJumpIfRequired();
-		Turn ();
+		PerformTurnIfRequired ();
 
 		//Cannot move if input disabled by a steep slope
 		if(_ignoreLeftInput && _move < 0.0f)
@@ -247,8 +203,62 @@ public class CharController2D : MonoBehaviour {
 			//_body.AddForce(new Vector2(0.0f, 2.0f));
 		}
 		
-		_body.velocity = new Vector2(appliedMovement*MaxSpeed, _body.velocity.y);
 		DebugVelocity = _body.velocity;
+
+		if (UseForceMovement) 
+		{
+			/*float maxVelocityChange = 10.0f;
+			// Calculate how fast we should be moving
+			var targetVelocity = new Vector2(appliedMovement, 0);
+			targetVelocity = transform.TransformDirection(targetVelocity);
+			targetVelocity *= MaxSpeed;
+			
+			// Apply a force that attempts to reach our target velocity
+			var velocity = _body.velocity;
+			var velocityChange = (targetVelocity - velocity);
+			velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
+			velocityChange.y = _body.velocity.y;
+			_body.velocity = velocityChange;*/
+
+			/*var curV = _body.velocity;
+			var targetV = new Vector2(appliedMovement*MaxSpeed, _body.velocity.y);
+			var diffX = targetV.x - curV.x;
+			var t = 0f;
+			if(diffX < 0)
+			{
+				//t = diffX * MaxSpeed; 
+				//t = (1 / (diffX / targetV.x)) * appliedMovement * MaxSpeed;
+				//t = Mathf.Clamp(t, -MaxSpeed*10f, MaxSpeed*10f);
+			}
+			//DebugVelocity.x = t;
+			//DebugVelocity.y = diffX;
+
+			var newV = new Vector2(appliedMovement*MaxSpeed + t, _body.velocity.y);
+			_body.velocity = newV;*/
+
+			float velocityChange = 0.1f;
+			// Calculate how fast we should be moving
+			var targetSpeed = Mathf.Abs(appliedMovement*MaxSpeed);
+			var currSpeed = _movement_speed;
+			if(currSpeed < targetSpeed)
+			{
+				_velocityModifier += velocityChange * Time.deltaTime * appliedMovement;
+			}
+			if(currSpeed > targetSpeed)
+			{
+				_velocityModifier -= velocityChange * Time.deltaTime * appliedMovement;
+			}
+
+			_body.velocity = new Vector2(appliedMovement*MaxSpeed + _velocityModifier, _body.velocity.y);
+
+			DebugVelocity.x = _velocityModifier;
+			DebugVelocity.y = currSpeed;
+			DebugVelocity.z = targetSpeed;
+		}
+		else
+		{
+			_body.velocity = new Vector2(appliedMovement*MaxSpeed, _body.velocity.y);
+		}
 
 		UpdateAnimations ();
 		
@@ -267,7 +277,7 @@ public class CharController2D : MonoBehaviour {
 		_position_previous = _position_current;
 		_position_current = _body.position;
 		
-		_movement_speed = (_position_current.x - _position_previous.x) * Time.fixedTime;
+		_movement_speed = Mathf.Abs(_position_current.x - _position_previous.x) * Time.fixedTime;
 	}
 
 	public void SetTeam(string teamName)

@@ -14,6 +14,7 @@ public class AIController2D : CharController2D {
 	protected float _maxHealth;
 	protected Transform _target;
 	protected System.Random _rand;
+	protected float MaxTargetDistance = 0.5f;
 
 	public override void Init()
 	{
@@ -61,7 +62,7 @@ public class AIController2D : CharController2D {
 					float direction = distance / absDistance;
 
 					//too far, just wander
-					if(absDistance > 5f)
+					if(absDistance > MaxTargetDistance)
 					{
 						if(_facingRight)
 							return 1;
@@ -70,6 +71,11 @@ public class AIController2D : CharController2D {
 					}
 					else
 					{
+						if(_facingRight && direction < 0)
+							Flip();
+						if(!_facingRight && direction > 0)
+							Flip();
+
 						return direction;
 					}
 				}
@@ -83,23 +89,37 @@ public class AIController2D : CharController2D {
 		private set{}
 	}
 
+	public override void UpdateAnimations()
+	{
+		_anim.SetFloat("Speed", Mathf.Abs(_move));
+	}
+
 	public override void Turn()
 	{
+		Debug.Log ("Turn: " + System.Environment.StackTrace );
 		if(_target != null)
 		{
 			float distance = _target.position.x - transform.position.x;
 			float absDistance = Mathf.Abs(distance);
 
 			//close enough to keep on target
-			if(absDistance < 5f)
+			if(absDistance < MaxTargetDistance)
 			{
+				Debug.Log ("Turn: No");
 				return;
 			}
 		}
 
-		_facingRight = !_facingRight;
+		Flip ();
 	}
 
+	public override bool IsGrounded
+	{
+		get
+		{
+			return true;
+		}
+	}
 
 	public override bool JumpIsPressed
 	{
@@ -155,17 +175,15 @@ public class AIController2D : CharController2D {
 				if(DamageTrigger && _damageTimer < 0)
 				{
 					collision.gameObject.SendMessage("ApplyDamage", new DamageDescription(){
-						AttackDamage = 5,
+						AttackDamage = 1,
 						AttackDirectionIsRight = _facingRight,
 						AttackerId = _id,
-						AttackForce = new Vector2(2000, 2000)
+						AttackForce = _facingRight ? new Vector2(20, 20) : new Vector2(-20, 20)
 					});
 					_damageTimer = _attackTimer;
 				}				
 			}
 		}
-
-
 	}
 
 	public override void ApplyDamage(DamageDescription damage)
@@ -181,7 +199,7 @@ public class AIController2D : CharController2D {
 		//Debug.Log("Taking damage from: " + damage.AttackerId + " for " + damage.AttackDamage + " dmg");
 		Health -= damage.AttackDamage;
 		int direction = damage.AttackDirectionIsRight ? 1 : -1;
-		rigidbody2D.AddForce(new Vector2(2000 * direction, 200));
+		rigidbody2D.AddForce(new Vector2(2 * direction, 2));
 		//rigidbody2D.velocity = new Vector2(damage.AttackForce.x*100, damage.AttackForce.y);
 		//rigidbody2D.velocity = new Vector2(-50000, JumpSpeed);
 

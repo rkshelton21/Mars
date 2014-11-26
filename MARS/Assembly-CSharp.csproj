@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\Characters\BlobController.cs" />
      <Compile Include="Assets\Scripts\Characters\Bugger.cs" />
      <Compile Include="Assets\Scripts\Characters\CharController2D.cs" />
+     <Compile Include="Assets\Scripts\Characters\CrawlerController.cs" />
      <Compile Include="Assets\Scripts\Characters\MovementTest.cs" />
      <Compile Include="Assets\Scripts\Characters\OLD\Player.cs" />
      <Compile Include="Assets\Scripts\Characters\OLD\PlayerControllerScript.cs" />
@@ -95,6 +96,7 @@
      <Compile Include="Assets\Scripts\Utilities\TileProperties.cs" />
      <Compile Include="Assets\Scripts\Utilities\TileRules.cs" />
      <Compile Include="Assets\Scripts\Utilities\TileSpawner.cs" />
+     <Compile Include="Assets\Scripts\Utilities\Triggers\TurnAbout.cs" />
      <None Include="Assets\Fonts\perfectdark.txt" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Multiply Culled.shader" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Background.shader" />

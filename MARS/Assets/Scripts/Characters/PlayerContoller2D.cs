@@ -220,6 +220,86 @@ public class PlayerContoller2D : CharController2D {
 		}
 	}
 
+	public override void PerformTurnIfRequired()
+	{
+		if(_move > 0 && !_facingRight && !_attacking)
+		{
+			Flip ();
+		}
+		else if(_move < 0 && _facingRight && !_attacking)
+		{
+			Flip ();
+		}
+	}
+
+	public override void UpdateAnimations()
+	{
+		if(IsGrounded)
+		{
+			_TimeOffGround = 0f;
+		}
+		else
+		{
+			_TimeOffGround += Time.deltaTime;
+		}
+		
+		if(_TimeOffGround > 0.25f && !IsGrounded)
+		{
+			//update animation variables
+			_anim.SetBool("Ground", IsGrounded);
+		}
+		else
+		{
+			//update animation variables
+			_anim.SetBool("Ground", true);
+		}
+		
+		_anim.SetFloat("verticalSpeed", _body.velocity.y);
+		//_anim.SetFloat("Speed", Mathf.Abs(_body.));
+		_anim.SetFloat("TimeInAir", _TimeOffGround);
+		
+		var cur_speed = Mathf.Abs(_move);
+		var notWalking = cur_speed < 0.01f;
+		var sliding = notWalking && IsGrounded && Mathf.Abs (_movement_speed) > 0.001f;
+		
+		//if sliding
+		if(sliding)
+		{
+			if(_facingRight)
+			{
+				if(_movement_speed > 0)
+				{
+					_anim.SetFloat("Sliding", 4.0f); //Slide Right Facing Right
+				}
+				else
+				{
+					_anim.SetFloat("Sliding", 2.0f); //Slide Left Facing Right
+				}
+			}
+			else
+			{
+				if(_movement_speed > 0)
+				{
+					_anim.SetFloat("Sliding", 3.0f); //Slide Right Facing Left
+				}
+				else
+				{
+					_anim.SetFloat("Sliding", 1.0f); //Slide Left Facing Left
+				}
+			}
+			
+			//set current speed manually
+			//cur_speed = _movement_speed;
+			//DebugVelocity.x = cur_speed;
+		}
+		else
+		{
+			_anim.SetFloat("Sliding", 0.0f);
+		}
+		
+		_anim.SetFloat("Speed", cur_speed);
+	}
+
 	private void SwapWeapons()
 	{
 		if(_Bullet_Primary != null && _Bullet_Secondary != null)
@@ -277,7 +357,8 @@ public class PlayerContoller2D : CharController2D {
 		//Debug.Log("Taking damage from: " + damage.AttackerId + " for " + damage.AttackDamage + " dmg");
 		Health -= damage.AttackDamage;
 		int direction = damage.AttackDirectionIsRight ? 1 : -1;
-		rigidbody2D.AddForce(new Vector2(2000 * direction, 200));
+		rigidbody2D.AddForce(damage.AttackForce);
+		//rigidbody2D.AddForce(new Vector2(2000 * direction, 200));
 		//rigidbody2D.velocity = new Vector2(damage.AttackForce.x*100, damage.AttackForce.y);
 		//rigidbody2D.velocity = new Vector2(-50000, JumpSpeed);
 		

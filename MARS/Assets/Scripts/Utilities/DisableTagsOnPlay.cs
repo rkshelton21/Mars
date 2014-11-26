@@ -15,9 +15,7 @@ public class DisableTagsOnPlay : MonoBehaviour {
 	{
 		foreach(var name in TagsToDisable)
 		{
-			Debug.Log(name);
 			var taggedObjects = GameObject.FindGameObjectsWithTag(name);
-			Debug.Log(taggedObjects.Length);
 			foreach(var obj in taggedObjects)
 			{
 				obj.gameObject.SetActive(false);
