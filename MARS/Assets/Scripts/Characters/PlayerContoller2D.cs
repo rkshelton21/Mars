@@ -171,8 +171,8 @@ public class PlayerContoller2D : CharController2D {
 					var offset_xy = GetShotOffset(fireInputX, fireInputY, _facingRight, _crouched);
 					var offset = new Vector3(offset_xy.x, offset_xy.y, 0.0f);
 
-
 					Instantiate(_Ammo_Primary, transform.position + offset, Quaternion.identity);
+
 					_muzzleFlash.Fire(shotDir);
 					_body.AddForce( shotDir * -100f);
 				}
@@ -402,31 +402,32 @@ public class PlayerContoller2D : CharController2D {
 		var offset = new Vector2();
 		if(inputX > -0.5 && inputX < 0.5 && inputY > 0.5)//up
 		{
-			offset = new Vector2(-0.05f, 0.0f);
+			offset = new Vector2();//Vector2(-0.05f, 0.0f);
 		}
 		else if((inputX < -0.5 || inputX > 0.5) && inputY > 0.5)//up angle
 		{
-			offset = new Vector2(0f, -0.2f);
+			offset = new Vector2();//Vector2(0f, -0.2f);
 		}
 		else if((inputX < -0.5 || inputX > 0.5) && (inputY > -0.5 && inputY < 0.5))//norm
 		{
-			offset = new Vector2(0.35f, -0.5f);
+			offset = new Vector2();//Vector2(0.35f, -0.5f);
 		}
 		else if((inputX < -0.5 || inputX > 0.5) && (inputY < -0.5 || inputY > 0.5))//down angle
 		{
-			offset = new Vector2(0.1f, -0.6f);
+			offset = new Vector2();//Vector2(0.1f, -0.6f);
 		}
 		else if(inputX > -0.5 && inputX < 0.5 && inputY < -0.5)//down
 		{
-			offset = new Vector2(0.0f, -1f);
+			offset = new Vector2();//Vector2(0.0f, -1f);
 		}
 
 		if(!_facingRight)
 			offset.x = -offset.x;
 		
-		if(_crouched)
-		{
+		if (_crouched) {
 			offset.y -= 0.3f;
+		} else {
+			offset.y -= 0.1f;
 		}
 
 		return offset;

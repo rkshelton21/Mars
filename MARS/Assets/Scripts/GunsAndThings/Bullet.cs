@@ -42,42 +42,42 @@ public class Bullet : MonoBehaviour, IDamageResponse {
 		if(ShotForce.x > -0.5 && ShotForce.x < 0.5 && ShotForce.y > 0.5)//up
 		{
 			direction = 0;
-			_boxCollider.size = new Vector2(0.3f, 0.5f);
-			_boxCollider.center = new Vector2(0f, 0.25f);
-			//transform.FindChild("HitBox_0").gameObject.SetActive(true);
-			//_rigidBody = transform.FindChild("HitBox_0").GetComponent<Rigidbody2D>();
+			//_boxCollider.size = new Vector2(0.3f, 0.5f);
+			//_boxCollider.center = new Vector2(0f, 0.25f);
+			transform.FindChild("HitBox_0").gameObject.SetActive(true);
+			_rigidBody = transform.FindChild("HitBox_0").GetComponent<Rigidbody2D>();
 		}
 		else if((ShotForce.x < -0.5 || ShotForce.x > 0.5) && ShotForce.y > 0.5)//up angle
 		{
 			direction = 1;	
-			_boxCollider.size = new Vector2(0.5f, 0.5f);
-			_boxCollider.center = new Vector2(0.25f, 0.25f);
-			//transform.FindChild("HitBox_1").gameObject.SetActive(true);
-			//_rigidBody = transform.FindChild("HitBox_1").GetComponent<Rigidbody2D>();
+			//_boxCollider.size = new Vector2(0.5f, 0.5f);
+			//_boxCollider.center = new Vector2(0.25f, 0.25f);
+			transform.FindChild("HitBox_1").gameObject.SetActive(true);
+			_rigidBody = transform.FindChild("HitBox_1").GetComponent<Rigidbody2D>();
 		}
 		else if((ShotForce.x < -0.5 || ShotForce.x > 0.5) && (ShotForce.y > -0.5 && ShotForce.y < 0.5))//norm
 		{
 			direction = 2;
-			_boxCollider.size = new Vector2(0.5f, 0.3f);
-			_boxCollider.center = new Vector2(0.25f, 0.03f);
-			//transform.FindChild("HitBox_2").gameObject.SetActive(true);
-			//_rigidBody = transform.FindChild("HitBox_2").GetComponent<Rigidbody2D>();
+			//_boxCollider.size = new Vector2(0.5f, 0.3f);
+			//_boxCollider.center = new Vector2(0.25f, 0.03f);
+			transform.FindChild("HitBox_2").gameObject.SetActive(true);
+			_rigidBody = transform.FindChild("HitBox_2").GetComponent<Rigidbody2D>();
 		}
 		else if((ShotForce.x < -0.5 || ShotForce.x > 0.5) && (ShotForce.y < -0.5 || ShotForce.y > 0.5))//down angle
 		{
 			direction = 3;
-			_boxCollider.size = new Vector2(0.5f, 0.5f);
-			_boxCollider.center = new Vector2(0.25f, -0.25f);
-			//transform.FindChild("HitBox_3").gameObject.SetActive(true);
-			//_rigidBody = transform.FindChild("HitBox_3").GetComponent<Rigidbody2D>();
+			//_boxCollider.size = new Vector2(0.5f, 0.5f);
+			//_boxCollider.center = new Vector2(0.25f, -0.25f);
+			transform.FindChild("HitBox_3").gameObject.SetActive(true);
+			_rigidBody = transform.FindChild("HitBox_3").GetComponent<Rigidbody2D>();
 		}
 		else if(ShotForce.x > -0.5 && ShotForce.x < 0.5 && ShotForce.y < -0.5)//down
 		{
 			direction = 4;
-			_boxCollider.size = new Vector2(0.3f, 0.5f);
-			_boxCollider.center = new Vector2(0f, -0.25f);
-			//transform.FindChild("HitBox_4").gameObject.SetActive(true);
-			//_rigidBody = transform.FindChild("HitBox_4").GetComponent<Rigidbody2D>();
+			//_boxCollider.size = new Vector2(0.3f, 0.5f);
+			//_boxCollider.center = new Vector2(0f, -0.25f);
+			transform.FindChild("HitBox_4").gameObject.SetActive(true);
+			_rigidBody = transform.FindChild("HitBox_4").GetComponent<Rigidbody2D>();
 		}
 
 		_rigidBody = transform.rigidbody2D;
