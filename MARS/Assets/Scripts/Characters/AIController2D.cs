@@ -15,6 +15,7 @@ public class AIController2D : CharController2D {
 	protected Transform _target;
 	protected System.Random _rand;
 	protected float MaxTargetDistance = 0.5f;
+	protected float _maxAudioDistance = 1.5f;
 
 	public override void Init()
 	{
@@ -36,6 +37,27 @@ public class AIController2D : CharController2D {
 		if(_target == null)
 		{
 			_target = _Player;
+		}
+
+		var audioSources = GetComponents<AudioSource> ();
+		if (audioSources.GetValue(0) != null) 
+		{
+			// Just to make sure we are
+			// going to disable the play
+			// on awake for the AudioSource
+			audioSources[0].playOnAwake = false;
+
+			// Make sure there is an
+			// AudioClip to play before
+			// continuing 
+			if (audioSources[0].clip != null) 
+			{
+				// Get a random number between
+				// our min and max delays
+				float delayTime = Random.Range (0, 1);
+				// Play the audio with a delay
+				audioSources[0].PlayDelayed (delayTime);
+			}
 		}
 	}
 
@@ -92,6 +114,18 @@ public class AIController2D : CharController2D {
 	public override void UpdateAnimations()
 	{
 		_anim.SetFloat("Speed", Mathf.Abs(_move));
+	}
+
+	public override void UpdateSound()
+	{
+		if (_Player != null) 
+		{
+			var d = _Player.position - transform.position;
+			if(audio != null)
+			{
+				audio.volume = _maxAudioDistance / d.magnitude;
+			}
+		}
 	}
 
 	public override void Turn()
@@ -188,15 +222,19 @@ public class AIController2D : CharController2D {
 
 	public override void ApplyDamage(DamageDescription damage)
 	{
-		//Debug.Log("Damage Applied");
+		Debug.Log("Damage Applied");
 		_attackTimer = AttackCooldown;
 
-		AudioSource.PlayClipAtPoint(ImpactClip, transform.position);
+		if (ImpactClip != null) 
+		{
+			ImpactSource.PlayOneShot(ImpactClip);
+			//AudioSource.PlayClipAtPoint (ImpactClip, transform.position);
+		}
 
 		//This shouldn't be used here I don't think
 		//_damageTimer = _attackTimer;
 
-		//Debug.Log("Taking damage from: " + damage.AttackerId + " for " + damage.AttackDamage + " dmg");
+		Debug.Log("Taking damage from: " + damage.AttackerId + " for " + damage.AttackDamage + " dmg");
 		Health -= damage.AttackDamage;
 		int direction = damage.AttackDirectionIsRight ? 1 : -1;
 		rigidbody2D.AddForce(new Vector2(2 * direction, 2));

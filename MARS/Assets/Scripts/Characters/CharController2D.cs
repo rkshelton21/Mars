@@ -6,7 +6,9 @@ public class CharController2D : MonoBehaviour {
 	/**************************************************************/
 	public bool UseForceMovement = false;
 	protected Animator _anim;
-	public AudioClip ImpactClip;
+	protected AudioClip ImpactClip = null;
+	protected AudioSource ImpactSource = null;
+	public int ImpactClipIndex = -1;
 	protected Rigidbody2D _body = null;
 	private SpriteRenderer _renderer;
 	protected Color _teamColor = Color.white;
@@ -34,6 +36,7 @@ public class CharController2D : MonoBehaviour {
 	protected float _movement_speed;
 	/**************************************************************/
 	public virtual void ProcessInput(){}
+	public virtual void UpdateSound(){}
 	public virtual void Init(){}
 	public virtual void Collide(Collision2D collision){}
 	public virtual void Trigger(Collider2D collider){}
@@ -55,7 +58,14 @@ public class CharController2D : MonoBehaviour {
 		{
 			_renderer.color = _teamColor;
 		}
-		
+
+		var audioSources = GetComponents<AudioSource> ();
+		if (ImpactClipIndex >= 0 && audioSources.GetValue(ImpactClipIndex) != null) 
+		{
+			ImpactSource = ((AudioSource)audioSources.GetValue(ImpactClipIndex));
+			ImpactClip = ImpactSource.clip;
+		}
+
 		Init ();
 	}
 
@@ -261,6 +271,7 @@ public class CharController2D : MonoBehaviour {
 		}
 
 		UpdateAnimations ();
+		UpdateSound ();
 		
 		//reset flags
 		_ignoreLeftInput = false;

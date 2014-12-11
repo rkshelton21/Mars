@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour, IDamageResponse {
 
 	private BoxCollider2D _boxCollider;
 	private float _timeAlive = 0.0f;
-	private float TIME_TO_DIE = 0.5f;
+	private float TIME_TO_DIE = 1.0f;
 	private bool _alive = false;
 	private bool _dying = false;
 	private bool _dead = false;
@@ -20,6 +20,9 @@ public class Bullet : MonoBehaviour, IDamageResponse {
 	private List<int> _victims = new List<int>();
 	private Animator _anim;
 	private Rigidbody2D _rigidBody;
+	protected AudioClip ImpactClip = null;
+	protected AudioSource ImpactSource = null;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -83,6 +86,13 @@ public class Bullet : MonoBehaviour, IDamageResponse {
 		_rigidBody = transform.rigidbody2D;
 		_rigidBody.AddForce(ShotForce);
 		_anim.SetFloat("Direction", (float)direction);
+
+		var audioSources = GetComponents<AudioSource> ();
+		if (audioSources.GetValue(1) != null) 
+		{
+			ImpactSource = ((AudioSource)audioSources.GetValue(1));
+			ImpactClip = ImpactSource.clip;
+		}
 	}
 
 	// Update is called once per frame
@@ -169,6 +179,7 @@ public class Bullet : MonoBehaviour, IDamageResponse {
 			_boxCollider.enabled = false;
 			Destroy(gameObject, 0.5f);
 			_anim.SetTrigger("Explode");
+			ImpactSource.PlayOneShot(ImpactClip);
 		}
 
 		int minXForce = (int)(300f);

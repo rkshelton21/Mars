@@ -1,0 +1,388 @@
+fileFormatVersion: 2
+guid: fe0b2cb02a302994dbd173382516cf3a
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: HealthBars_0
+    21300002: HealthBars_1
+    21300004: HealthBars_2
+    21300006: HealthBars_3
+    21300008: HealthBars_4
+    21300010: HealthBars_5
+    21300012: HealthBars_6
+    21300014: HealthBars_7
+    21300016: HealthBars_8
+    21300018: HealthBars_9
+    21300020: HealthBars_10
+    21300022: HealthBars_11
+    21300024: HealthBars_12
+    21300026: HealthBars_13
+    21300028: HealthBars_14
+    21300030: HealthBars_15
+    21300032: HealthBars_16
+    21300034: HealthBars_17
+    21300036: HealthBars_18
+    21300038: HealthBars_19
+    21300040: HealthBars_20
+    21300042: HealthBars_21
+    21300044: HealthBars_22
+    21300046: HealthBars_23
+    21300048: HealthBars_24
+    21300050: HealthBars_25
+    21300052: HealthBars_26
+    21300054: HealthBars_27
+    21300056: HealthBars_28
+    21300058: HealthBars_29
+    21300060: HealthBars_30
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 0
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: HealthBars_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 249
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 249
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_2
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 249
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_3
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 249
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 249
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_5
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 249
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 242
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_7
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 242
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_8
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 242
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_9
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 242
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_10
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 242
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_11
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 242
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 235
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_13
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 235
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_14
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 235
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_15
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 235
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_16
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 235
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_17
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 235
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 228
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_19
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 228
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_20
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 228
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_21
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 228
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_22
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 228
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_23
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 228
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 221
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_25
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 221
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_26
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 221
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_27
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 221
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_28
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 221
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_29
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 221
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HealthBars_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 214
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{64CCB53B-02B6-77FB-5EF0-161407DCAE5D}") = "MARS", "Assembly-CSharp.csproj", "{FDCF586F-24E7-4A93-4594-54A93837F765}"
 EndProject
+Project("{64CCB53B-02B6-77FB-5EF0-161407DCAE5D}") = "MARS", "Assembly-CSharp-Editor.csproj", "{FCB958F3-0E86-3502-C086-CD84B5D2767A}"
+EndProject
 Project("{64CCB53B-02B6-77FB-5EF0-161407DCAE5D}") = "MARS", "Assembly-UnityScript.unityproj", "{2D87036C-0EEE-89E0-E29F-45549B89425D}"
 EndProject
 Global
@@ -15,6 +17,10 @@ Global
 		{FDCF586F-24E7-4A93-4594-54A93837F765}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDCF586F-24E7-4A93-4594-54A93837F765}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDCF586F-24E7-4A93-4594-54A93837F765}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCB958F3-0E86-3502-C086-CD84B5D2767A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCB958F3-0E86-3502-C086-CD84B5D2767A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCB958F3-0E86-3502-C086-CD84B5D2767A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCB958F3-0E86-3502-C086-CD84B5D2767A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2D87036C-0EEE-89E0-E29F-45549B89425D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2D87036C-0EEE-89E0-E29F-45549B89425D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D87036C-0EEE-89E0-E29F-45549B89425D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -23,7 +29,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																													GlobalSection(MonoDevelopProperties) = preSolution
+																																				GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

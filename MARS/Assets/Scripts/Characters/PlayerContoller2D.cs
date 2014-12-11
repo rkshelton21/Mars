@@ -70,8 +70,20 @@ public class PlayerContoller2D : CharController2D {
 	{
 		get
 		{
+			if(_leftGroundStop.Count > 0 || _rightGroundStop.Count > 0)
+			{
+				var result = Input.GetAxis("Horizontal");
+				//if blocked on left input
+				if(_leftGroundStop.Count > 0 && result < 0)
+					return 0;
+				//if blocked on right input
+				if(_rightGroundStop.Count > 0 && result > 0)
+					return 0;
+			}
+			
 			if(!_crouched)
 			{
+				//if walking backward
 				if(Input.GetAxis("Horizontal") < 0 && _facingRight || Input.GetAxis("Horizontal") > 0 && !_facingRight)
 					return Input.GetAxis("Horizontal")/2f;
 
@@ -79,6 +91,7 @@ public class PlayerContoller2D : CharController2D {
 			}
 			else
 			{
+				//if walking backward
 				if(Input.GetAxis("Horizontal") < 0 && _facingRight || Input.GetAxis("Horizontal") > 0 && !_facingRight)
 					return Input.GetAxis("Horizontal")/4f;
 
