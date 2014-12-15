@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Editor\SpriteChanger.cs" />
      <Compile Include="Assets\Editor\SpriteMapper.cs" />
      <None Include="Assets\Fonts\perfectdark.txt" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Multiply Culled.shader" />

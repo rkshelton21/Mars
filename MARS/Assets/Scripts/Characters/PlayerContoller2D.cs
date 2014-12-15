@@ -369,7 +369,7 @@ public class PlayerContoller2D : CharController2D {
 		
 		//Debug.Log("Taking damage from: " + damage.AttackerId + " for " + damage.AttackDamage + " dmg");
 		Health -= damage.AttackDamage;
-		int direction = damage.AttackDirectionIsRight ? 1 : -1;
+		//int direction = damage.AttackDirectionIsRight ? 1 : -1;
 		rigidbody2D.AddForce(damage.AttackForce);
 		//rigidbody2D.AddForce(new Vector2(2000 * direction, 200));
 		//rigidbody2D.velocity = new Vector2(damage.AttackForce.x*100, damage.AttackForce.y);

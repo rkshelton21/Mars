@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour, IDamageResponse {
 	private bool _alive = false;
 	private bool _dying = false;
 	private bool _dead = false;
-	System.Random r = new System.Random(System.Guid.NewGuid().GetHashCode());
+	//System.Random r = new System.Random(System.Guid.NewGuid().GetHashCode());
 	private List<int> _victims = new List<int>();
 	private Animator _anim;
 	private Rigidbody2D _rigidBody;
@@ -130,6 +130,7 @@ public class Bullet : MonoBehaviour, IDamageResponse {
 	{
 		if(collider.tag == "Ground" && !_dying)
 		{
+			Debug.Log("Ground Hit: " + collider.name);
 			ReduceAndDeflect(0, 10000, 0);
 		}
 

@@ -5,7 +5,7 @@ public class Slug : AIController2D {
 
 	BoxCollider2D _midBoxCollider;
 	BoxCollider2D _largeBoxCollider;
-	private bool _deathTest = false;
+	//private bool _deathTest = false;
 	private float _deathStage = 0;
 	private float _roarStage = 0;
 

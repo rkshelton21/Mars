@@ -57,7 +57,7 @@ public class Spawner : MonoBehaviour {
 			_SpawnRequestTrigger = false;
 			if(_timeSinceSpawn > SpawnFrequency)
 			{
-				var newChar = Instantiate(EnemyToSpawn, transform.position, Quaternion.identity);
+				Instantiate(EnemyToSpawn, transform.position, Quaternion.identity);
 				_numSpawned++;
 				_timeSinceSpawn = 0.0f;
 			}

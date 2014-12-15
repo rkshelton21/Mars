@@ -13,7 +13,7 @@ public class Bugger : MonoBehaviour {
 
 	protected Animator _anim;
 
-	private float Health = 1;
+	//private float Health = 1;
 	private bool Dying = false;
 
 	private int _id;

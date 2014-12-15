@@ -92,6 +92,7 @@
      <Compile Include="Assets\Scripts\Utilities\RepeatSpriteBoundary.cs" />
      <Compile Include="Assets\Scripts\Utilities\SimpleParallax.cs" />
      <Compile Include="Assets\Scripts\Utilities\Spawner.cs" />
+     <Compile Include="Assets\Scripts\Utilities\SpriteEditor.cs" />
      <Compile Include="Assets\Scripts\Utilities\Tile.cs" />
      <Compile Include="Assets\Scripts\Utilities\TileProperties.cs" />
      <Compile Include="Assets\Scripts\Utilities\TileRules.cs" />

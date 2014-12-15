@@ -53,7 +53,7 @@ public class SimpleParallax : MonoBehaviour {
 			}
 		}
 
-		var newPos = p;
+		//var newPos = p;
 		//transform.position = Vector3.Lerp( transform.position, p, 0.02f );
 		transform.position = p;
 
