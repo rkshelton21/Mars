@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEditor;
+using System.Collections.Generic;
 
 [CustomEditor(typeof(SpriteRenderer))]
 public class SpriteChanger : Editor
 {
 	private SpriteEditor _editor = null;
 	private SpriteRenderer _myRenderer = null;
+	private Sprite[] _spriteSheet;
+	private string _spriteSheetName = "";
 
 	public override void OnInspectorGUI()
 	{
@@ -30,6 +33,18 @@ public class SpriteChanger : Editor
 			if (GUILayout.Button ("Next")) 
 			{
 				_editor.ShiftSingleSpritesForeward (_myRenderer);
+			}
+		}
+		else
+		{
+			if (GUILayout.Button ("Prev")) 
+			{
+				ExpensiveShiftSprite(false);
+			}
+			
+			if (GUILayout.Button ("Next")) 
+			{
+				ExpensiveShiftSprite(true);
 			}
 		}
 
@@ -77,6 +92,89 @@ public class SpriteChanger : Editor
 		}
 	}
 
+	private void ExpensiveShiftSprite(bool forward)
+	{
+		var target = _myRenderer;
+		if(target.sprite != null)
+		{
+			var baseName = target.sprite.name.Substring(0, target.sprite.name.LastIndexOf('_'));
+			if(!ExpensiveLoadSprites(baseName))
+				return;
+			
+			var currentIndex = int.Parse(target.sprite.name.Replace(_spriteSheetName + "_", ""));
+
+			if(forward)
+			{
+				currentIndex--;
+			
+				if(currentIndex < 0)
+					currentIndex = _spriteSheet.Length - 1;
+			}
+			else
+			{
+				currentIndex++;
+				
+				if(currentIndex >= _spriteSheet.Length)
+					currentIndex = 0;
+			}
+
+			target.sprite = _spriteSheet[currentIndex];
+		}
+		
+		//string resourceName = "res1";
+		//Sprite spr = Resources.Load(resourceName, typeof(Sprite)) as Sprite;
+		//spriteRenderer.sprite = spr;
+	}
+
+	private bool ExpensiveLoadSprites(string sheetName)
+	{
+		if (_spriteSheetName == sheetName) 
+		{
+			//Debug.Log("Already loaded: " + sheetName);
+			return true;
+		}
+		_spriteSheetName = sheetName;
+		
+		var searchResults = UnityEditor.AssetDatabase.FindAssets("n:" + _spriteSheetName);
+		List<string> searchResultsList = new List<string>();
+		foreach(var s in searchResults)
+		{
+			if(!searchResultsList.Contains(s))
+				searchResultsList.Add(s);
+		}
+		
+		if (searchResultsList.Count == 0) 
+		{
+			Debug.Log("No sprite sheets with this name found: " + _spriteSheetName);
+			_spriteSheetName = "";
+			return false;
+		}
+		if (searchResultsList.Count > 1) 
+		{
+			Debug.Log("Too many sprite sheets with this name found: " + _spriteSheetName);
+			_spriteSheetName = "";
+			return false;
+		}
+		
+		var assetGuid = searchResultsList [0];
+		var assetPath = UnityEditor.AssetDatabase.GUIDToAssetPath(assetGuid);
+		
+		var sprites = UnityEditor.AssetDatabase.LoadAllAssetsAtPath(assetPath);
+		_spriteSheet = new Sprite[sprites.Length - 1];
+		int i = 0;
+		foreach(var x in sprites)
+		{
+			if(x.GetType() == typeof(Sprite))
+			{
+				_spriteSheet[i] = (Sprite)x;
+				i++;
+			}
+		}
+		
+		Debug.Log ("Sprites Loaded: " + sheetName);
+		return true;
+	}
+
 	private bool GetEditor()
 	{
 		if (_editor == null) 
@@ -86,7 +184,7 @@ public class SpriteChanger : Editor
 
 		if (_editor == null) 
 		{
-			Debug.Log("Sprite Editor not found.");
+			//Debug.Log("Sprite Editor not found.");
 			return false;
 		}
 		return true;

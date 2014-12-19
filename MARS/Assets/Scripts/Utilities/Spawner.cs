@@ -6,16 +6,26 @@ public class Spawner : MonoBehaviour {
 	public Transform EnemyToSpawn = null;
 	public int SpawnCount = -1;
 	public float SpawnFrequency = 3.0f;
+	public bool StartSpawnerAutomatically = false;
 
 	private bool _spawningEnabled = false;
 	private float _timeSinceSpawn = 0.0f;
 	private int _numSpawned = 0;
 	private bool _SpawnOnRequest = false;
 	private bool _SpawnRequestTrigger = false;
+	
+	public bool RandomX = false;
+	public float xVariant = 0f;
 
 	public void StartSpawning()
 	{
 		_spawningEnabled = true;
+	}
+
+	public void SetRandomX(float x)
+	{
+		xVariant = x;
+		RandomX = true;
 	}
 
 	public void StartSpawningOnRequest()
@@ -36,7 +46,10 @@ public class Spawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		if (StartSpawnerAutomatically) 
+		{
+			StartSpawning();
+		}
 	}
 	
 	// Update is called once per frame
@@ -57,10 +70,21 @@ public class Spawner : MonoBehaviour {
 			_SpawnRequestTrigger = false;
 			if(_timeSinceSpawn > SpawnFrequency)
 			{
-				Instantiate(EnemyToSpawn, transform.position, Quaternion.identity);
+				var pos = transform.position;
+				if(RandomX)
+				{
+					float offset = Random.Range(xVariant, -xVariant);
+					pos.x += offset;
+				}
+				Debug.Log("Spawning at: " + pos);
+				var boj = Instantiate(EnemyToSpawn, pos, Quaternion.identity);
+				if(boj == null)
+					Debug.LogError("Failed");
+
 				_numSpawned++;
 				_timeSinceSpawn = 0.0f;
 			}
 		}
+
 	}
 }

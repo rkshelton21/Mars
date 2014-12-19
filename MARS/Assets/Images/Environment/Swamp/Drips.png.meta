@@ -1,0 +1,322 @@
+fileFormatVersion: 2
+guid: a96561fb2b69d4146aa8b02c8da7cc8b
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Drips_0
+    21300002: Drips_1
+    21300004: Drips_2
+    21300006: Drips_3
+    21300008: Drips_4
+    21300010: Drips_5
+    21300012: Drips_6
+    21300014: Drips_7
+    21300016: Drips_8
+    21300018: Drips_9
+    21300020: Drips_10
+    21300022: Drips_11
+    21300024: Drips_12
+    21300026: Drips_13
+    21300028: Drips_14
+    21300030: Drips_15
+    21300032: Drips_16
+    21300034: Drips_17
+    21300036: Drips_18
+    21300038: Drips_19
+    21300040: Drips_20
+    21300042: Drips_21
+    21300044: Drips_22
+    21300046: Drips_23
+    21300048: Drips_24
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 0
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Drips_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 53
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Drips_1
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 53
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Drips_2
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 53
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Drips_3
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 53
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Drips_4
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 53
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Drips_5
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 41
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Drips_6
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 41
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Drips_7
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 41
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Drips_8
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 41
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Drips_9
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 41
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Drips_10
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 29
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Drips_11
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 29
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Drips_12
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 29
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Drips_13
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 29
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Drips_14
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 29
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Drips_15
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 17
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Drips_16
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 17
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Drips_17
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 17
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Drips_18
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 17
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Drips_19
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 17
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Drips_20
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 5
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Drips_21
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 5
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Drips_22
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 5
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Drips_23
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 5
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Drips_24
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 5
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

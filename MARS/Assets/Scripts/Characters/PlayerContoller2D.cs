@@ -70,7 +70,6 @@ public class PlayerContoller2D : CharController2D {
 	{
 		get
 		{
-			Debug.Log(Input.GetAxis("Horizontal") + " " + _leftGroundStop.Count);
 			if(_leftGroundStop.Count > 0 || _rightGroundStop.Count > 0)
 			{
 				var result = Input.GetAxis("Horizontal");
