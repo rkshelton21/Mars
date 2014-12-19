@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class AIController2D : CharController2D {
+	public bool DestroyOnDeath = false;
 	protected Transform _Player = null;
 	protected BoxCollider2D _boxCollider;
 	protected BoxCollider2D _deathCollider;
@@ -248,7 +249,8 @@ public class AIController2D : CharController2D {
 				_circleCollider.enabled = false;
 				_boxCollider.enabled = false;
 				_deathCollider.enabled = true;
-				
+				_healthBar.transform.gameObject.SetActive(false);
+
 				Dying = true;
 			}
 
@@ -260,7 +262,10 @@ public class AIController2D : CharController2D {
 			_circleCollider.enabled = false;
 			//rigidbody2D.gravityScale = 0f;
 
-			Destroy(gameObject, 0.75f);
+			this.enabled = false;
+
+			if(DestroyOnDeath)
+				Destroy(gameObject, 0.75f);
 		}
 		else
 		{

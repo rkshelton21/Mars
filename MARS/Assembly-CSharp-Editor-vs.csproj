@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Editor\SpriteChanger.cs" />
      <Compile Include="Assets\Editor\SpriteMapper.cs" />
+     <Compile Include="Assets\Editor\TransitionEditor.cs" />
      <None Include="Assets\Fonts\perfectdark.txt" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Multiply Culled.shader" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Background.shader" />

@@ -25,7 +25,7 @@ public class Camera : MonoBehaviour {
 
 		if (Target != null) {
 			//Self.position = new Vector3(Target.position.x, Target.position.y, Self.position.z);
-			var newPos = Vector3.Lerp (Self.position, Target.position, 1);
+			var newPos = Vector3.Lerp (Self.position, Target.position, 0.005f);
 			newPos.z = Self.position.z;
 			Self.position = newPos;
 		}

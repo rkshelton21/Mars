@@ -45,7 +45,7 @@ public class BlobController : AIController2D {
 						AttackDamage = 3,
 						AttackDirectionIsRight = _facingRight,
 						AttackerId = _id,
-						AttackForce = new Vector2(2000, 2000)
+						AttackForce = new Vector2(20, 20)
 					});
 					_damageTimer = _attackTimer;
 				}				

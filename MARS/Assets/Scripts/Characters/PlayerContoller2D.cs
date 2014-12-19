@@ -70,6 +70,7 @@ public class PlayerContoller2D : CharController2D {
 	{
 		get
 		{
+			Debug.Log(Input.GetAxis("Horizontal") + " " + _leftGroundStop.Count);
 			if(_leftGroundStop.Count > 0 || _rightGroundStop.Count > 0)
 			{
 				var result = Input.GetAxis("Horizontal");
@@ -215,11 +216,11 @@ public class PlayerContoller2D : CharController2D {
 
 		if(_crouched)
 		{
-			//_anim.SetBool("Crouched", true);
+			_anim.SetBool("Crouched", true);
 		}
 		else
 		{
-			//_anim.SetBool("Crouched", false);
+			_anim.SetBool("Crouched", false);
 		}
 
 		if(die)
@@ -270,7 +271,8 @@ public class PlayerContoller2D : CharController2D {
 		_anim.SetFloat("verticalSpeed", _body.velocity.y);
 		//_anim.SetFloat("Speed", Mathf.Abs(_body.));
 		_anim.SetFloat("TimeInAir", _TimeOffGround);
-		
+		_anim.SetFloat("AttackCooldown", _fireCoolDown);
+
 		var cur_speed = Mathf.Abs(_move);
 		var notWalking = cur_speed < 0.01f;
 		var sliding = notWalking && IsGrounded && Mathf.Abs (_movement_speed) > 0.001f;
@@ -399,7 +401,7 @@ public class PlayerContoller2D : CharController2D {
 		}
 		else
 		{
-			_anim.SetTrigger("Hit");
+			//_anim.SetTrigger("Hit");
 		}
 		
 		damage.Reflect(_id, 2.5f, 1.0f);
@@ -438,9 +440,9 @@ public class PlayerContoller2D : CharController2D {
 			offset.x = -offset.x;
 		
 		if (_crouched) {
-			offset.y -= 0.3f;
-		} else {
 			offset.y -= 0.1f;
+		} else {
+			offset.y -= 0.05f;
 		}
 
 		return offset;
@@ -505,6 +507,9 @@ public class PlayerContoller2D : CharController2D {
 
 	private void AddCollisionSurfaces(Collision2D collision)
 	{
+		if (collision.collider.tag != "Ground")
+			return;
+
 		var id = collision.collider.GetInstanceID();
 
 		foreach(ContactPoint2D contact in collision.contacts) 

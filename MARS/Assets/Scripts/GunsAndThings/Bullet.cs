@@ -181,6 +181,8 @@ public class Bullet : MonoBehaviour, IDamageResponse {
 			Destroy(gameObject, 0.5f);
 			_anim.SetTrigger("Explode");
 			ImpactSource.PlayOneShot(ImpactClip);
+
+			//_rigidBody.AddForce(ShotForce);
 		}
 
 		int minXForce = (int)(300f);
@@ -197,7 +199,8 @@ public class Bullet : MonoBehaviour, IDamageResponse {
 		_rigidBody.velocity = new Vector2(0, 0);
 		if(!_dying)
 		{
-			_rigidBody.AddForce(new Vector2(xForce*direction, yForce));
+			//_rigidBody.AddForce(new Vector2(xForce*direction, yForce));
+			_rigidBody.AddForce(ShotForce);
 		}
 	}
 }

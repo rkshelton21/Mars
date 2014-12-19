@@ -1,11 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Utilities\SpriteEditor.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GunsAndThings\MuzzleFlare.cs">
     <Files>
-      <File FileName="Assets\Scripts\Utilities\SpriteEditor.cs" Line="178" Column="1" />
-      <File FileName="Assets\Editor\SpriteMapper.cs" Line="54" Column="1" />
-      <File FileName="Assets\Editor\SpriteChanger.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GunsAndThings\Bullet.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Characters\PlayerContoller2D.cs" Line="579" Column="13" />
+      <File FileName="Assets\Scripts\Characters\AIController2D.cs" Line="268" Column="32" />
+      <File FileName="Assets\Scripts\Characters\BlobController.cs" Line="4" Column="34" />
+      <File FileName="Assets\Scripts\GunsAndThings\MuzzleFlare.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
