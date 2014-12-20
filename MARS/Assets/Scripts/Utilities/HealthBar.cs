@@ -20,6 +20,7 @@ public class HealthBar : MonoBehaviour {
 			_maxSpriteIndex = Sprites.Count - 1;
 			_barRenderer.sprite = Sprites[_maxSpriteIndex];
 		}
+		_barRenderer.enabled = false;
 	}
 
 	//void Update(){
@@ -28,6 +29,11 @@ public class HealthBar : MonoBehaviour {
 
 	public void SetHealth(float percentage)
 	{
+		if (percentage < 0.99f)
+			_barRenderer.enabled = true;
+		else
+			_barRenderer.enabled = false;
+
 		var index = (int)(_maxSpriteIndex * percentage);
 		if(index < 0)
 		{

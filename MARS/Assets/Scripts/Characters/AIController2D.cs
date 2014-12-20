@@ -80,7 +80,7 @@ public class AIController2D : CharController2D {
 			{
 				if(!Dying)
 				{
-					float distance = _target.position.x - transform.position.x;
+					float distance = (_target.position - transform.position).magnitude;
 					float absDistance = Mathf.Abs(distance);
 					float direction = distance / absDistance;
 
