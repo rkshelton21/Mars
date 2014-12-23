@@ -76,7 +76,7 @@ public class Spawner : MonoBehaviour {
 					float offset = Random.Range(xVariant, -xVariant);
 					pos.x += offset;
 				}
-				Debug.Log("Spawning at: " + pos);
+				//Debug.Log("Spawning at: " + pos);
 				var boj = Instantiate(EnemyToSpawn, pos, Quaternion.identity);
 				if(boj == null)
 					Debug.LogError("Failed");

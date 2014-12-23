@@ -1,15 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Utilities\HealthBar.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Environment\Swamp\SlimePillar.cs">
     <Files>
-      <File FileName="Assets\Scripts\Utilities\Spawner.cs" Line="83" Column="5" />
-      <File FileName="Assets\Scripts\Utilities\Triggers\BasicSpawnTrigger.cs" Line="24" Column="3" />
-      <File FileName="Assets\Scripts\Utilities\Triggers\SwampBubbleSpawner.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Environment\Swamp\Drip.cs" Line="15" Column="34" />
-      <File FileName="Assets\Scripts\Environment\SimpleAnimation.cs" Line="22" Column="52" />
-      <File FileName="Assets\Scripts\Environment\Swamp\Drop.cs" Line="15" Column="20" />
-      <File FileName="Assets\Scripts\Characters\AIController2D.cs" Line="94" Column="7" />
-      <File FileName="Assets\Scripts\Utilities\HealthBar.cs" Line="36" Column="3" />
+      <File FileName="Assets\Scripts\Environment\Swamp\SlimePillar.cs" Line="80" Column="24" />
+      <File FileName="Assets\Scripts\Characters\BlobController.cs" Line="49" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

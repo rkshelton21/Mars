@@ -253,17 +253,19 @@ public class CharController2D : MonoBehaviour {
 			if(currSpeed < targetSpeed)
 			{
 				_velocityModifier += velocityChange * Time.deltaTime * appliedMovement;
+				DebugVelocity.x = 1;
 			}
 			if(currSpeed > targetSpeed)
 			{
 				_velocityModifier -= velocityChange * Time.deltaTime * appliedMovement;
+				DebugVelocity.x = -1;
 			}
 
 			_body.velocity = new Vector2(appliedMovement*MaxSpeed + _velocityModifier, _body.velocity.y);
 
-			DebugVelocity.x = _velocityModifier;
-			DebugVelocity.y = currSpeed;
-			DebugVelocity.z = targetSpeed;
+			//DebugVelocity.x = _velocityModifier;
+			DebugVelocity.y = appliedMovement;
+			DebugVelocity.z = _velocityModifier;//appliedMovement*MaxSpeed;
 		}
 		else
 		{

@@ -10,7 +10,10 @@ public class SpriteChanger : Editor
 	private SpriteRenderer _myRenderer = null;
 	private Sprite[] _spriteSheet;
 	private string _spriteSheetName = "";
-
+	private string[] _assetFolders = new string[]{
+		"Assets/Images/Characters/BlobBoss",
+		"Assets/Images/Platform"
+	};
 	public override void OnInspectorGUI()
 	{
 		DrawDefaultInspector ();
@@ -135,17 +138,21 @@ public class SpriteChanger : Editor
 		}
 		_spriteSheetName = sheetName;
 		
-		var searchResults = UnityEditor.AssetDatabase.FindAssets("n:" + _spriteSheetName);
+		var searchResults = UnityEditor.AssetDatabase.FindAssets(sheetName, _assetFolders);
 		List<string> searchResultsList = new List<string>();
 		foreach(var s in searchResults)
 		{
 			if(!searchResultsList.Contains(s))
+			{
+				Debug.Log(searchResults.Length);
 				searchResultsList.Add(s);
+			}
 		}
 		
 		if (searchResultsList.Count == 0) 
 		{
 			Debug.Log("No sprite sheets with this name found: " + _spriteSheetName);
+			Debug.Log("Or folder not found in search list" + _spriteSheetName);
 			_spriteSheetName = "";
 			return false;
 		}

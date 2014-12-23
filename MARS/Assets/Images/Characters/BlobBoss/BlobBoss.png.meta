@@ -1,0 +1,982 @@
+fileFormatVersion: 2
+guid: 0deeb5a8f58ed2145a1a25597132377e
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: BlobBoss_0
+    21300002: BlobBoss_1
+    21300004: BlobBoss_2
+    21300006: BlobBoss_3
+    21300008: BlobBoss_4
+    21300010: BlobBoss_5
+    21300012: BlobBoss_6
+    21300014: BlobBoss_7
+    21300016: BlobBoss_8
+    21300018: BlobBoss_9
+    21300020: BlobBoss_10
+    21300022: BlobBoss_11
+    21300024: BlobBoss_12
+    21300026: BlobBoss_13
+    21300028: BlobBoss_14
+    21300030: BlobBoss_15
+    21300032: BlobBoss_16
+    21300034: BlobBoss_17
+    21300036: BlobBoss_18
+    21300038: BlobBoss_19
+    21300040: BlobBoss_20
+    21300042: BlobBoss_21
+    21300044: BlobBoss_22
+    21300046: BlobBoss_23
+    21300048: BlobBoss_24
+    21300050: BlobBoss_25
+    21300052: BlobBoss_26
+    21300054: BlobBoss_27
+    21300056: BlobBoss_28
+    21300058: BlobBoss_29
+    21300060: BlobBoss_30
+    21300062: BlobBoss_31
+    21300064: BlobBoss_32
+    21300066: BlobBoss_33
+    21300068: BlobBoss_34
+    21300070: BlobBoss_35
+    21300072: BlobBoss_36
+    21300074: BlobBoss_37
+    21300076: BlobBoss_38
+    21300078: BlobBoss_39
+    21300080: BlobBoss_40
+    21300082: BlobBoss_41
+    21300084: BlobBoss_42
+    21300086: BlobBoss_43
+    21300088: BlobBoss_44
+    21300090: BlobBoss_45
+    21300092: BlobBoss_46
+    21300094: BlobBoss_47
+    21300096: BlobBoss_48
+    21300098: BlobBoss_49
+    21300100: BlobBoss_50
+    21300102: BlobBoss_51
+    21300104: BlobBoss_52
+    21300106: BlobBoss_53
+    21300108: BlobBoss_54
+    21300110: BlobBoss_55
+    21300112: BlobBoss_56
+    21300114: BlobBoss_57
+    21300116: BlobBoss_58
+    21300118: BlobBoss_59
+    21300120: BlobBoss_60
+    21300122: BlobBoss_61
+    21300124: BlobBoss_62
+    21300126: BlobBoss_63
+    21300128: BlobBoss_64
+    21300130: BlobBoss_65
+    21300132: BlobBoss_66
+    21300134: BlobBoss_67
+    21300136: BlobBoss_68
+    21300138: BlobBoss_69
+    21300140: BlobBoss_70
+    21300142: BlobBoss_71
+    21300144: BlobBoss_72
+    21300146: BlobBoss_73
+    21300148: BlobBoss_74
+    21300150: BlobBoss_75
+    21300152: BlobBoss_76
+    21300154: BlobBoss_77
+    21300156: BlobBoss_78
+    21300158: BlobBoss_79
+    21300160: BlobBoss_80
+    21300162: BlobBoss_81
+    21300164: BlobBoss_82
+    21300166: BlobBoss_83
+    21300168: BlobBoss_84
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 0
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: BlobBoss_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 423
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_1
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 423
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_2
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 423
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_3
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 423
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_4
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 423
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_5
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 423
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_6
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 423
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_7
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 423
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_8
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 423
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_9
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 423
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_10
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 423
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_11
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 423
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_12
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 423
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_13
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 423
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_14
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 423
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_15
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 423
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_16
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 423
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_17
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 333
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_18
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 333
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_19
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 333
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_20
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 333
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_21
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 333
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_22
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 333
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_23
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 333
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_24
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 333
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_25
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 333
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_26
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 333
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_27
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 333
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_28
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 333
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_29
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 333
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_30
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 333
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_31
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 333
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_32
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 333
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_33
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 333
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_34
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 243
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_35
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 243
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_36
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 243
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_37
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 243
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_38
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 243
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_39
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 243
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_40
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 243
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_41
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 243
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_42
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 243
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_43
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 243
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_44
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 243
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_45
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 243
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_46
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 243
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_47
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 243
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_48
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 243
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_49
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 243
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_50
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 243
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_51
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 153
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_52
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 153
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_53
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 153
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_54
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 153
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_55
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 153
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_56
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 153
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_57
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 153
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_58
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 153
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_59
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 153
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_60
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 153
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_61
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 153
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_62
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 153
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_63
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 153
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_64
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 153
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_65
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 153
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_66
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 153
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_67
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 153
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_68
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 63
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_69
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 63
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_70
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 63
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_71
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 63
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_72
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 63
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_73
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 63
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_74
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 63
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_75
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 63
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_76
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 63
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_77
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 63
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_78
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 63
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_79
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 63
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_80
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 63
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_81
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 63
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_82
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 63
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_83
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 63
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlobBoss_84
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 63
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

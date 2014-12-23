@@ -11,6 +11,10 @@ public class BasicSpawnTrigger : MonoBehaviour {
 		if (Spawner == null)
 			Debug.LogError ("Spawner not attached.");
 		_spawner = Spawner.GetComponent<Spawner> ();
+
+		if (_spawner == null)
+			_spawner = Spawner.GetComponentInChildren<Spawner> ();
+
 		if (_spawner == null)
 			Debug.LogError ("Spawner not attached.");
 	}
@@ -19,6 +23,8 @@ public class BasicSpawnTrigger : MonoBehaviour {
 	{
 		if (collider.tag == "Player") 
 		{
+			if(_spawner == null)
+				Debug.Log("What?");
 			_spawner.StartSpawning();
 		}
 	}

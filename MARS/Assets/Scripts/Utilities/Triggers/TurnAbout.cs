@@ -15,10 +15,10 @@ public class TurnAbout : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D collider)
 	{
-		Debug.Log("TURN! " + name + " " + collider.name);
+		//Debug.Log("TURN! " + name + " " + collider.name);
 		if (collider.tag == "Enemy") 
 		{
-			Debug.Log("BABY TURN!");
+			//Debug.Log("BABY TURN!");
 			collider.gameObject.SendMessage("Turn",null);
 		}
 	}

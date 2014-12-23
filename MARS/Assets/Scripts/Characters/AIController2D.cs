@@ -82,7 +82,8 @@ public class AIController2D : CharController2D {
 				{
 					float distance = (_target.position - transform.position).magnitude;
 					float absDistance = Mathf.Abs(distance);
-					float direction = distance / absDistance;
+					var x = _target.position.x - transform.position.x;
+					float direction = x / Mathf.Abs(x);
 
 					//too far, just wander
 					if(absDistance > MaxTargetDistance)
@@ -131,7 +132,7 @@ public class AIController2D : CharController2D {
 
 	public override void Turn()
 	{
-		Debug.Log ("Turn: " + System.Environment.StackTrace );
+		//Debug.Log ("Turn: " + System.Environment.StackTrace );
 		if(_target != null)
 		{
 			float distance = _target.position.x - transform.position.x;
