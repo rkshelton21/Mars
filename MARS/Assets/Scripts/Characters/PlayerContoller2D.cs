@@ -28,14 +28,16 @@ public class PlayerContoller2D : CharController2D {
 	private Dictionary<int, string> _rightGroundStop = new Dictionary<int, string>();
 	private Dictionary<int, string> _normalGroundStop = new Dictionary<int, string>();
 
-
+	private Camera _cam;
+	
 	public override void Init()
 	{
 		_maxHealth = Health;
 		_Inv = GameObject.Find("Inventory").GetComponent<Inventory>();
 		_Hud = GameObject.Find("HUD").GetComponent<HUD>();
 		_healthBar = GameObject.Find("HUD").GetComponentInChildren<PlayerHealth>();
-
+		_cam = GameObject.Find("Main Camera").GetComponent<Camera>();
+		
 		//_Bullet = Bullet.transform.GetComponent<Bullet>();
 		_muzzleFlash = transform.GetComponentInChildren<MuzzleFlare>();
 
@@ -363,6 +365,7 @@ public class PlayerContoller2D : CharController2D {
 
 	public override void ApplyDamage(DamageDescription damage)
 	{
+		_cam.Shake = true;
 		//Debug.Log("Damage Applied");
 		_attackTimer = AttackCooldown;
 		//This shouldn't be used here I don't think
@@ -400,7 +403,7 @@ public class PlayerContoller2D : CharController2D {
 		}
 		else
 		{
-			//_anim.SetTrigger("Hit");
+			//_anim.SetTrigger("Hit");			
 		}
 		
 		damage.Reflect(_id, 2.5f, 1.0f);

@@ -84,10 +84,12 @@ public class AIController2D : CharController2D {
 					float absDistance = Mathf.Abs(distance);
 					var x = _target.position.x - transform.position.x;
 					float direction = x / Mathf.Abs(x);
-
+					//DebugVelocity.x = absDistance;
+					//DebugVelocity.y = -2;
 					//too far, just wander
 					if(absDistance > MaxTargetDistance)
 					{
+						//DebugVelocity.y = -1;
 						if(_facingRight)
 							return 1;
 						else 
@@ -100,6 +102,7 @@ public class AIController2D : CharController2D {
 						if(!_facingRight && direction > 0)
 							Flip();
 
+						//DebugVelocity.y = 1;
 						return direction;
 					}
 				}
@@ -135,7 +138,7 @@ public class AIController2D : CharController2D {
 		//Debug.Log ("Turn: " + System.Environment.StackTrace );
 		if(_target != null)
 		{
-			float distance = _target.position.x - transform.position.x;
+			float distance = (_target.position - transform.position).magnitude;
 			float absDistance = Mathf.Abs(distance);
 
 			//close enough to keep on target
@@ -224,7 +227,7 @@ public class AIController2D : CharController2D {
 
 	public override void ApplyDamage(DamageDescription damage)
 	{
-		Debug.Log("Damage Applied");
+		//Debug.Log("Damage Applied");
 		_attackTimer = AttackCooldown;
 
 		if (ImpactClip != null) 
@@ -236,7 +239,7 @@ public class AIController2D : CharController2D {
 		//This shouldn't be used here I don't think
 		//_damageTimer = _attackTimer;
 
-		Debug.Log("Taking damage from: " + damage.AttackerId + " for " + damage.AttackDamage + " dmg");
+		//Debug.Log("Taking damage from: " + damage.AttackerId + " for " + damage.AttackDamage + " dmg");
 		Health -= damage.AttackDamage;
 		int direction = damage.AttackDirectionIsRight ? 1 : -1;
 		rigidbody2D.AddForce(new Vector2(2 * direction, 2));

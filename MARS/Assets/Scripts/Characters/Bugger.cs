@@ -17,12 +17,12 @@ public class Bugger : MonoBehaviour {
 	private bool Dying = false;
 
 	private int _id;
-	private BoxCollider2D _boxCollider;
+	private CircleCollider2D _circleCollider;
 	private SpriteRenderer spriteRenderer;
 	private Vector3 moveDirection;
 	public Vector3 _floatOffset;
-	private double _PermanentOffsetMax = 3.0;
-	private double _RandomBuzzOffsetMax = 10.0;
+	public double _PermanentOffsetMax = 3.0;
+	public double _RandomBuzzOffsetMax = 10.0;
 	private bool _facingRight = false;
 	private Color _teamColor = Color.white;
 	public float AttackCooldown = 1.0f;
@@ -40,7 +40,7 @@ public class Bugger : MonoBehaviour {
 		}
 
 		_anim = GetComponent<Animator>();
-		_boxCollider = GetComponent<BoxCollider2D>();
+		_circleCollider = GetComponent<CircleCollider2D>();
 		_id = transform.GetInstanceID();
 
 		_Random = new System.Random(System.DateTime.UtcNow.Millisecond);
@@ -88,7 +88,7 @@ public class Bugger : MonoBehaviour {
 			*/
 		}
 		else
-		{
+		{			
 			float x = (float)(_Random.NextDouble()*_RandomBuzzOffsetMax - _RandomBuzzOffsetMax/2.0);
 			float y = (float)(_Random.NextDouble()*_RandomBuzzOffsetMax - _RandomBuzzOffsetMax/2.0);
 			Vector3 buzzOffset = new Vector3(x, y, 0.0f);
@@ -96,17 +96,28 @@ public class Bugger : MonoBehaviour {
 			// 4
 			moveDirection = moveToward - currentPosition;
 			moveDirection.z = 0; 
-			moveDirection.Normalize();		
+			moveDirection.Normalize();					
 		}
 		
-		Vector3 target = moveDirection * moveSpeed + currentPosition;
-		transform.position = Vector3.Lerp( currentPosition, target, Time.deltaTime );
+		var targetInRange = false;
+		if(Target != null)
+		{			
+			float distance = (Target.position - transform.position).magnitude;
+			float absDistance = Mathf.Abs(distance);
+			targetInRange = absDistance < 2.5f;
+		}
 		
-		float targetAngle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
-		transform.rotation = 
-			Quaternion.Slerp( transform.rotation, 
-			                 Quaternion.Euler( 0, 0, targetAngle ), 
-			                 turnSpeed * Time.deltaTime );
+		if(targetInRange)
+		{
+			Vector3 target = moveDirection * moveSpeed + currentPosition;
+			transform.position = Vector3.Lerp( currentPosition, target, Time.deltaTime );
+			
+			float targetAngle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
+			transform.rotation = 
+				Quaternion.Slerp( transform.rotation, 
+				                 Quaternion.Euler( 0, 0, targetAngle ), 
+				                 turnSpeed * Time.deltaTime );
+         }
 	}
 
 	void OnCollisionEnter2D(Collision2D collision)
@@ -118,7 +129,7 @@ public class Bugger : MonoBehaviour {
 				AttackDamage = 1,
 				AttackDirectionIsRight = _facingRight,
 				AttackerId = _id,
-				AttackForce = new Vector2(200, 200)
+				AttackForce = new Vector2(20, 20)
 			});
 
 			_attackTimer = AttackCooldown;
@@ -136,7 +147,7 @@ public class Bugger : MonoBehaviour {
 		if(_anim != null)
 		{
 			_anim.SetTrigger("Die");
-			_boxCollider.enabled = false;
+			_circleCollider.enabled = false;
 	
 			damage.Reflect(_id, 0.5f, 0.2f);
 			Destroy(gameObject, 0.75f);

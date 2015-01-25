@@ -115,7 +115,7 @@ public class Bullet : MonoBehaviour, IDamageResponse {
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
-		Debug.LogError("Collision?");
+		//Debug.LogError("Collision?");
 		_anim.SetTrigger("Explode");
 		if(collision.collider.tag == "Bullet")
 		{

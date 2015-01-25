@@ -26,6 +26,7 @@ public class SpriteChanger : Editor
 			_myRenderer = ((SpriteRenderer)this.target);
 		}
 
+		GUILayout.BeginHorizontal();
 		if (_editor != null) 
 		{
 			if (GUILayout.Button ("Prev")) 
@@ -42,57 +43,67 @@ public class SpriteChanger : Editor
 		{
 			if (GUILayout.Button ("Prev")) 
 			{
-				ExpensiveShiftSprite(false);
+				ExpensiveShiftSprite(true);
 			}
 			
 			if (GUILayout.Button ("Next")) 
 			{
-				ExpensiveShiftSprite(true);
+				ExpensiveShiftSprite(false);
 			}
 		}
+		GUILayout.EndHorizontal();		
 
 		if (GUILayout.Button ("Snap")) 
 		{
-			var x = _myRenderer.transform.position.x - 0.15;
+			var x = _myRenderer.transform.position.x;
 			var xa = (int)(x / 0.3f);
-			var xdiff = (xa*0.3f + 0.15f - x);
-			//Debug.Log(xdiff);
-			if(xdiff > 0.225)
+			var xdiff = (xa*0.3f - x);
+			Debug.Log(xdiff);
+			if(xdiff > 0.15)
 				xa--;
-			if(xdiff < 0)
+			if(xdiff < -0.15)
 				xa++;
 			//special case
-			if( x > -0.15 && x < 0.15)
+			/*if( x > -0.15 && x < 0.15)
 			{
 				xa = 0;
-			}
+			}*/
 
-			var y = _myRenderer.transform.position.y - 0.15;
+			var y = _myRenderer.transform.position.y;
 			var ya = (int)(y / 0.3f);
-			var ydiff = (ya*0.3f + 0.15f - y);
+			var ydiff = (ya*0.3f - y);
 			//Debug.Log(ydiff);
-			if(ydiff > 0.225)
+			if(ydiff > 0.15)
 				ya--;
-			if(ydiff < 0)
+			if(ydiff < -0.15)
 				ya++;
 			//special case
-			if( y > -0.15 && y < 0.15)
+			/*if( y > -0.15 && y < 0.15)
 			{
 				ya = 0;
-			}
+			}*/
 
 			var p = _myRenderer.transform.position;
-			p.x = xa*0.3f + 0.15f;
-			p.y = ya*0.3f + 0.15f;
+			p.x = xa*0.3f;
+			p.y = ya*0.3f + 0.02f;
 			_myRenderer.transform.position = p;
-			Debug.Log(_myRenderer.transform.localPosition);
 		}
 
-		if (GUILayout.Button ("Print Info")) 
+		if (GUILayout.Button ("Add Next Sprite")) 
 		{
-			Debug.Log("World: " + _myRenderer.transform.position);
-			Debug.Log("Local: " + _myRenderer.transform.localPosition);
+			//Debug.Log("World: " + _myRenderer.transform.position);
+			//Debug.Log("Local: " + _myRenderer.transform.localPosition);
+			var newP = _myRenderer.transform.position;
+			newP.x += 0.3f;
+			var currT = Selection.activeGameObject.transform;
+			var newObj = Instantiate(currT, newP, Quaternion.identity);			
+			var newT = ((Transform)newObj);
+			newT.name = currT.name;
+			newT.parent = currT.parent;
+			Selection.activeGameObject = newT.gameObject;
 		}
+		
+		
 	}
 
 	private void ExpensiveShiftSprite(bool forward)

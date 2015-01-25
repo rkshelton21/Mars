@@ -12,7 +12,8 @@ public class SpriteMapper : Editor
 	private string _toIndex = "01";
 
 	private string _prefix = "";
-
+	private Color _newColor = Color.white;
+	
 	public override void OnInspectorGUI()
 	{
 		DrawDefaultInspector ();
@@ -24,7 +25,8 @@ public class SpriteMapper : Editor
 		_toIndex = EditorGUILayout.TextField ("To Index", _toIndex);
 
 		_prefix = EditorGUILayout.TextField ("Sprite Name Prefix", _prefix);
-
+		_newColor = EditorGUILayout.ColorField("Sprite Color", _newColor);
+		
 		SpriteEditor editor = (SpriteEditor)target;
 		if (GUILayout.Button ("All Forward")) 
 		{
@@ -42,6 +44,11 @@ public class SpriteMapper : Editor
 			var temp = _oldBaseName;
 			_oldBaseName = _newBaseName;
 			_newBaseName = temp;
+		}
+		
+		if (GUILayout.Button ("Re-Color")) 
+		{
+			editor.ReColorAllSprites(_oldBaseName, _newColor);			
 		}
 
 		if (GUILayout.Button ("Rename all sprites")) 
@@ -79,7 +86,8 @@ public class SpriteMapper : Editor
 
 		if (GUILayout.Button ("Create Colliders")) 
 		{
-			editor.GenerateColliders(_oldBaseName);
+			//editor.GenerateColliders(_oldBaseName);
+			editor.GenerateCollidersV2(_oldBaseName);
 		}
 	}
 }

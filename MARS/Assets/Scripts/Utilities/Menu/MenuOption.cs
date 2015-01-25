@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class MenuOption : MonoBehaviour {
 
+	public bool IsNewGame = false;
 	public bool IsQuitButton = false;
 	public bool IsExpandable = false;
 	public bool StartHidden = false;
@@ -16,7 +17,7 @@ public class MenuOption : MonoBehaviour {
 
 	void Start()
 	{
-		if(!StartHidden)
+		if(StartHidden)
 		{
 			renderer.enabled = false;
 		}
@@ -71,10 +72,15 @@ public class MenuOption : MonoBehaviour {
 	
 	void OnMouseUp()
 	{
+		Debug.Log ("Click");
 		if(!renderer.enabled)
 			return;
 
-		if(IsQuitButton)
+		if(IsNewGame)
+		{
+			Application.LoadLevel("New Game");
+		}
+		else if(IsQuitButton)
 		{
 			Application.Quit();
 		}

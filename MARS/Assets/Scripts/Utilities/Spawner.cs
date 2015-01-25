@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Spawner : MonoBehaviour {
 
+	private Transform _SpawnerChildren = null;
 	public Transform EnemyToSpawn = null;
 	public int SpawnCount = -1;
 	public float SpawnFrequency = 3.0f;
@@ -50,6 +51,8 @@ public class Spawner : MonoBehaviour {
 		{
 			StartSpawning();
 		}
+		
+		_SpawnerChildren = GameObject.Find("SpawnerChildren").transform;
 	}
 	
 	// Update is called once per frame
@@ -78,6 +81,8 @@ public class Spawner : MonoBehaviour {
 				}
 				//Debug.Log("Spawning at: " + pos);
 				var boj = Instantiate(EnemyToSpawn, pos, Quaternion.identity);
+				((Transform)boj).parent = _SpawnerChildren;
+				
 				if(boj == null)
 					Debug.LogError("Failed");
 

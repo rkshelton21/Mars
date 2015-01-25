@@ -77,7 +77,7 @@ public class SlimePillar : MonoBehaviour {
 			rigid.AddForce(new Vector2(0.0f, 100.0f));
 
 			collider.transform.parent.gameObject.SendMessage("ApplyDamage", new DamageDescription(){
-				AttackDamage = 0.1f,
+				AttackDamage = 0.5f,
 				AttackDirectionIsRight = true,
 				AttackerId = _id,
 				AttackForce = new Vector2(0, 0)

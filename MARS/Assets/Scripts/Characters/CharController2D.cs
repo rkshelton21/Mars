@@ -148,7 +148,7 @@ public class CharController2D : MonoBehaviour {
 	{
 		if((IsGrounded || !_doubleJump) && JumpIsPressed)
 		{
-			Debug.Log("Jump");
+			//Debug.Log("Jump");
 			var tempJumpSpeed = JumpSpeed;
 			//set double jump flag if needed
 			if(!_doubleJump && !IsGrounded)
@@ -156,8 +156,8 @@ public class CharController2D : MonoBehaviour {
 			
 			//update animation
 			_anim.SetBool("Ground", false);
-			//if(_doubleJump)
-			//	tempJumpSpeed *= 2;
+			if(_doubleJump)
+				tempJumpSpeed *= 1.5f;
 			
 			//_doubleJump = false;
 			
@@ -187,6 +187,7 @@ public class CharController2D : MonoBehaviour {
 		ProcessInput ();
 		//Set character input
 		_move = HorizontalInput;	
+		DebugVelocity.x = _move;
 		//Get movement input
 		float appliedMovement = _move;
 
@@ -213,8 +214,6 @@ public class CharController2D : MonoBehaviour {
 			//_body.AddForce(new Vector2(0.0f, 2.0f));
 		}
 		
-		DebugVelocity = _body.velocity;
-
 		if (UseForceMovement) 
 		{
 			/*float maxVelocityChange = 10.0f;
@@ -253,19 +252,19 @@ public class CharController2D : MonoBehaviour {
 			if(currSpeed < targetSpeed)
 			{
 				_velocityModifier += velocityChange * Time.deltaTime * appliedMovement;
-				DebugVelocity.x = 1;
+				//DebugVelocity.x = 1;
 			}
 			if(currSpeed > targetSpeed)
 			{
 				_velocityModifier -= velocityChange * Time.deltaTime * appliedMovement;
-				DebugVelocity.x = -1;
+				//DebugVelocity.x = -1;
 			}
 
 			_body.velocity = new Vector2(appliedMovement*MaxSpeed + _velocityModifier, _body.velocity.y);
 
 			//DebugVelocity.x = _velocityModifier;
-			DebugVelocity.y = appliedMovement;
-			DebugVelocity.z = _velocityModifier;//appliedMovement*MaxSpeed;
+			//DebugVelocity.y = appliedMovement;
+			//DebugVelocity.z = _velocityModifier;//appliedMovement*MaxSpeed;
 		}
 		else
 		{

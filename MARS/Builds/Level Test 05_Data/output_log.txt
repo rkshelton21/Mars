@@ -1,0 +1,123 @@
+Initialize engine version: 4.5.5f1 (7684ad0c5a44)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 560 Ti   (ID=0x1200)
+    Vendor:   NVIDIA
+    VRAM:     977 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\Programming\Repo\TheProject\MARS\Builds\Level Test 05_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Programming\Repo\TheProject\MARS\Builds\Level Test 05_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Programming\Repo\TheProject\MARS\Builds\Level Test 05_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Programming\Repo\TheProject\MARS\Builds\Level Test 05_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Programming\Repo\TheProject\MARS\Builds\Level Test 05_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading D:\Programming\Repo\TheProject\MARS\Builds\Level Test 05_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+- Completed reload, in  0.180 seconds
+desktop: 1920x1080 60Hz; virtual: 3200x1080 at -1280,0
+<RI> Initializing input.
+<RI> Input initialized.
+Click
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+MenuOption:OnMouseUp() (at D:\Programming\Repo\TheProject\MARS\Assets\Scripts\Utilities\Menu\MenuOption.cs:75)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\d63dfc6385190b60\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\d63dfc6385190b60\Runtime\Export\MouseEvents.cs:173)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\d63dfc6385190b60\Runtime\Export\MouseEvents.cs:143)
+ 
+(Filename: D Line: 0)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/Runtime/Mono/MonoBehaviour.cpp Line: 1633)
+
+A script behaviour has a different serialization layout when loading. (Read 24 bytes but expected 40 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/Runtime/Serialize/SerializedFile.cpp Line: 1170)
+
+UnloadTime: 0.372373 ms
+System memory in use before: 13.8 MB.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+System memory in use after: 13.7 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1862.
+Total: 0.825410 ms (FindLiveObjects: 0.060909 ms CreateObjectMapping: 0.020083 ms MarkObjects: 0.218946 ms  DeleteObjects: 0.030619 ms)
+
+BlackGun Equipped in slot 0
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Inventory:Equip(Int32, String, String) (at D:\Programming\Repo\TheProject\MARS\Assets\Scripts\Utilities\Menu\Inventory.cs:160)
+PlayerContoller2D:ConsumeItem(String) (at D:\Programming\Repo\TheProject\MARS\Assets\Scripts\Characters\PlayerContoller2D.cs:345)
+Consumable:OnTriggerEnter2D(Collider2D) (at D:\Programming\Repo\TheProject\MARS\Assets\Scripts\Items\Consumable.cs:20)
+ 
+(Filename: D Line: 0)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/Runtime/Mono/MonoBehaviour.cpp Line: 1633)
+
+A script behaviour has a different serialization layout when loading. (Read 24 bytes but expected 40 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/Runtime/Serialize/SerializedFile.cpp Line: 1170)
+
+UnloadTime: 3.187067 ms
+System memory in use before: 14.0 MB.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+System memory in use after: 13.9 MB.
+
+Unloading 85 unused Assets to reduce memory usage. Loaded Objects now: 1307.
+Total: 1.289972 ms (FindLiveObjects: 0.065848 ms CreateObjectMapping: 0.025022 ms MarkObjects: 0.290391 ms  DeleteObjects: 0.180424 ms)
+
+BlackGun Equipped in slot 0
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Inventory:Equip(Int32, String, String) (at D:\Programming\Repo\TheProject\MARS\Assets\Scripts\Utilities\Menu\Inventory.cs:160)
+PlayerContoller2D:ConsumeItem(String) (at D:\Programming\Repo\TheProject\MARS\Assets\Scripts\Characters\PlayerContoller2D.cs:345)
+Consumable:OnTriggerEnter2D(Collider2D) (at D:\Programming\Repo\TheProject\MARS\Assets\Scripts\Items\Consumable.cs:20)
+ 
+(Filename: D Line: 0)
+
+Ground Hit: Ground Colliders
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Bullet:OnTriggerEnter2D(Collider2D) (at D:\Programming\Repo\TheProject\MARS\Assets\Scripts\GunsAndThings\Bullet.cs:133)
+ 
+(Filename: D Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Restart.OnMouseEnter () [0x00010] in D:\Programming\Repo\TheProject\MARS\Assets\Scripts\Utilities\Menu\Restart.cs:23 
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\d63dfc6385190b60\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\d63dfc6385190b60\Runtime\Export\MouseEvents.cs:198)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\d63dfc6385190b60\Runtime\Export\MouseEvents.cs:143)
+ 
+(Filename: D Line: 0)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/Runtime/Mono/MonoBehaviour.cpp Line: 1633)
+
+A script behaviour has a different serialization layout when loading. (Read 24 bytes but expected 40 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/Runtime/Serialize/SerializedFile.cpp Line: 1170)
+
+UnloadTime: 1.521100 ms
+System memory in use before: 14.0 MB.
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+System memory in use after: 14.0 MB.
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1310.
+Total: 1.116132 ms (FindLiveObjects: 0.058275 ms CreateObjectMapping: 0.024363 ms MarkObjects: 0.258126 ms  DeleteObjects: 0.010206 ms)
+
+BlackGun Equipped in slot 0
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Inventory:Equip(Int32, String, String) (at D:\Programming\Repo\TheProject\MARS\Assets\Scripts\Utilities\Menu\Inventory.cs:160)
+PlayerContoller2D:ConsumeItem(String) (at D:\Programming\Repo\TheProject\MARS\Assets\Scripts\Characters\PlayerContoller2D.cs:345)
+Consumable:OnTriggerEnter2D(Collider2D) (at D:\Programming\Repo\TheProject\MARS\Assets\Scripts\Items\Consumable.cs:20)
+ 
+(Filename: D Line: 0)
+

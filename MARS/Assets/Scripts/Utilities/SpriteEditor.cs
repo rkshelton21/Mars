@@ -83,6 +83,22 @@ public class SpriteEditor : MonoBehaviour {
 			}
 		}
 	}
+	
+	public void ReColorAllSprites(string oldBase, Color newColor)
+	{
+		var renderers = transform.GetComponentsInChildren<SpriteRenderer> ();
+		foreach (var renderer in renderers) 
+		{
+			if(renderer.sprite != null)
+			{
+				var matchesBaseName = renderer.sprite.name.Contains(oldBase);
+				if(matchesBaseName)
+				{
+					renderer.color = newColor;
+				}
+			}
+		}
+	}
 
 	public void ReMapAllSpritesFromIndexToIndex(string oldBase, string newBase, string from, int to)
 	{
@@ -216,35 +232,37 @@ public class SpriteEditor : MonoBehaviour {
 				if(!renderer.sprite.name.StartsWith(baseName))
 					continue;
 
-			var x = renderer.transform.position.x - 0.15;
+			var x = renderer.transform.position.x;
 			var xa = (int)(x / 0.3f);
-			var xdiff = (xa * 0.3f + 0.15f - x);
-			//Debug.Log (xdiff);
-			if (xdiff > 0.225)
-					xa--;
-			if (xdiff < 0)
-					xa++;
+			var xdiff = (xa * 0.3f - x);
+			Debug.Log(xdiff);
+			if(xdiff > 0.15)
+				xa--;
+			if(xdiff < -0.15)
+				xa++;
 			//special case
-			if (x > -0.15 && x < 0.15) {
-					xa = 0;
-			}
-
-			var y = renderer.transform.position.y - 0.15;
+			/*if( x > -0.15 && x < 0.15)
+			{
+				xa = 0;
+			}*/
+			
+			var y = renderer.transform.position.y;
 			var ya = (int)(y / 0.3f);
-			var ydiff = (ya * 0.3f + 0.15f - y);
+			var ydiff = (ya*0.3f - y);
 			//Debug.Log(ydiff);
-			if (ydiff > 0.225)
-					ya--;
-			if (ydiff < 0)
-					ya++;
+			if(ydiff > 0.15)
+				ya--;
+			if(ydiff < -0.15)
+				ya++;
 			//special case
-			if (y > -0.15 && y < 0.15) {
-					ya = 0;
-			}
-
+			/*if( y > -0.15 && y < 0.15)
+			{
+				ya = 0;
+			}*/
+			
 			var p = renderer.transform.position;
-			p.x = xa * 0.3f + 0.15f;
-			p.y = ya * 0.3f + 0.15f;
+			p.x = xa*0.3f;
+			p.y = ya*0.3f + 0.02f;
 			renderer.transform.position = p;
 			//Debug.Log(_myRenderer.transform.localPosition);		
 		}
@@ -276,6 +294,9 @@ public class SpriteEditor : MonoBehaviour {
 			return;
 
 		var baseObject = new GameObject ();
+		baseObject.tag = "Ground";
+		baseObject.layer = LayerMask.NameToLayer("Ground");
+		baseObject.name = "Ground Colliders";
 
 		var points = new Vector2[30];
 		var internalPoints = new Vector2[9]
@@ -566,6 +587,325 @@ public class SpriteEditor : MonoBehaviour {
 				break;
 			}
 
+			if(n >= 2)
+			{
+				var collider = baseObject.AddComponent<EdgeCollider2D>();
+				var list = new System.Collections.Generic.List<Vector2>();
+				for(int i=0; i<n; i++)
+				{
+					list.Add(points[i] + new Vector2(renderer.transform.position.x, renderer.transform.position.y));
+				}
+				collider.points = list.ToArray();
+				collider.sharedMaterial = ColliderMaterial;
+			}
+		}
+	}
+	
+	public void GenerateCollidersV2(string baseName)
+	{
+		if (!LoadSprites (baseName))
+			return;
+		
+		var baseObject = new GameObject ();
+		baseObject.tag = "Ground";
+		baseObject.layer = LayerMask.NameToLayer("Ground");
+		baseObject.name = "Ground Colliders";
+		
+		float yOffset = -0.15f - 0.02f;
+		float xOffset = 0.15f;
+		// 0 1 2
+		// 3 4 5
+		// 6 7 8 
+		var points = new Vector2[30];
+		var internalPoints = new Vector2[9]
+		{
+			new Vector2(-0.15f + xOffset, 0.15f + yOffset),
+			new Vector2(0.0f + xOffset, 0.15f + yOffset),
+			new Vector2(0.15f + xOffset, 0.15f + yOffset),
+			
+			new Vector2(-0.15f + xOffset, 0f + yOffset),
+			new Vector2(0f + xOffset, 0f + yOffset),
+			new Vector2(0.15f + xOffset, 0f + yOffset),
+			
+			new Vector2(-0.15f + xOffset, -0.15f + yOffset),
+			new Vector2(0f + xOffset, -0.15f + yOffset),
+			new Vector2(0.15f + xOffset, -0.15f + yOffset)
+		};
+		
+		var sprites = transform.GetComponentsInChildren<SpriteRenderer> ();
+		foreach (var renderer in sprites) 
+		{
+			if (renderer.sprite != null)
+				if (!renderer.sprite.name.StartsWith (baseName))
+					continue;
+			
+			var currentIndex = int.Parse(renderer.sprite.name.Replace(_spriteSheetName + "_", ""));
+			var n = 2;
+			
+			switch(currentIndex)
+			{
+			case 00:
+				points[0] = internalPoints[6];
+				points[1] = internalPoints[5];
+				break;
+			case 01:
+				points[0] = internalPoints[3];
+				points[1] = internalPoints[2];
+				break;
+			case 02:
+				points[0] = internalPoints[6];
+				points[1] = internalPoints[2];
+				break;
+			case 03:
+				points[0] = internalPoints[0];
+				points[1] = internalPoints[2];
+				break;
+			case 04:
+				points[0] = internalPoints[0];
+				points[1] = internalPoints[2];
+				break;
+			case 05:
+				points[0] = internalPoints[0];
+				points[1] = internalPoints[2];
+				break;
+			case 06:
+				points[0] = internalPoints[0];
+				points[1] = internalPoints[8];
+				break;
+			case 07:
+				points[0] = internalPoints[0];
+				points[1] = internalPoints[5];
+				break;
+			case 08:
+				points[0] = internalPoints[3];
+				points[1] = internalPoints[8];
+				break;
+			case 09:
+				points[0] = internalPoints[6];
+				points[1] = internalPoints[1];
+				break;
+			case 10:
+				points[0] = internalPoints[3];
+				points[1] = internalPoints[1];
+				break;
+			case 11:
+				points[0] = internalPoints[8];
+				points[1] = internalPoints[2];
+				break;
+			case 12:
+				points[0] = internalPoints[7];
+				points[1] = internalPoints[2];
+				break;
+			case 13:
+				points[0] = internalPoints[6];
+				points[1] = internalPoints[2];
+				break;
+			case 14:
+				points[0] = internalPoints[3];
+				points[1] = internalPoints[2];
+				break;
+			case 15:
+				n = 0;
+				break;
+			case 16:
+				points[0] = internalPoints[3];
+				points[1] = internalPoints[5];
+				break;
+			case 17:
+				points[0] = internalPoints[3];
+				points[1] = internalPoints[8];
+				break;
+			/////////////////////////////////////////////
+			case 18:
+				points[0] = internalPoints[3];
+				points[1] = internalPoints[7];
+				break;
+			case 19:
+				n = 3;
+				points[0] = internalPoints[3];
+				points[1] = new Vector2();
+				points[2] = internalPoints[8];
+				break;
+			case 20:
+				n = 0;
+				break;
+			case 21:
+				n = 3;
+				points[0] = internalPoints[3];
+				points[1] = new Vector2();
+				points[2] = internalPoints[7];
+				break;
+			case 22:
+				n = 3;
+				points[0] = internalPoints[7];
+				points[1] = new Vector2();
+				points[2] = internalPoints[5];
+				break;
+			case 23:
+				n = 0;
+				break;
+			case 24:
+				n = 3;
+				points[0] = internalPoints[6];
+				points[1] = new Vector2();
+				points[2] = internalPoints[5];
+				break;
+			case 25:
+				n = 0;
+				break;
+			case 26:
+				points[0] = internalPoints[7];
+				points[1] = internalPoints[5];
+				break;
+			case 27:
+				points[0] = internalPoints[6];
+				points[1] = internalPoints[5];
+				break;
+			case 28:
+				n = 0;
+				break;
+			case 29:
+				n = 0;
+				break;
+			case 30:
+				n = 0;
+				break;
+			case 31:
+				n = 0;
+				break;
+			case 32:
+				points[0] = internalPoints[3];
+				points[1] = internalPoints[5];
+				break;
+			case 33:
+				points[0] = internalPoints[3];
+				points[1] = internalPoints[2];
+				break;
+			case 34:
+				points[0] = internalPoints[3];
+				points[1] = internalPoints[1];
+				break;
+			case 35:
+				n = 3;
+				points[0] = internalPoints[3];
+				points[1] = new Vector2();
+				points[2] = internalPoints[2];
+				break;
+			case 36:
+				n = 0;
+				break;
+			case 37:
+				n = 3;
+				points[0] = internalPoints[3];
+				points[1] = new Vector2();
+				points[2] = internalPoints[1];
+				break;
+			case 38:
+				n = 3;
+				points[0] = internalPoints[1];
+				points[1] = new Vector2();
+				points[2] = internalPoints[5];
+				break;
+			case 39:
+				n = 0;
+				break;
+			case 40:
+				n = 3;
+				points[0] = internalPoints[0];
+				points[1] = new Vector2();
+				points[2] = internalPoints[5];
+				break;
+			case 41:
+				n = 0;
+				break;
+			case 42:
+				points[0] = internalPoints[1];
+				points[1] = internalPoints[5];
+				break;
+			case 43:
+				points[0] = internalPoints[0];
+				points[1] = internalPoints[5];
+				break;
+			case 44:
+				n = 0;
+				break;
+			case 45:
+				n = 0;
+				break;
+			case 46:
+				n = 0;
+				break;
+			case 47:
+				n = 0;
+				break;
+			case 48:
+				points[0] = internalPoints[6];
+				points[1] = internalPoints[8];
+				break;
+			case 49:
+				points[0] = internalPoints[6];
+				points[1] = internalPoints[5];
+				break;
+			case 50:
+				points[0] = internalPoints[6];
+				points[1] = internalPoints[2];
+				break;
+			case 51:
+				points[0] = internalPoints[6];
+				points[1] = internalPoints[1];
+				break;
+			case 52:
+				points[0] = internalPoints[0];
+				points[1] = internalPoints[6];
+				break;
+			case 53:
+				points[0] = internalPoints[7];
+				points[1] = internalPoints[5];
+				break;
+			case 54:
+				points[0] = internalPoints[7];
+				points[1] = internalPoints[2];
+				break;
+			case 55:
+				points[0] = internalPoints[1];
+				points[1] = internalPoints[7];
+				break;
+			case 56:
+				points[0] = internalPoints[7];
+				points[1] = internalPoints[1];
+				break;
+			case 57:
+				points[0] = internalPoints[0];
+				points[1] = internalPoints[7];
+				break;
+			case 58:
+				points[0] = internalPoints[3];
+				points[1] = internalPoints[7];
+				break;
+			case 59:
+				points[0] = internalPoints[2];
+				points[1] = internalPoints[8];
+				break;
+			case 60:
+				points[0] = internalPoints[1];
+				points[1] = internalPoints[8];
+				break;
+			case 61:
+				points[0] = internalPoints[0];
+				points[1] = internalPoints[8];
+				break;
+			case 62:
+				points[0] = internalPoints[3];
+				points[1] = internalPoints[8];
+				break;
+			case 63:
+				n = 0;
+				break;
+			default:
+				n = 0;
+				break;
+			}
+			
 			if(n >= 2)
 			{
 				var collider = baseObject.AddComponent<EdgeCollider2D>();

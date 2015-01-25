@@ -1,0 +1,815 @@
+fileFormatVersion: 2
+guid: 36b8a13509c6d5a46990888c3d16380b
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 30xGround_Tiles_04_0
+    21300002: 30xGround_Tiles_04_1
+    21300004: 30xGround_Tiles_04_2
+    21300006: 30xGround_Tiles_04_3
+    21300008: 30xGround_Tiles_04_4
+    21300010: 30xGround_Tiles_04_5
+    21300012: 30xGround_Tiles_04_6
+    21300014: 30xGround_Tiles_04_7
+    21300016: 30xGround_Tiles_04_8
+    21300018: 30xGround_Tiles_04_9
+    21300020: 30xGround_Tiles_04_10
+    21300022: 30xGround_Tiles_04_11
+    21300024: 30xGround_Tiles_04_12
+    21300026: 30xGround_Tiles_04_13
+    21300028: 30xGround_Tiles_04_14
+    21300030: 30xGround_Tiles_04_15
+    21300032: 30xGround_Tiles_04_16
+    21300034: 30xGround_Tiles_04_17
+    21300036: 30xGround_Tiles_04_18
+    21300038: 30xGround_Tiles_04_19
+    21300040: 30xGround_Tiles_04_20
+    21300042: 30xGround_Tiles_04_21
+    21300044: 30xGround_Tiles_04_22
+    21300046: 30xGround_Tiles_04_23
+    21300048: 30xGround_Tiles_04_24
+    21300050: 30xGround_Tiles_04_25
+    21300052: 30xGround_Tiles_04_26
+    21300054: 30xGround_Tiles_04_27
+    21300056: 30xGround_Tiles_04_28
+    21300058: 30xGround_Tiles_04_29
+    21300060: 30xGround_Tiles_04_30
+    21300062: 30xGround_Tiles_04_31
+    21300064: 30xGround_Tiles_04_32
+    21300066: 30xGround_Tiles_04_33
+    21300068: 30xGround_Tiles_04_34
+    21300070: 30xGround_Tiles_04_35
+    21300072: 30xGround_Tiles_04_36
+    21300074: 30xGround_Tiles_04_37
+    21300076: 30xGround_Tiles_04_38
+    21300078: 30xGround_Tiles_04_39
+    21300080: 30xGround_Tiles_04_40
+    21300082: 30xGround_Tiles_04_41
+    21300084: 30xGround_Tiles_04_42
+    21300086: 30xGround_Tiles_04_43
+    21300088: 30xGround_Tiles_04_44
+    21300090: 30xGround_Tiles_04_45
+    21300092: 30xGround_Tiles_04_46
+    21300094: 30xGround_Tiles_04_47
+    21300096: 30xGround_Tiles_04_48
+    21300098: 30xGround_Tiles_04_49
+    21300100: 30xGround_Tiles_04_50
+    21300102: 30xGround_Tiles_04_51
+    21300104: 30xGround_Tiles_04_52
+    21300106: 30xGround_Tiles_04_53
+    21300108: 30xGround_Tiles_04_54
+    21300110: 30xGround_Tiles_04_55
+    21300112: 30xGround_Tiles_04_56
+    21300114: 30xGround_Tiles_04_57
+    21300116: 30xGround_Tiles_04_58
+    21300118: 30xGround_Tiles_04_59
+    21300120: 30xGround_Tiles_04_60
+    21300122: 30xGround_Tiles_04_61
+    21300124: 30xGround_Tiles_04_62
+    21300126: 30xGround_Tiles_04_63
+    21300128: 30xGround_Tiles_04_64
+    21300130: 30xGround_Tiles_04_65
+    21300132: 30xGround_Tiles_04_66
+    21300134: 30xGround_Tiles_04_67
+    21300136: 30xGround_Tiles_04_68
+    21300138: 30xGround_Tiles_04_69
+    21300140: 30xGround_Tiles_04_70
+    21300142: 30xGround_Tiles_04_71
+    21300144: 30xGround_Tiles_04_72
+    21300146: 30xGround_Tiles_04_73
+    21300148: 30xGround_Tiles_04_74
+    21300150: 30xGround_Tiles_04_75
+    21300152: 30xGround_Tiles_04_76
+    21300154: 30xGround_Tiles_04_77
+    21300156: 30xGround_Tiles_04_78
+    21300158: 30xGround_Tiles_04_79
+    21300160: 30xGround_Tiles_04_80
+    21300162: 30xGround_Tiles_04_81
+    21300164: 30xGround_Tiles_04_82
+    21300166: 30xGround_Tiles_04_83
+    21300168: 30xGround_Tiles_04_84
+    21300170: 30xGround_Tiles_04_85
+    21300172: 30xGround_Tiles_04_86
+    21300174: 30xGround_Tiles_04_87
+    21300176: 30xGround_Tiles_04_88
+    21300178: 30xGround_Tiles_04_89
+    21300180: 30xGround_Tiles_04_90
+    21300182: 30xGround_Tiles_04_91
+    21300184: 30xGround_Tiles_04_92
+    21300186: 30xGround_Tiles_04_93
+    21300188: 30xGround_Tiles_04_94
+    21300190: 30xGround_Tiles_04_95
+    21300192: 30xGround_Tiles_04_96
+    21300194: 30xGround_Tiles_04_97
+    21300196: 30xGround_Tiles_04_98
+    21300198: 30xGround_Tiles_04_99
+    21300200: 30xGround_Tiles_04_100
+    21300202: 30xGround_Tiles_04_101
+    21300204: 30xGround_Tiles_04_102
+    21300206: 30xGround_Tiles_04_103
+    21300208: 30xGround_Tiles_04_104
+    21300210: 30xGround_Tiles_04_105
+    21300212: 30xGround_Tiles_04_106
+    21300214: 30xGround_Tiles_04_107
+    21300216: 30xGround_Tiles_04_108
+    21300218: 30xGround_Tiles_04_109
+    21300220: 30xGround_Tiles_04_110
+    21300222: 30xGround_Tiles_04_111
+    21300224: 30xGround_Tiles_04_112
+    21300226: 30xGround_Tiles_04_113
+    21300228: 30xGround_Tiles_04_114
+    21300230: 30xGround_Tiles_04_115
+    21300232: 30xGround_Tiles_04_116
+    21300234: 30xGround_Tiles_04_117
+    21300236: 30xGround_Tiles_04_118
+    21300238: 30xGround_Tiles_04_119
+    21300240: 30xGround_Tiles_04_120
+    21300242: 30xGround_Tiles_04_121
+    21300244: 30xGround_Tiles_04_122
+    21300246: 30xGround_Tiles_04_123
+    21300248: 30xGround_Tiles_04_124
+    21300250: 30xGround_Tiles_04_125
+    21300252: 30xGround_Tiles_04_126
+    21300254: 30xGround_Tiles_04_127
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 0
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 1
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: 30xGround_Tiles_04_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 193
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 193
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_2
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 193
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_3
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 193
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_4
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 193
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_5
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 193
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_6
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 193
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_7
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 193
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_8
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 193
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_9
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 193
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_10
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 193
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_11
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 193
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_12
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 193
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_13
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 193
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_14
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 193
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_15
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 193
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 129
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_17
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 129
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_18
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 129
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_19
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 129
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_20
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 129
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_21
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 129
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_22
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 129
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_23
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 129
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_24
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 129
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_25
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 129
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_26
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 129
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_27
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 129
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_28
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 129
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_29
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 129
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_30
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 129
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_31
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 129
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_32
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 65
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_33
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 65
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_34
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 65
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_35
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 65
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_36
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 65
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_37
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 65
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_38
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 65
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_39
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 65
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_40
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 65
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_41
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 65
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_42
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 65
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_43
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 65
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_44
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 65
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_45
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 65
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_46
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 65
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_47
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 65
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_48
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_49
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 1
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_50
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 1
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_51
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 1
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_52
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 1
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_53
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 1
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_54
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 1
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_55
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 1
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_56
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_57
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 1
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_58
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_59
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 1
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_60
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 1
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_61
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 1
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_62
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 1
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 30xGround_Tiles_04_63
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 1
+        width: 30
+        height: 62
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
