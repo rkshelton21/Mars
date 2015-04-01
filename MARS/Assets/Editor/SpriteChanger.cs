@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEditor;
 using System.Collections.Generic;
 
-[CustomEditor(typeof(SpriteRenderer))]
+//[CustomEditor(typeof(SpriteRenderer))]
 public class SpriteChanger : Editor
 {
 	private SpriteEditor _editor = null;

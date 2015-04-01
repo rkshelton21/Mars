@@ -15,7 +15,7 @@ public class Zombie : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		spriteRenderer = renderer as SpriteRenderer;
+		spriteRenderer = GetComponent<Renderer>() as SpriteRenderer;
 		moveDirection = Vector3.right;
 	}
 	
@@ -35,7 +35,7 @@ public class Zombie : MonoBehaviour {
 		{
 			if( Input.GetButton("Fire1") ) {
 				// 3
-				Vector3 moveToward = camera.ScreenToWorldPoint( Input.mousePosition );
+				Vector3 moveToward = GetComponent<UnityEngine.Camera>().ScreenToWorldPoint( Input.mousePosition );
 				// 4
 				moveDirection = moveToward - currentPosition;
 				moveDirection.z = 0; 

@@ -17,13 +17,13 @@ public class Execute : MonoBehaviour {
 	{
 		if(StartHidden)
 		{
-			renderer.enabled = false;
+			GetComponent<Renderer>().enabled = false;
 		}
 	}
 	
 	void Show()
 	{
-		renderer.enabled = true;
+		GetComponent<Renderer>().enabled = true;
 		
 		if(SubMenu != null)
 		{
@@ -39,7 +39,7 @@ public class Execute : MonoBehaviour {
 	
 	void Hide()
 	{
-		renderer.enabled = false;
+		GetComponent<Renderer>().enabled = false;
 		
 		if(SubMenu != null)
 		{
@@ -55,13 +55,13 @@ public class Execute : MonoBehaviour {
 	
 	void OnMouseEnter()
 	{
-		audio.PlayOneShot(Button);
-		renderer.material.color = Color.red;
+		GetComponent<AudioSource>().PlayOneShot(Button);
+		GetComponent<Renderer>().material.color = Color.red;
 	}
 	
 	void OnMouseExit()
 	{
-		renderer.material.color = Color.white;
+		GetComponent<Renderer>().material.color = Color.white;
 	}
 	
 	void OnMouseUp()

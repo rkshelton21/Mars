@@ -80,7 +80,7 @@ public class SlimePillar : MonoBehaviour {
 				AttackDamage = 0.5f,
 				AttackDirectionIsRight = true,
 				AttackerId = _id,
-				AttackForce = new Vector2(0, 0)
+				AttackForce = new Vector2(0, 200)
 			});
 		}
 	}

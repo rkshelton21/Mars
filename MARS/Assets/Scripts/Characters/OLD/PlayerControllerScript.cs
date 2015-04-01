@@ -35,8 +35,8 @@ public class PlayerControllerScript : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
-		IsSleeping = rigidbody2D.IsSleeping();
-		IsAwake = rigidbody2D.IsAwake();
+		IsSleeping = GetComponent<Rigidbody2D>().IsSleeping();
+		IsAwake = GetComponent<Rigidbody2D>().IsAwake();
 
 		if(IsOnGround)
 		{
@@ -44,12 +44,12 @@ public class PlayerControllerScript : MonoBehaviour {
 		}
 		else
 		{
-			transform.rigidbody2D.gravityScale = 1.0f;
+			transform.GetComponent<Rigidbody2D>().gravityScale = 1.0f;
 		}
 
 		_grounded = Physics2D.OverlapCircle(GroundCheck.position, _groundRadius, WhatIsGround);
 		_anim.SetBool("Ground", _grounded);
-		_anim.SetFloat("verticalSpeed", rigidbody2D.velocity.y);
+		_anim.SetFloat("verticalSpeed", GetComponent<Rigidbody2D>().velocity.y);
 
 		if(_grounded)
 			_doubleJump = false;
@@ -66,13 +66,13 @@ public class PlayerControllerScript : MonoBehaviour {
 
 		_anim.SetFloat("Speed", Mathf.Abs(move));
 
-		rigidbody2D.velocity = new Vector2(move*MaxSpeed, rigidbody2D.velocity.y);
+		GetComponent<Rigidbody2D>().velocity = new Vector2(move*MaxSpeed, GetComponent<Rigidbody2D>().velocity.y);
 		//rigidbody2D.velocity = new Vector2(move*MaxSpeed, rigidbody2D.velocity.y);
 
 		//don't slide down slopes
 		if(IsOnRegularGround)
 		{
-			rigidbody2D.AddForce(new Vector2(0.0f, 30.0f));
+			GetComponent<Rigidbody2D>().AddForce(new Vector2(0.0f, 30.0f));
 		}
 
 		if(move > 0 && !_facingRight)
@@ -98,14 +98,14 @@ public class PlayerControllerScript : MonoBehaviour {
 		{
 			_anim.SetBool("Ground", false);
 			//rigidbody2D.AddForce(new Vector2(0, JumpForce));
-			var velocityY = rigidbody2D.velocity.y;
+			var velocityY = GetComponent<Rigidbody2D>().velocity.y;
 			if(velocityY < 0)
 			{
-				rigidbody2D.velocity = rigidbody2D.velocity + new Vector2(0, 7);
+				GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity + new Vector2(0, 7);
 			}
 			else if(velocityY < 7)
 			{
-				rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, 7);
+				GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, 7);
 			}
 			else
 			{

@@ -130,7 +130,7 @@ public class SlimeBoss : ObjectThatAcceptsDamage {
 				AttackDamage = 3,
 				AttackDirectionIsRight = _facingRight,
 				AttackerId = _id,
-				AttackForce = new Vector2(20000, 20)
+				AttackForce = _facingRight ? new Vector2(200, 20) : new Vector2(-200, 20)
 			});
 			_damageTimer = _attackTimer;
 		}	

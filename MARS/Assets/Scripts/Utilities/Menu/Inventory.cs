@@ -4,22 +4,14 @@ using System.Collections.Generic;
 
 public class Inventory : MonoBehaviour {
 
-	public int Rows = 3;
-	public int Columns = 8;
-
-	public float FrameWidth = 0f;
-	public float FrameHeight = 0f;
-
-	public float WidthPercentageOfGrid = 1.0f;
-	public float HeightPercentageOfGrid = 0.5f;
-	public bool UpdatePositions = false;
-
-	public Transform InventorySlot;
+	private Transform _inventoryGrid;
+	public Transform InventorySlotTemplate;
+	public List<Transform> SupportedItems = new List<Transform>();
+	public List<Transform> SupportedAmmo = new List<Transform>();
 	private bool _inventoryShown = false;
 
-	private Dictionary<string, InventoryItem> _ItemSlots = new Dictionary<string, InventoryItem>();
-	public List<InventoryItem> AvailableItems = new List<InventoryItem>();
-	public List<BulletType> AmmoStock = new List<BulletType>();
+	private Dictionary<string, InventoryItemSlotScript> _ItemSlotScripts = new Dictionary<string, InventoryItemSlotScript>();
+	private List<BulletType> AmmoStock = new List<BulletType>();
 
 	public InventoryItem _primaryWeapon = null;
 	public InventoryItem _secondaryWeapon = null;
@@ -30,77 +22,75 @@ public class Inventory : MonoBehaviour {
 	void Start () 
 	{
 		_Hud = GameObject.Find("HUD").GetComponent<HUD>();	
-
-		CalculatePositions();
+		_inventoryGrid = transform.FindChild("InventoryGrid");
 		Hide ();
+		
+		foreach(var item in SupportedItems)
+		{
+			var name = item.name.Replace("_Bullet", "");
+			name = name.Replace("Consumable_", "");
+			var slotObj = (Transform)Instantiate(InventorySlotTemplate, new Vector3(), Quaternion.identity);
+			var script = slotObj.GetComponent<InventoryItemSlotScript>();
+			slotObj.SetParent(_inventoryGrid);
+			
+			_ItemSlotScripts.Add(name, script);
+			script.SetItem(new InventoryItem(item.gameObject));			
+			script.SetCount(0);
+		}
+		
+		foreach(var item in SupportedAmmo)
+		{
+			var name = item.name.Replace("_Bullet", "");
+			name = name.Replace("Consumable_", "");
+			AmmoStock.Add(new BulletType(){ Name = name, Bullet = item });			
+		}
 	}
 
 	public void Toggle()
 	{
-		//Debug.Log(_inventoryShown);
-		if(_inventoryShown)
-		{
-			Hide ();
-		}
-		else
-		{
-			Show ();
-		}
+		var c = transform.GetChild(0);
+		c.gameObject.SetActive(!c.gameObject.activeInHierarchy); 
 	}
 
-	private void Show()
+	public void Show()
 	{
-		var textures = GetComponentsInChildren<GUITexture>();
-		foreach(var t in textures)
-		{
-			t.enabled = true;
-		}
-		_inventoryShown = true;
-
-		ShowAllItems();
+		var c = transform.GetChild(0);
+		c.gameObject.SetActive(true); 
 	}
-
-	private void Hide()
+	
+	private void UpdateSlots()
 	{
-		var textures = GetComponentsInChildren<GUITexture>();
-		foreach(var t in textures)
-		{
-			t.enabled = false;
-		}
-		_inventoryShown = false;
-
-		HideAllItems();
+		
 	}
-
-	//public void SetItemImage(string name, Texture newTexture)
-	//{
-	//	Items[name].ItemImage = newTexture;
-	//}
+	
+	public void Hide()
+	{
+		var c = transform.GetChild(0);
+		c.gameObject.SetActive(false); 
+	}
 
 	public void SetItemCount(string name, int count)
 	{
-		var itemMatch = _ItemSlots[name];
+		var itemMatch = _ItemSlotScripts[name];
 		if(itemMatch == null)
 		{
 			Debug.LogError("Item not supported in inventory.");
 		}
 		else
 		{
-			itemMatch.ItemCount = count;
+			itemMatch.SetCount(count);
 		}
 	}
 
 	public void AddItem(string name)
 	{
-		if(!_ItemSlots.ContainsKey(name))
+		if(!_ItemSlotScripts.ContainsKey(name))
 		{
 			Debug.LogError("Item (" + name +  ") not supported in inventory.");
 		}
 
-		var itemMatch = _ItemSlots[name];
-		itemMatch.ItemCount++;
-
-
+		var itemMatch = _ItemSlotScripts[name];
+		itemMatch.IncrementCount();
 
 		//Debug.Log("Name:" + _primaryWeapon.ItemName + ":" + name + ":" + itemMatch.ItemName);
 	}
@@ -117,8 +107,8 @@ public class Inventory : MonoBehaviour {
 		_primaryWeapon = _secondaryWeapon;
 		_secondaryWeapon = temp;
 
-		_Hud.Set(0, _primaryWeapon.ItemTexture);
-		_Hud.Set(1, _secondaryWeapon.ItemTexture);
+		_Hud.Set(0, _primaryWeapon.ItemSprite);
+		_Hud.Set(1, _secondaryWeapon.ItemSprite);
 
 		return true;
 	}
@@ -127,49 +117,37 @@ public class Inventory : MonoBehaviour {
 	{
 		if(!string.IsNullOrEmpty(oldItem))
 		{
-			if(!_ItemSlots.ContainsKey(oldItem))
+			if(!_ItemSlotScripts.ContainsKey(oldItem))
 			{
-				Debug.LogError("Item (" + oldItem +  ") not supported in inventory.");
+				Debug.LogError("Item (" + oldItem +  ") not supported in inventory.");				
 			}
-			var oldItemMatch = _ItemSlots[oldItem];
-			oldItemMatch.Equiped = false;
+			var oldItemMatch = _ItemSlotScripts[oldItem];
+			oldItemMatch.GetItem().Equiped = false;
 		}
 
-		if(!_ItemSlots.ContainsKey(newItem))
+		if(!_ItemSlotScripts.ContainsKey(newItem))
 		{
 			Debug.LogError("Item (" + newItem +  ") not supported in inventory.");
 		}
 
-		var newItemMatch = _ItemSlots[newItem];
-		newItemMatch.Equiped = true;
+		var newItemMatch = _ItemSlotScripts[newItem];
+		newItemMatch.GetItem().Equiped = true;
 
 		if(slot == 0)
 		{
-			_primaryWeapon = newItemMatch;
+			_primaryWeapon = newItemMatch.GetItem();
 		}
 		else if(slot == 1)
 		{
-			_secondaryWeapon = newItemMatch;
+			_secondaryWeapon = newItemMatch.GetItem();
 		}
 		else
 		{
 			Debug.LogError("Not enough slots");
 		}
 
-		_Hud.Set(slot, newItemMatch.ItemTexture);
+		_Hud.Set(slot, newItemMatch.GetSprite());
 		Debug.Log(newItem + " Equipped in slot " + slot);
-	}
-
-	public Texture GetTexture(string name)
-	{
-		foreach(var b in AvailableItems)
-		{
-			if(b.ItemName == name)
-			{
-				return b.ItemTexture;
-			}
-		}
-		return null;
 	}
 
 	public void GetAmmo(string name, out Transform ammoTransform, out Bullet ammoClass)
@@ -186,130 +164,43 @@ public class Inventory : MonoBehaviour {
 				return;
 			}
 		}
-		return;
-	}
-
-	private void CalculatePositions()
-	{
-		DestroyAllItems();
-
-		int i = 0;
-		//Set Text Position
-		float a = WidthPercentageOfGrid;
-		float b = HeightPercentageOfGrid;
 		
-		float x = a/(Columns*2f);
-		float y = b/(Rows*2f);
-
-		var itemCounter = InventorySlot.FindChild("ItemCount");
-		itemCounter.localPosition = new Vector3(a/(Columns), -b/(Rows), itemCounter.position.z);
-		var itemCounterGui = itemCounter.GetComponent<GUIText>();
-		itemCounterGui.text = i.ToString("D2");
-
-		//x = x + a/(Columns) * c;
-		//y = y + b/(Rows) * r;
-		//y = 1f - y;
-
-		/*
-		for(int c = 0; c < Columns; c++)
-		{
-			for(int r = 0; r < Rows; r++)
-			{
-				x = a/(Columns*2f) + a/(Columns) * c;
-				y = b/(Rows*2f) + b/(Rows) * r;
-				y = 1f - y;
-
-				var p = new Vector3(x, y, 1);
-				
-				var newItemSlot = Instantiate(InventorySlot, p, Quaternion.identity);
-				var newItemTransform = (Transform)newItemSlot;
-				//newItemTransform.localScale = new Vector3(scaleX, scaleY, 1.0f);
-
-				newItemTransform.parent = transform;
-				newItemTransform.localPosition = p;
-
-
-				Items.Add(new InventoryItem(newItemTransform.gameObject));			
-				i++;
-			}
-		}
-		*/
-
-		foreach(var item in AvailableItems)
-		{		
-			int r = i / Columns;
-			int c = i - r;
-					
-			x = a/(Columns*2f) + a/(Columns) * c;
-			y = b/(Rows*2f) + b/(Rows) * r;
-			y = 1f - y;
-			
-			var p = new Vector3(x, y, 1);
-			
-			var newItemSlot = Instantiate(InventorySlot, p, Quaternion.identity);
-			var newItemTransform = (Transform)newItemSlot;
-			//newItemTransform.localScale = new Vector3(scaleX, scaleY, 1.0f);
-			
-			newItemTransform.parent = transform;
-			newItemTransform.localPosition = p;
-			
-			newItemSlot.name = item.ItemName;
-			var itemCopy = new InventoryItem(newItemTransform.gameObject);
-			itemCopy.ItemName = item.ItemName;
-			itemCopy.ItemTexture = item.ItemTexture;
-			itemCopy.ItemType = item.ItemType;
-
-			var itemTexture = ((Transform)newItemSlot).GetComponentInChildren<GUITexture>();
-			itemTexture.texture = itemCopy.ItemTexture;
-
-			_ItemSlots.Add(item.ItemName, itemCopy);
-
-			i++;
-		}
+		Debug.Log("Could not Find Ammo");		
+		return;
 	}
 
 	private void DestroyAllItems()
 	{
-		if(_ItemSlots != null)
+		if(_ItemSlotScripts != null)
 		{
-			foreach(var item in _ItemSlots.Values)
+			foreach(var item in _ItemSlotScripts.Values)
 			{
-				item.Destroy();
+				//item.Item.Destroy();
 			}
 		}
 
-		_ItemSlots.Clear();
+		_ItemSlotScripts.Clear();
 	}
 
 	private void ShowAllItems()
 	{
-		if(_ItemSlots != null)
+		if(_ItemSlotScripts != null)
 		{
-			foreach(var item in _ItemSlots.Values)
+			foreach(var item in _ItemSlotScripts.Values)
 			{
-				item.Show();
+				//item.Show();
 			}
 		}
 	}
 
 	private void HideAllItems()
 	{
-		if(_ItemSlots != null)
+		if(_ItemSlotScripts != null)
 		{
-			foreach(var item in _ItemSlots.Values)
+			foreach(var item in _ItemSlotScripts.Values)
 			{
-				item.Hide();
+				//item.Hide();
 			}
 		}
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-		if(UpdatePositions)
-		{
-			CalculatePositions();
-			UpdatePositions = false;
-		}
-	}
+	}	
 }

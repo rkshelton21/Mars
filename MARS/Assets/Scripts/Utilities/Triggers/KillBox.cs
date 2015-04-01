@@ -13,7 +13,7 @@ public class KillBox : MonoBehaviour {
 		Transform current = collider.transform;
 		while (current.parent != null) 
 		{
-			if(current.parent.name != "Characters")
+			if(current.parent.tag == "Enemy")
 			{
 				current = current.parent;
 			}
@@ -23,6 +23,20 @@ public class KillBox : MonoBehaviour {
 			}						
 		}
 		
-		Destroy (current.gameObject);	
+		if(current.tag == "Player")
+		{
+			current.SendMessage("ApplyDamage", new DamageDescription(){
+				AttackDamage = 100000,
+				AttackerId = -1				
+			});
+		}
+		else if(current.tag == "Particle")
+		{
+			current.gameObject.SetActive(false);
+		}
+		else
+		{
+			Destroy (current.gameObject);	
+		}
 	}
 }

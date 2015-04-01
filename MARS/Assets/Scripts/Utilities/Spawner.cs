@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Spawner : MonoBehaviour {
 
+	private List<Transform> _SpawnedChildren = new List<Transform>();
+	
 	private Transform _SpawnerChildren = null;
 	public Transform EnemyToSpawn = null;
 	public int SpawnCount = -1;
+	public int MaxAliveCount = -1;
 	public float SpawnFrequency = 3.0f;
 	public bool StartSpawnerAutomatically = false;
 
@@ -66,28 +70,42 @@ public class Spawner : MonoBehaviour {
 		//if spanwing is enabled
 		//and there are more to spawn
 		//and either spawn on request is off, or it's on and we haven't spawned yet
-		if(	_spawningEnabled 
-			&& (SpawnCount == -1 || _numSpawned < SpawnCount) && 
-			(!_SpawnOnRequest || (_SpawnOnRequest && _SpawnRequestTrigger)))
+		if(_spawningEnabled)
 		{
-			_SpawnRequestTrigger = false;
-			if(_timeSinceSpawn > SpawnFrequency)
+			if(SpawnCount == -1 || _numSpawned < SpawnCount)
 			{
-				var pos = transform.position;
-				if(RandomX)
+				if(!_SpawnOnRequest || (_SpawnOnRequest && _SpawnRequestTrigger))
 				{
-					float offset = Random.Range(xVariant, -xVariant);
-					pos.x += offset;
+					if(MaxAliveCount >= 0)
+					{
+						_SpawnedChildren.RemoveAll(x => x == null);
+						if(_SpawnedChildren.Count >= MaxAliveCount)
+						{
+							return;
+						}
+					}
+					
+					_SpawnRequestTrigger = false;
+					if(_timeSinceSpawn > SpawnFrequency)
+					{
+						var pos = transform.position;
+						if(RandomX)
+						{
+							float offset = Random.Range(xVariant, -xVariant);
+							pos.x += offset;
+						}
+						//Debug.Log("Spawning at: " + pos);
+						var boj = Instantiate(EnemyToSpawn, pos, Quaternion.identity);
+						((Transform)boj).parent = _SpawnerChildren;
+						_SpawnedChildren.Add((Transform)boj);
+						
+						if(boj == null)
+							Debug.LogError("Failed");
+		
+						_numSpawned++;
+						_timeSinceSpawn = 0.0f;
+					}
 				}
-				//Debug.Log("Spawning at: " + pos);
-				var boj = Instantiate(EnemyToSpawn, pos, Quaternion.identity);
-				((Transform)boj).parent = _SpawnerChildren;
-				
-				if(boj == null)
-					Debug.LogError("Failed");
-
-				_numSpawned++;
-				_timeSinceSpawn = 0.0f;
 			}
 		}
 

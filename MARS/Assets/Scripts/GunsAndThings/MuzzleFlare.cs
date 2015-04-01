@@ -7,10 +7,16 @@ public class MuzzleFlare : MonoBehaviour {
 	public Sprite NormalMuzzleFlash;
 	public Sprite DownwardMuzzleFlash;
 	public Sprite DownMuzzleFlash;
-
+	
+	public Transform UpMuzzleFlashPosition;
+	public Transform UpwardMuzzleFlashPosition;
+	public Transform NormalMuzzleFlashPosition;
+	public Transform DownwardMuzzleFlashPosition;
+	public Transform DownMuzzleFlashPosition;
+	
 	private SpriteRenderer _sprite;
 	private float _displayTimer;
-	private float _maxDisplayTimer = 0.1f;
+	public float _maxDisplayTimer = 0.1f;
 
 	private Vector3[] _FlashPositions = new Vector3[5]{
 		//UP
@@ -24,6 +30,19 @@ public class MuzzleFlare : MonoBehaviour {
 		//DOWN
 		new Vector3(0.008365631f, -0.5312206f, 0f)
 	};
+	
+	void Start()
+	{
+		_FlashPositions[0] = UpMuzzleFlashPosition.localPosition;
+		_FlashPositions[1] = UpwardMuzzleFlashPosition.localPosition;
+		_FlashPositions[2] = NormalMuzzleFlashPosition.localPosition;
+		_FlashPositions[3] = DownwardMuzzleFlashPosition.localPosition;
+		_FlashPositions[4] = DownMuzzleFlashPosition.localPosition;
+		
+		_sprite = GetComponent<SpriteRenderer>();
+		_displayTimer = 0;
+		_sprite.enabled = false;
+	}
 
 	public void Fire(Vector2 direction)
 	{
@@ -35,45 +54,37 @@ public class MuzzleFlare : MonoBehaviour {
 		if(!moveX && upY)
 		{
 			_sprite.sprite = UpMuzzleFlash;
-			transform.localPosition = _FlashPositions[0];
+			transform.localPosition = UpMuzzleFlashPosition.localPosition;
 		}
 		//Upward
 		else if(moveX && upY)
 		{
 			_sprite.sprite = UpwardMuzzleFlash;
-			transform.localPosition = _FlashPositions[1];
+			transform.localPosition = UpwardMuzzleFlashPosition.localPosition;
 		}
 		//Normal
 		else if(moveX && !upY && !downY)
 		{
 			_sprite.sprite = NormalMuzzleFlash;
-			transform.localPosition = _FlashPositions[2];
+			transform.localPosition = NormalMuzzleFlashPosition.localPosition;
 		}
 		//Downward
 		else if(moveX && downY)
 		{
 			_sprite.sprite = DownwardMuzzleFlash;
-			transform.localPosition = _FlashPositions[3];
+			transform.localPosition = DownwardMuzzleFlashPosition.localPosition;
 		}
 		//Down
 		else//(!moveX && downY)
 		{
 			_sprite.sprite = DownMuzzleFlash;
-			transform.localPosition = _FlashPositions[4];
+			transform.localPosition = DownMuzzleFlashPosition.localPosition;
 		}
 
 		_displayTimer = _maxDisplayTimer;
 		_sprite.enabled = true;
 	}
 
-	// Use this for initialization
-	void Start () 
-	{
-		_sprite = GetComponent<SpriteRenderer>();
-		_displayTimer = 0;
-		_sprite.enabled = false;
-	}
-	
 	// Update is called once per frame
 	void Update () 
 	{

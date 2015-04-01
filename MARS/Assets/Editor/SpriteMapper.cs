@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEditor;
 
-[CustomEditor(typeof(SpriteEditor))]
+//[CustomEditor(typeof(SpriteEditor))]
 public class SpriteMapper : Editor
 {
 	private string _oldBaseName = "30xGround_Tiles_00";

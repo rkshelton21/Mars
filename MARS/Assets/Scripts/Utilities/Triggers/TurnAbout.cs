@@ -3,6 +3,9 @@ using System.Collections;
 
 public class TurnAbout : MonoBehaviour {
 
+	public bool SendRightOnly = false;
+	public bool SendLeftOnly = false;
+	
 	// Use this for initialization
 	void Start () {
 	
@@ -19,7 +22,7 @@ public class TurnAbout : MonoBehaviour {
 		if (collider.tag == "Enemy") 
 		{
 			//Debug.Log("BABY TURN!");
-			collider.gameObject.SendMessage("Turn",null);
+			collider.gameObject.SendMessage("Turn", new bool[2] {SendLeftOnly, SendRightOnly});
 		}
 	}
 }

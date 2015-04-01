@@ -83,7 +83,7 @@ public class Bullet : MonoBehaviour, IDamageResponse {
 			_rigidBody = transform.FindChild("HitBox_4").GetComponent<Rigidbody2D>();
 		}
 
-		_rigidBody = transform.rigidbody2D;
+		_rigidBody = transform.GetComponent<Rigidbody2D>();
 		_rigidBody.AddForce(ShotForce);
 		_anim.SetFloat("Direction", (float)direction);
 
@@ -115,23 +115,11 @@ public class Bullet : MonoBehaviour, IDamageResponse {
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
-		//Debug.LogError("Collision?");
-		_anim.SetTrigger("Explode");
-		if(collision.collider.tag == "Bullet")
-		{
-			_anim.SetTrigger("Explode");
-			_rigidBody.velocity = new Vector2(_rigidBody.velocity.y, _rigidBody.velocity.x);
-			_boxCollider.isTrigger = true;
-			_dead = true;
-		}
-	}
-
-	void OnTriggerEnter2D(Collider2D collider)
-	{
+		var collider = collision.collider;
+		//Only happens on downward angle shots? WHY?
 		if(collider.tag == "Ground" && !_dying)
 		{
-			Debug.Log("Ground Hit: " + collider.name);
-			ReduceAndDeflect(0, 10000, 0);
+			ReduceAndDeflect(0, 10000, 0);			
 		}
 
 		if(collider.tag == "Enemy" && !_dying)
@@ -145,8 +133,7 @@ public class Bullet : MonoBehaviour, IDamageResponse {
 			var victimId = instance.GetInstanceID();
 			if(_victims.Contains(victimId))
 				return;
-			//Debug.Log("Damaged");
-
+			
 			_victims.Add(victimId);
 			collider.gameObject.SendMessage("ApplyDamage", new DamageDescription()
         	{
@@ -154,7 +141,40 @@ public class Bullet : MonoBehaviour, IDamageResponse {
 				AttackDirectionIsRight = FacingRight,
 				Attacker = this,
 				AttackerId = Id,
-				AttackForce = ShotForce
+				AttackForce = FacingRight ? ShotPower : new Vector2(-ShotPower.x, ShotPower.y)
+			});
+
+			_anim.SetTrigger("Fire");
+		}
+	}
+
+	void OnTriggerEnter2D(Collider2D collider)
+	{
+		if(collider.tag == "Ground" && !_dying)
+		{
+			ReduceAndDeflect(0, 10000, 0);			
+		}
+
+		if(collider.tag == "Enemy" && !_dying)
+		{
+			var instance = collider.transform;
+			if(instance.parent != null)
+				instance = instance.parent;
+			if(instance.parent != null)
+				instance = instance.parent;
+
+			var victimId = instance.GetInstanceID();
+			if(_victims.Contains(victimId))
+				return;
+			
+			_victims.Add(victimId);
+			collider.gameObject.SendMessage("ApplyDamage", new DamageDescription()
+        	{
+				AttackDamage = TotalDamage,
+				AttackDirectionIsRight = FacingRight,
+				Attacker = this,
+				AttackerId = Id,
+				AttackForce = FacingRight ? ShotPower : new Vector2(-ShotPower.x, ShotPower.y)
 			});
 
 			_anim.SetTrigger("Fire");

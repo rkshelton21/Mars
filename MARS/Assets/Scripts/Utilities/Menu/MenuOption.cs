@@ -19,13 +19,13 @@ public class MenuOption : MonoBehaviour {
 	{
 		if(StartHidden)
 		{
-			renderer.enabled = false;
+			GetComponent<Renderer>().enabled = false;
 		}
 	}
 
 	public void Show()
 	{
-		renderer.enabled = true;
+		GetComponent<Renderer>().enabled = true;
 
 		if(SubMenu != null)
 		{
@@ -41,7 +41,7 @@ public class MenuOption : MonoBehaviour {
 
 	public void Hide()
 	{
-		renderer.enabled = false;
+		GetComponent<Renderer>().enabled = false;
 
 		if(SubMenu != null)
 		{
@@ -57,28 +57,28 @@ public class MenuOption : MonoBehaviour {
 
 	void OnMouseEnter()
 	{
-		renderer.material.color = Color.red;
+		GetComponent<Renderer>().material.color = Color.red;
 
-		if(!renderer.enabled)
+		if(!GetComponent<Renderer>().enabled)
 			return;
 
-		audio.PlayOneShot(Button);
+		GetComponent<AudioSource>().PlayOneShot(Button);
 	}
 	
 	void OnMouseExit()
 	{
-		renderer.material.color = Color.white;
+		GetComponent<Renderer>().material.color = Color.white;
 	}
 	
 	void OnMouseUp()
 	{
 		Debug.Log ("Click");
-		if(!renderer.enabled)
+		if(!GetComponent<Renderer>().enabled)
 			return;
 
 		if(IsNewGame)
 		{
-			Application.LoadLevel("New Game");
+			Application.LoadLevel(Application.loadedLevel + 1);
 		}
 		else if(IsQuitButton)
 		{
@@ -114,7 +114,7 @@ public class MenuOption : MonoBehaviour {
 			else
 			{
 				var menuEvent = GetComponent<MenuEvent>();
-				menuEvent.Spawn(SpawnObject, SpawnOnTeams);
+				//menuEvent.Spawn(SpawnObject, SpawnOnTeams);
 			}
 		}
 	}

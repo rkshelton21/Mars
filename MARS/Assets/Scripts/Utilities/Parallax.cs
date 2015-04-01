@@ -44,7 +44,7 @@ public class Parallax : MonoBehaviour {
 			}
 		}
 
-		_camInitialX = camera.transform.position.x;
+		_camInitialX = GetComponent<UnityEngine.Camera>().transform.position.x;
 
 		if(StartPoint.x == 0 && EndPoint.x == 0)
 		{
@@ -58,13 +58,13 @@ public class Parallax : MonoBehaviour {
 		var p = transform.position;
 		if(FollowCamera)
 		{
-			p.x = (camera.transform.position.x - _camInitialX) / Offset + _initialX;
-			p.y = (camera.transform.position.y - _camInitialY) / Offset + _initialY;
+			p.x = (GetComponent<UnityEngine.Camera>().transform.position.x - _camInitialX) / Offset + _initialX;
+			p.y = (GetComponent<UnityEngine.Camera>().transform.position.y - _camInitialY) / Offset + _initialY;
 		}
 		else
 		{
-			p.x = (_camInitialX - camera.transform.position.x) / Offset + _initialX;		
-			p.y = (_camInitialY - camera.transform.position.y) / Offset + _initialY;		
+			p.x = (_camInitialX - GetComponent<UnityEngine.Camera>().transform.position.x) / Offset + _initialX;		
+			p.y = (_camInitialY - GetComponent<UnityEngine.Camera>().transform.position.y) / Offset + _initialY;		
 		}
 		var newPos = p;
 		if(!ignoreBounds)
@@ -83,7 +83,7 @@ public class Parallax : MonoBehaviour {
 			Transform activesprite = _spriteAIsActive ? _spriteA : _spriteB;
 			Transform inactivesprite = _spriteAIsActive ? _spriteB : _spriteA;
 
-			var diff = camera.transform.position.x - activesprite.transform.position.x;
+			var diff = GetComponent<UnityEngine.Camera>().transform.position.x - activesprite.transform.position.x;
 
 			//if left needs scrolling
 			if(diff < -(_spriteWidth / 8))

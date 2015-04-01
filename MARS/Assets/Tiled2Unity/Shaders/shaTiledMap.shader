@@ -80,8 +80,8 @@
             fixed4 frag(v2f IN) : COLOR
             {
                 half4 texcol = tex2D(_MainTex, IN.texcoord);
-
-                // The alpha color key is 'enabled' if it has solid alpha
+				
+				// The alpha color key is 'enabled' if it has solid alpha
                 if (_AlphaColorKey.a == 1 &&
                     _AlphaColorKey.r == texcol.r &&
                     _AlphaColorKey.g == texcol.g &&
@@ -93,7 +93,7 @@
                 {
                     texcol = texcol * IN.color;
                 }
-
+                
                 return texcol;
             }
         ENDCG

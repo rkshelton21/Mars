@@ -15,7 +15,7 @@ public class RevealTexture : MonoBehaviour
 	{
 		var revealOffset = f / 100f; 
 		f += Time.deltaTime;
-		gameObject.renderer.material.SetTextureOffset ("_Mask", new Vector2(0f, revealOffset));
+		gameObject.GetComponent<Renderer>().material.SetTextureOffset ("_Mask", new Vector2(0f, revealOffset));
 
 		if(revealOffset > 1)
 			f = 0;

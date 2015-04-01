@@ -20,7 +20,7 @@ public class Quit : MonoBehaviour {
 	{
 		_Text.color = Color.red;
 		
-		audio.PlayOneShot(Button);
+		GetComponent<AudioSource>().PlayOneShot(Button);
 	}
 	
 	void OnMouseExit()

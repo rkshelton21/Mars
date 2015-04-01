@@ -12,7 +12,8 @@ public class CharController2D : MonoBehaviour {
 	protected Rigidbody2D _body = null;
 	private SpriteRenderer _renderer;
 	protected Color _teamColor = Color.white;
-
+	public Color ParticleColor = Color.red;
+	
 	public float MaxSpeed = 5.0f;
 	public float JumpSpeed = 20.0f;
 	protected float _move = 0.0f;
@@ -34,6 +35,7 @@ public class CharController2D : MonoBehaviour {
 	private Vector3 _position_current;
 	private Vector3 _position_previous;
 	protected float _movement_speed;
+	protected Vector2 _contact_normal;
 	/**************************************************************/
 	public virtual void ProcessInput(){}
 	public virtual void UpdateSound(){}
@@ -43,7 +45,7 @@ public class CharController2D : MonoBehaviour {
 	//public virtual void Pre_FixedUpdate() {}
 	public virtual void Pre_Update() {}
 	public virtual void ApplyDamage(DamageDescription damage) {}
-	public virtual void Turn() {}
+	public virtual void Turn(bool[] forceDirection) {}
 
 	/**************************************************************/
 
@@ -156,8 +158,8 @@ public class CharController2D : MonoBehaviour {
 			
 			//update animation
 			_anim.SetBool("Ground", false);
-			if(_doubleJump)
-				tempJumpSpeed *= 1.5f;
+			//if(_doubleJump)
+			//	tempJumpSpeed *= 1.5f;
 			
 			//_doubleJump = false;
 			
@@ -165,11 +167,11 @@ public class CharController2D : MonoBehaviour {
 			var velocityY = _body.velocity.y;
 			if(velocityY < 0)
 			{
-				_body.velocity = _body.velocity + new Vector2(0, tempJumpSpeed);
+				_body.velocity = new Vector2(_body.velocity.x, tempJumpSpeed);//_body.velocity + new Vector2(0, tempJumpSpeed);
 			}
 			else if(velocityY < JumpSpeed)
 			{
-				_body.velocity = new Vector2(_body.velocity.x, tempJumpSpeed);
+				_body.velocity = new Vector2(_body.velocity.x, tempJumpSpeed);//new Vector2(_body.velocity.x, tempJumpSpeed);
 			}
 			else
 			{
@@ -268,7 +270,21 @@ public class CharController2D : MonoBehaviour {
 		}
 		else
 		{
-			_body.velocity = new Vector2(appliedMovement*MaxSpeed, _body.velocity.y);
+			DebugVelocity.x = _contact_normal.x;
+			DebugVelocity.y = _contact_normal.y;
+			_body.velocity = new Vector2(appliedMovement*MaxSpeed, _body.velocity.y);			
+			//boost right
+			if(appliedMovement > 0 && _contact_normal.x < -0.1f)
+			{
+				Debug.DrawRay(transform.position, _contact_normal, Color.white, 0.5f, false);
+				_body.velocity = new Vector2(appliedMovement*MaxSpeed*1.25f, _body.velocity.y);
+			}
+			//boost left
+			if(appliedMovement < 0 && _contact_normal.x > 0.1f)
+			{
+				Debug.DrawRay(transform.position, _contact_normal, Color.white, 0.5f, false);
+				_body.velocity = new Vector2(appliedMovement*MaxSpeed*1.25f, _body.velocity.y);
+			}
 		}
 
 		UpdateAnimations ();
@@ -286,10 +302,11 @@ public class CharController2D : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-		_position_previous = _position_current;
-		_position_current = _body.position;
+		//Pre_Update();
+		//_position_previous = _position_current;
+		//_position_current = _body.position;
 		
-		_movement_speed = Mathf.Abs(_position_current.x - _position_previous.x) * Time.fixedTime;
+		//_movement_speed = Mathf.Abs(_position_current.x - _position_previous.x) * Time.fixedTime;
 	}
 
 	public void SetTeam(string teamName)

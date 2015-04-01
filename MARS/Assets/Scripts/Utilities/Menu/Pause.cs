@@ -37,23 +37,23 @@ public class Pause : MonoBehaviour
 				}
 			}
 
-			if(audio != null)
+			if(GetComponent<AudioSource>() != null)
 			{
 				//soften audio to a stop
-				if(audio.pitch > 0)				
+				if(GetComponent<AudioSource>().pitch > 0)				
 				{
-					if(audio.pitch - _audioStep <= 0)
+					if(GetComponent<AudioSource>().pitch - _audioStep <= 0)
 					{
-						audio.pitch = 0;
+						GetComponent<AudioSource>().pitch = 0;
 					}
 					else
 					{
-						audio.pitch -= _audioStep;
+						GetComponent<AudioSource>().pitch -= _audioStep;
 					}
 				}
 				else
 				{
-					audio.Pause();
+					GetComponent<AudioSource>().Pause();
 				}
 			}
 		}
@@ -72,21 +72,21 @@ public class Pause : MonoBehaviour
 				}
 			}
 
-			if(audio != null)
+			if(GetComponent<AudioSource>() != null)
 			{
 				//ramp up audio to full
-				if(audio.pitch < 1)
+				if(GetComponent<AudioSource>().pitch < 1)
 				{
-					if(!audio.isPlaying)
-						audio.Play();
+					if(!GetComponent<AudioSource>().isPlaying)
+						GetComponent<AudioSource>().Play();
 					
-					if(audio.pitch + _audioStep >= 1)
+					if(GetComponent<AudioSource>().pitch + _audioStep >= 1)
 					{
-						audio.pitch = 1;
+						GetComponent<AudioSource>().pitch = 1;
 					}
 					else
 					{
-						audio.pitch += _audioStep;
+						GetComponent<AudioSource>().pitch += _audioStep;
 					}
 				}
 			}

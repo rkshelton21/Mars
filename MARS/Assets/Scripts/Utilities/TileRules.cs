@@ -66,7 +66,7 @@ public class TileRules : MonoBehaviour {
 			{
 				foreach(var s in _spawns)
 				{
-					((GameObject)s).renderer.enabled = false;
+					((GameObject)s).GetComponent<Renderer>().enabled = false;
 				}
 				_renderingOn = false;
 			}
@@ -85,7 +85,7 @@ public class TileRules : MonoBehaviour {
 			{
 				foreach(var s in _spawns)
 				{
-					((GameObject)s).renderer.enabled = true;
+					((GameObject)s).GetComponent<Renderer>().enabled = true;
 				}
 				_renderingOn = true;
 			}

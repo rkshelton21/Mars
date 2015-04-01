@@ -126,14 +126,14 @@ public class AIController2D : CharController2D {
 		if (_Player != null) 
 		{
 			var d = _Player.position - transform.position;
-			if(audio != null)
+			if(GetComponent<AudioSource>() != null)
 			{
-				audio.volume = _maxAudioDistance / d.magnitude;
+				GetComponent<AudioSource>().volume = _maxAudioDistance / d.magnitude;
 			}
 		}
 	}
 
-	public override void Turn()
+	public override void Turn(bool[] forceDirection)
 	{
 		//Debug.Log ("Turn: " + System.Environment.StackTrace );
 		if(_target != null)
@@ -148,7 +148,15 @@ public class AIController2D : CharController2D {
 				return;
 			}
 		}
-
+		
+		//ignore if already going the right direction
+		//force left
+		if(forceDirection[0] && !_facingRight)
+			return;
+		//force right
+		if(forceDirection[1] && _facingRight)
+			return;
+		
 		Flip ();
 	}
 
@@ -227,7 +235,6 @@ public class AIController2D : CharController2D {
 
 	public override void ApplyDamage(DamageDescription damage)
 	{
-		//Debug.Log("Damage Applied");
 		_attackTimer = AttackCooldown;
 
 		if (ImpactClip != null) 
@@ -242,10 +249,12 @@ public class AIController2D : CharController2D {
 		//Debug.Log("Taking damage from: " + damage.AttackerId + " for " + damage.AttackDamage + " dmg");
 		Health -= damage.AttackDamage;
 		int direction = damage.AttackDirectionIsRight ? 1 : -1;
-		rigidbody2D.AddForce(new Vector2(2 * direction, 2));
+		GetComponent<Rigidbody2D>().AddForce(new Vector2(2 * direction, 2));
 		//rigidbody2D.velocity = new Vector2(damage.AttackForce.x*100, damage.AttackForce.y);
 		//rigidbody2D.velocity = new Vector2(-50000, JumpSpeed);
 
+		ObjectPooler.Current.Initialize("Block", 10, transform.position, new Vector4[]{ damage.AttackForce, ParticleColor });	
+		
 		if(Health <= 0)
 		{
 			if(!Dying)
@@ -261,15 +270,24 @@ public class AIController2D : CharController2D {
 			_anim.SetBool("Dying", true);
 			_anim.SetTrigger("Die");
 
-			_overlapCollider.enabled = false;
-			_boxCollider.enabled = false;
-			_circleCollider.enabled = false;
+			if(_overlapCollider != null)
+			{
+				_overlapCollider.enabled = false;
+			}
+			if(_boxCollider != null)
+			{
+				_boxCollider.enabled = false;
+			}
+			if(_circleCollider != null)
+			{
+				_circleCollider.enabled = false;
+			}
 			//rigidbody2D.gravityScale = 0f;
 
 			this.enabled = false;
 
 			if(DestroyOnDeath)
-				Destroy(gameObject, 0.75f);
+				Destroy(gameObject, 1.75f);
 		}
 		else
 		{
@@ -293,4 +311,14 @@ public class AIController2D : CharController2D {
 		}
 	}
 	*/
+	
+	public override void HandleOnCollisionStay2D (Collision2D collision)
+	{
+		if (collision.collider.tag != "Ground")
+			return;
+		var contact = collision.contacts[0];
+		var n = collision.contacts[0].normal;
+		//Debug.DrawRay(contact.point, contact.normal, Color.white, 0.5f, false);
+		_contact_normal = n;
+	}
 }

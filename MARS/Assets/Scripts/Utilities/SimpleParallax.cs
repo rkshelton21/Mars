@@ -16,18 +16,23 @@ public class SimpleParallax : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		if (Cam == null)
-			Cam = GameObject.Find ("Main Camera").transform;
-		_initialX = transform.position.x;
-		_initialY = transform.position.y;
-
-		_camInitialX = Cam.position.x;
+		
 
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
+		if (Cam == null)
+		{	
+			Cam = GameObject.Find ("Main Camera").transform;
+			_initialX = transform.position.x;
+			_initialY = transform.position.y;
+			
+			_camInitialX = Cam.position.x;
+			_camInitialY = Cam.position.x;						
+		}
+		
 		var p = transform.position;
 		if(FollowCamera)
 		{

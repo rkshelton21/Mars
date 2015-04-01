@@ -27,6 +27,8 @@ public class Camera : MonoBehaviour {
 		Shake = false;
 		ShakeTimer = ShakeDuration;
 		ShakeSpeed = ShakeSpeed_Max;
+		
+		GUIController.ShowHUD();
 	}
 	
 	// Update is called once per frame

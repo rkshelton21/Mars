@@ -48,7 +48,7 @@ public class Bugger : MonoBehaviour {
 		float y = (float)(_Random.NextDouble()*_PermanentOffsetMax - _PermanentOffsetMax/2.0);
 		_floatOffset = new Vector3(x, y, 0);
 
-		spriteRenderer = renderer as SpriteRenderer;
+		spriteRenderer = GetComponent<Renderer>() as SpriteRenderer;
 		moveDirection = Vector3.right;
 		spriteRenderer.color = _teamColor;
 	}
@@ -75,7 +75,16 @@ public class Bugger : MonoBehaviour {
 			moveDirection = moveToward - currentPosition;
 			moveDirection.z = 0; 
 			//moveDirection.Normalize();
-
+			
+			//Hover
+			float x = (float)(_Random.NextDouble()*_RandomBuzzOffsetMax - _RandomBuzzOffsetMax/2.0);
+			float y = (float)(_Random.NextDouble()*_RandomBuzzOffsetMax - _RandomBuzzOffsetMax/2.0);
+			Vector3 buzzOffset = new Vector3(x, y, 0.0f);
+			// 4
+			moveDirection = currentPosition;
+			moveDirection.z = 0; 
+			moveDirection.Normalize();
+			
 			/*
 			if( Input.GetButton("Fire1") ) {
 				// 3
@@ -92,7 +101,7 @@ public class Bugger : MonoBehaviour {
 			float x = (float)(_Random.NextDouble()*_RandomBuzzOffsetMax - _RandomBuzzOffsetMax/2.0);
 			float y = (float)(_Random.NextDouble()*_RandomBuzzOffsetMax - _RandomBuzzOffsetMax/2.0);
 			Vector3 buzzOffset = new Vector3(x, y, 0.0f);
-			Vector3 moveToward = Target.position + _floatOffset + buzzOffset;
+			Vector3 moveToward = Target.position + buzzOffset;
 			// 4
 			moveDirection = moveToward - currentPosition;
 			moveDirection.z = 0; 
@@ -104,7 +113,8 @@ public class Bugger : MonoBehaviour {
 		{			
 			float distance = (Target.position - transform.position).magnitude;
 			float absDistance = Mathf.Abs(distance);
-			targetInRange = absDistance < 2.5f;
+			//targetInRange = absDistance < 2.5f;
+			targetInRange = true;
 		}
 		
 		if(targetInRange)
@@ -117,9 +127,29 @@ public class Bugger : MonoBehaviour {
 				Quaternion.Slerp( transform.rotation, 
 				                 Quaternion.Euler( 0, 0, targetAngle ), 
 				                 turnSpeed * Time.deltaTime );
-         }
+		}
+		else
+		{
+			Vector3 target = moveDirection * moveSpeed + currentPosition;
+			transform.position = Vector3.Lerp( currentPosition, target, Time.deltaTime );
+			
+			float targetAngle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
+			transform.rotation = 
+				Quaternion.Slerp( transform.rotation, 
+				                 Quaternion.Euler( 0, 0, targetAngle ), 
+				                 turnSpeed * Time.deltaTime );
+		}
 	}
 
+	public void Flip()
+	{
+		_facingRight = !_facingRight;
+		
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
+	}
+	
 	void OnCollisionEnter2D(Collision2D collision)
 	{
 		bool validTarget = (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Player");
@@ -129,7 +159,7 @@ public class Bugger : MonoBehaviour {
 				AttackDamage = 1,
 				AttackDirectionIsRight = _facingRight,
 				AttackerId = _id,
-				AttackForce = new Vector2(20, 20)
+				AttackForce = _facingRight ? new Vector2(20, 20) : new Vector2(-20, 20)
 			});
 
 			_attackTimer = AttackCooldown;

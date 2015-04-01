@@ -10,7 +10,7 @@ public class CameraTest : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Self = transform;
-		camera.orthographicSize = Screen.height*SizeModifier / (2 * Zoom);
+		GetComponent<UnityEngine.Camera>().orthographicSize = Screen.height*SizeModifier / (2 * Zoom);
 	}
 	
 	// Update is called once per frame

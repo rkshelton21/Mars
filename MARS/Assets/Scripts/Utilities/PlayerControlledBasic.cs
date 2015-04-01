@@ -12,7 +12,7 @@ public class PlayerControlledBasic : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		float move = Input.GetAxis ("Horizontal");
-		rigidbody2D.velocity = new Vector2 (move * Speed, rigidbody2D.velocity.y);
+		GetComponent<Rigidbody2D>().velocity = new Vector2 (move * Speed, GetComponent<Rigidbody2D>().velocity.y);
 		//rigidbody2D.AddForce(new Vector2 (move * Speed, 0f));
 	}
 	

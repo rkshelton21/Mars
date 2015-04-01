@@ -23,7 +23,7 @@ public class DustParticles : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		Speed = _Player.rigidbody2D.velocity.x;
+		Speed = _Player.GetComponent<Rigidbody2D>().velocity.x;
 		if(Speed != 0 && !_Particles.isPlaying)
 		{
 			//_Particles.Play();

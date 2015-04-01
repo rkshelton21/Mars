@@ -27,16 +27,17 @@ public class PlayerContoller2D : CharController2D {
 	private Dictionary<int, string> _leftGroundStop = new Dictionary<int, string>();
 	private Dictionary<int, string> _rightGroundStop = new Dictionary<int, string>();
 	private Dictionary<int, string> _normalGroundStop = new Dictionary<int, string>();
-
-	private Camera _cam;
+	
+	private CameraController _cam;
 	
 	public override void Init()
 	{
+		_anim.SetTrigger("Spawn");
 		_maxHealth = Health;
 		_Inv = GameObject.Find("Inventory").GetComponent<Inventory>();
 		_Hud = GameObject.Find("HUD").GetComponent<HUD>();
 		_healthBar = GameObject.Find("HUD").GetComponentInChildren<PlayerHealth>();
-		_cam = GameObject.Find("Main Camera").GetComponent<Camera>();
+		_cam = GameObject.Find("Main Camera").GetComponent<CameraController>();
 		
 		//_Bullet = Bullet.transform.GetComponent<Bullet>();
 		_muzzleFlash = transform.GetComponentInChildren<MuzzleFlare>();
@@ -118,6 +119,7 @@ public class PlayerContoller2D : CharController2D {
 	{
 		bool shoot = false;
 		bool toggleMenu = Input.GetKeyDown(KeyCode.E);
+		bool toggleConsole = Input.GetKeyDown(KeyCode.C);
 		bool swap = Input.GetKeyDown(KeyCode.Q);
 		bool secondary = Input.GetKey(KeyCode.LeftShift);
 		bool die = Input.GetKeyDown(KeyCode.X);
@@ -127,6 +129,18 @@ public class PlayerContoller2D : CharController2D {
 		if(toggleMenu)
 		{
 			_Inv.Toggle();
+		}
+		
+		if(toggleConsole)
+		{
+			if(GUIController.CONActive)
+			{
+				GUIController.ShowHUD();
+			}
+			else
+			{
+				GUIController.ShowConsole();
+			}
 		}
 
 		if(swap)		
@@ -153,17 +167,20 @@ public class PlayerContoller2D : CharController2D {
 			Flip ();
 		}
 
-		if(_facingRight)
+		if(shoot)
 		{
-			//_anim.SetFloat("AimDir", fireInputY - fireInputX / 2.0f);
-			_anim.SetFloat("AimDirX", fireInputX);
-			_anim.SetFloat("AimDirY", fireInputY);
-		}
-		else
-		{
-			//_anim.SetFloat("AimDir", fireInputY - (-fireInputX) / 2.0f);
-			_anim.SetFloat("AimDirX", fireInputX);
-			_anim.SetFloat("AimDirY", fireInputY);
+			if(_facingRight)
+			{
+				//_anim.SetFloat("AimDir", fireInputY - fireInputX / 2.0f);
+				_anim.SetFloat("AimDirX", fireInputX);
+				_anim.SetFloat("AimDirY", fireInputY);
+			}
+			else
+			{
+				//_anim.SetFloat("AimDir", fireInputY - (-fireInputX) / 2.0f);
+				_anim.SetFloat("AimDirX", fireInputX);
+				_anim.SetFloat("AimDirY", fireInputY);
+			}
 		}
 
 		if(shoot && _fireCoolDown < 0)
@@ -189,7 +206,7 @@ public class PlayerContoller2D : CharController2D {
 					Instantiate(_Ammo_Primary, transform.position + offset, Quaternion.identity);
 
 					_muzzleFlash.Fire(shotDir);
-					_body.AddForce( shotDir * -100f);
+					_body.AddForce( shotDir * -_Bullet_Primary.ShotForce.magnitude / 10f);									
 				}
 
 				if(secondary && _Inv._secondaryWeapon.ItemName != "" && _Ammo_Secondary != null)
@@ -210,7 +227,7 @@ public class PlayerContoller2D : CharController2D {
 					
 					Instantiate(_Ammo_Secondary, transform.position + offset, Quaternion.identity);
 					_muzzleFlash.Fire(shotDir);
-					_body.AddForce( shotDir * -100f);
+					_body.AddForce( shotDir * -_Bullet_Secondary.ShotForce.magnitude / 10f);
 				}
 			}
 		}
@@ -230,7 +247,7 @@ public class PlayerContoller2D : CharController2D {
 			_anim.SetTrigger("Die");
 			_boxCollider.enabled = false;
 			_circleCollider.enabled = false;
-			rigidbody2D.gravityScale = 0f;
+			//GetComponent<Rigidbody2D>().gravityScale = 0f;
 			Destroy(gameObject, 0.75f);
 		}
 	}
@@ -344,7 +361,7 @@ public class PlayerContoller2D : CharController2D {
 			if(_Ammo_Primary == null)
 			{
 				_Inv.GetAmmo(Item, out _Ammo_Primary, out _Bullet_Primary);
-				_Inv.Equip(0, string.Empty, Item);
+				_Inv.Equip(0, string.Empty, Item);				
 			}
 			else if(_Ammo_Secondary == null)
 			{
@@ -374,7 +391,7 @@ public class PlayerContoller2D : CharController2D {
 		//Debug.Log("Taking damage from: " + damage.AttackerId + " for " + damage.AttackDamage + " dmg");
 		Health -= damage.AttackDamage;
 		//int direction = damage.AttackDirectionIsRight ? 1 : -1;
-		rigidbody2D.AddForce(damage.AttackForce);
+		GetComponent<Rigidbody2D>().AddForce(damage.AttackForce);
 		//rigidbody2D.AddForce(new Vector2(2000 * direction, 200));
 		//rigidbody2D.velocity = new Vector2(damage.AttackForce.x*100, damage.AttackForce.y);
 		//rigidbody2D.velocity = new Vector2(-50000, JumpSpeed);
@@ -396,14 +413,14 @@ public class PlayerContoller2D : CharController2D {
 			//_overlapCollider.enabled = false;
 			_boxCollider.enabled = false;
 			_circleCollider.enabled = false;
-			rigidbody2D.gravityScale = 0f;
-			rigidbody2D.velocity = new Vector2();
+			//GetComponent<Rigidbody2D>().gravityScale = 0f;
+			GetComponent<Rigidbody2D>().velocity = new Vector2();
 
 			Destroy(gameObject, 0.75f);
 		}
 		else
 		{
-			//_anim.SetTrigger("Hit");			
+			_anim.SetTrigger("Hit");			
 		}
 		
 		damage.Reflect(_id, 2.5f, 1.0f);

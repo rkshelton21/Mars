@@ -7,7 +7,9 @@ public class MenuEvent : MonoBehaviour {
 	private float _swapSides = 1f;
 	private Transform _redBase;
 	private Transform _blueBase;
-
+	public Transform Creature;
+	public bool TeamSpawn;
+	
 	void Start()
 	{
 		_Player = GameObject.Find("Player").transform;
@@ -15,27 +17,28 @@ public class MenuEvent : MonoBehaviour {
 		_blueBase = GameObject.Find("BlueBase").transform;
 	}
 
-	public void Spawn(Transform character, bool teamSpawn)
+	public void Spawn()
 	{
 		if(_Player != null)
 		{
-			var newChar = Instantiate(character, _Player.position + new Vector3(8f * _swapSides, 0, 0), Quaternion.identity);
+			var newChar = Instantiate(Creature, _Player.position + new Vector3(2f * _swapSides, 0, 0), Quaternion.identity);
 
-			if(teamSpawn && character.tag == "Enemy")
+			if(TeamSpawn && Creature.tag == "Enemy")
 			{
 				if(_swapSides > 0)
 				{
-					((Transform)newChar).SendMessage("SetTeam", "Red");
+					//((Transform)newChar).SendMessage("SetTeam", "Red");
 					((Transform)newChar).gameObject.layer = 12;
 					((Transform)newChar).SendMessage("SetTarget", _blueBase);
-					((Transform)newChar).name = "Red" + ((Transform)newChar);
+					//((Transform)newChar).name = "Red" + ((Transform)newChar);					
+					((Transform)newChar).SendMessage("Flip");					
 				}
 				if(_swapSides < 0)
 				{
-					((Transform)newChar).SendMessage("SetTeam", "Blue");
+					//((Transform)newChar).SendMessage("SetTeam", "Blue");
 					((Transform)newChar).gameObject.layer = 13;
 					((Transform)newChar).SendMessage("SetTarget", _redBase);
-					((Transform)newChar).name = "Blue" + ((Transform)newChar);
+					//((Transform)newChar).name = "Blue" + ((Transform)newChar);					
 				}
 			}
 

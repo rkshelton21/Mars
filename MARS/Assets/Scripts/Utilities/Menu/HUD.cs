@@ -5,7 +5,7 @@ public class HUD : MonoBehaviour
 {
 	public int NumberOfSlots = 2;
 	public Transform HudSlot;
-	private GUITexture[] _hudSlotTextures;
+	private SpriteRenderer[] _hudSlotSprites;
 	private Transform[] _itemTransforms;
 	private float _slotWidth = 0.125f;
 	private float CalculatedRatio = 0;
@@ -13,7 +13,7 @@ public class HUD : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		_hudSlotTextures = new GUITexture[NumberOfSlots];
+		_hudSlotSprites = new SpriteRenderer[NumberOfSlots];
 		_itemTransforms = new Transform[NumberOfSlots];
 
 		CalculatedRatio = (float)Screen.height / (float)Screen.width;
@@ -32,10 +32,10 @@ public class HUD : MonoBehaviour
 			scale.x = scale.x * CalculatedRatio;
 			item.transform.localScale = scale;
 
-			var itemTexture = item.GetComponentInChildren<GUITexture>();
+			var itemRenderer = item.GetComponentInChildren<SpriteRenderer>();
 			newHudTransform.parent = transform;
 			_itemTransforms[i] = item.transform;
-			_hudSlotTextures[i] = itemTexture;
+			_hudSlotSprites[i] = itemRenderer;
 			x += _slotWidth;
 		}
 	}
@@ -52,12 +52,22 @@ public class HUD : MonoBehaviour
 		}
 	}
 	
-	public void Set(int i, Texture t)
+	public void Show()
+	{
+		transform.gameObject.SetActive(true);
+	}
+	
+	public void Hide()
+	{
+		transform.gameObject.SetActive(false);
+	}
+	
+	public void Set(int i, Sprite s)
 	{
 		if(i < 0 || i >= NumberOfSlots)
 			return;
 
-		_hudSlotTextures[i].texture = t;
+		_hudSlotSprites[i].sprite = s;
 	}
 
 	// Update is called once per frame
