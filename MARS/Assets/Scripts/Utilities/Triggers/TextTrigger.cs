@@ -7,8 +7,13 @@ public class TextTrigger : MonoBehaviour {
 	public bool Inner = false;
 	public bool Outter = false;
 	public bool Disabler = false;
+	public bool Enabler = false;
 	public bool TextRenderer = false;
-
+	public bool PauseOnEnter = false;
+	private bool _paused = false;
+	public Transform EnableTarget;
+	private bool _resumed = false;
+	
 	// Use this for initialization
 	void Start () {
 		var guiText = transform.GetComponent<GUIText>();
@@ -24,8 +29,20 @@ public class TextTrigger : MonoBehaviour {
 		{
 			var textMesh = transform.parent.GetComponentInChildren<TextMesh> ();			
 			textMesh.text = textMesh.text.Replace("\\n", "\r\n");
+		}		
+	}
+	
+	void Update()
+	{
+		if(_paused)
+		{
+			if(Input.GetKeyDown(KeyCode.Return))
+			{
+				_paused = false;
+				Pause.Current.Resume(false);
+				_resumed = true;
+			}
 		}
-
 	}
 	
 	void OnTriggerEnter2D(Collider2D collider)
@@ -37,6 +54,11 @@ public class TextTrigger : MonoBehaviour {
 				if(Text != null)
 				{
 					Text.enabled = true;
+					if(PauseOnEnter && !_resumed)
+					{
+						Pause.Current.Halt(true);
+						_paused = true;						
+					}
 				}
 			}
 
@@ -47,6 +69,11 @@ public class TextTrigger : MonoBehaviour {
 
 			if(Disabler)
 			{
+			}
+			
+			if(Enabler)
+			{
+				EnableTarget.gameObject.SetActive(true);
 			}
 		}
 	}

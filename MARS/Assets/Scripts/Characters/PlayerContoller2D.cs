@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections.Generic;
 using CurveExtended;
 
@@ -8,16 +8,16 @@ public class PlayerContoller2D : CharController2D {
 	private HUD _Hud;
 	private Bullet _Bullet_Primary;
 	private Bullet _Bullet_Secondary;
-	private Transform _Ammo_Primary;
-	private Transform _Ammo_Secondary;
-
+	
 	private BoxCollider2D _boxCollider;
 	private CircleCollider2D _circleCollider;
 	private int _id;
 	private bool _crouched = false;
 	private float _maxFireRateCooldown = 0.25f;
 	private float _fireCoolDown = 0.0f;
-	private MuzzleFlare _muzzleFlash;
+	private float _flashCoolDown = 0.0f;
+	private float _maxFlashCoolDown = 0.1f;
+	private SpriteRenderer _muzzleFlash;
 
 	private float Health = 10;
 	private bool Dying = false;
@@ -40,33 +40,11 @@ public class PlayerContoller2D : CharController2D {
 		_cam = GameObject.Find("Main Camera").GetComponent<CameraController>();
 		
 		//_Bullet = Bullet.transform.GetComponent<Bullet>();
-		_muzzleFlash = transform.GetComponentInChildren<MuzzleFlare>();
+		_muzzleFlash = _anim.transform.FindChild("Flash").GetComponent<SpriteRenderer>();
 
 		_boxCollider = GetComponent<BoxCollider2D>();
 		_circleCollider = GetComponent<CircleCollider2D>();	
-		_id = transform.GetInstanceID();
-
-		/*
-		Keyframe a = new Keyframe(0, 0);
-		a.tangentMode = 0;
-		Keyframe b = new Keyframe(1, 1);
-		b.tangentMode = 0;
-
-		var curve = new AnimationCurve();// (new Keyframe(0, 0, 0, 0), new Keyframe(1, 1, Mathf.Tan(Mathf.PI / 2), 0));
-		curve.AddKey(KeyframeUtil.GetNew(0.5f, 0.0f, TangentMode.Linear)); //false on 0.5 second
-		curve.AddKey(KeyframeUtil.GetNew(1.0f, 1.0f, TangentMode.Linear)); // true on 1.0 second
-
-		var clips = UnityEditor.AnimationUtility.GetAnimationClips(_anim.gameObject);
-		foreach(var c in clips)
-		{
-			Debug.Log(c.name);
-			if(c.name == "Legs_Walk")
-			{
-				Debug.Log("Test");
-				c.SetCurve("UpperBody/ForwardArm", transform.GetType(), "localPosition.x", curve);
-			}
-		}
-		*/
+		_id = transform.GetInstanceID();					
 	}
 
 	public override float HorizontalInput
@@ -100,9 +78,7 @@ public class PlayerContoller2D : CharController2D {
 
 				return Input.GetAxis("Horizontal")/2f;
 			}
-		}
-		
-		private set{}
+		}		
 	}
 
 	public override bool IsGrounded
@@ -117,6 +93,26 @@ public class PlayerContoller2D : CharController2D {
 
 	public override void ProcessInput()
 	{
+		if(Input.GetKeyDown(KeyCode.L))
+		{
+			PlayerData.LoadGame();
+			Debug.Log("Loaded");
+		}
+		if(Input.GetKeyDown(KeyCode.K))
+		{
+			PlayerData.SaveGame();
+			Debug.Log("Saved");
+		}
+		if(Input.GetKeyDown(KeyCode.J))
+		{
+			PlayerData.NewGame();
+			Debug.Log("Saved New");
+		}
+		if(Input.GetKeyDown(KeyCode.H))
+		{
+			GUIController.ShowHUD();
+		}
+		
 		bool shoot = false;
 		bool toggleMenu = Input.GetKeyDown(KeyCode.E);
 		bool toggleConsole = Input.GetKeyDown(KeyCode.C);
@@ -182,13 +178,14 @@ public class PlayerContoller2D : CharController2D {
 				_anim.SetFloat("AimDirY", fireInputY);
 			}
 		}
-
+		
+		
 		if(shoot && _fireCoolDown < 0)
 		{
 			if(_Inv != null)
 			{
 				_fireCoolDown = _maxFireRateCooldown;
-				if(!secondary && _Inv._primaryWeapon.ItemName != "" && _Ammo_Primary != null)
+				if(!secondary && _Inv._primaryWeapon.ItemName != "" && _Bullet_Primary != null)
 				{
 					_anim.SetTrigger("Attack");
 					float force = _Bullet_Primary.ShotPower.magnitude;
@@ -203,13 +200,14 @@ public class PlayerContoller2D : CharController2D {
 					var offset_xy = GetShotOffset(fireInputX, fireInputY, _facingRight, _crouched);
 					var offset = new Vector3(offset_xy.x, offset_xy.y, 0.0f);
 
-					Instantiate(_Ammo_Primary, transform.position + offset, Quaternion.identity);
+					Instantiate(_Bullet_Primary.transform, transform.position + offset, Quaternion.identity);
 
-					_muzzleFlash.Fire(shotDir);
+					_muzzleFlash.enabled = true;
+					_flashCoolDown = _maxFlashCoolDown;
 					_body.AddForce( shotDir * -_Bullet_Primary.ShotForce.magnitude / 10f);									
 				}
 
-				if(secondary && _Inv._secondaryWeapon.ItemName != "" && _Ammo_Secondary != null)
+				if(secondary && _Inv._secondaryWeapon.ItemName != "" && _Bullet_Secondary != null)
 				{
 					_anim.SetTrigger("Attack");
 					float force = _Bullet_Secondary.ShotPower.magnitude;
@@ -225,8 +223,10 @@ public class PlayerContoller2D : CharController2D {
 					var offset = new Vector3(offset_xy.x, offset_xy.y, 0.0f);
 					
 					
-					Instantiate(_Ammo_Secondary, transform.position + offset, Quaternion.identity);
-					_muzzleFlash.Fire(shotDir);
+					Instantiate(_Bullet_Secondary.transform, transform.position + offset, Quaternion.identity);
+					
+					_muzzleFlash.enabled = true;
+					_flashCoolDown = _maxFlashCoolDown;
 					_body.AddForce( shotDir * -_Bullet_Secondary.ShotForce.magnitude / 10f);
 				}
 			}
@@ -249,6 +249,12 @@ public class PlayerContoller2D : CharController2D {
 			_circleCollider.enabled = false;
 			//GetComponent<Rigidbody2D>().gravityScale = 0f;
 			Destroy(gameObject, 0.75f);
+		}
+		
+		_flashCoolDown -= Time.deltaTime;
+		if(_flashCoolDown < 0)
+		{
+			_muzzleFlash.enabled = false;
 		}
 	}
 
@@ -335,20 +341,7 @@ public class PlayerContoller2D : CharController2D {
 
 	private void SwapWeapons()
 	{
-		if(_Bullet_Primary != null && _Bullet_Secondary != null)
-		{
-			var success = _Inv.SwapWeapons();
-			if(success)
-			{
-				var tempAmmo = _Ammo_Primary;
-				var tempBullet = _Bullet_Primary;
-
-				_Ammo_Primary = _Ammo_Secondary;
-				_Bullet_Primary = _Bullet_Secondary;
-				_Ammo_Secondary = tempAmmo;
-				_Bullet_Secondary = tempBullet;
-			}
-		}
+		_Inv.SwapWeapons();		
 	}
 
 	public void ConsumeItem(string Item)
@@ -357,17 +350,6 @@ public class PlayerContoller2D : CharController2D {
 		{
 			_anim.SetTrigger("WeaponArmed");
 			_anim.SetBool("HasGun", true);
-
-			if(_Ammo_Primary == null)
-			{
-				_Inv.GetAmmo(Item, out _Ammo_Primary, out _Bullet_Primary);
-				_Inv.Equip(0, string.Empty, Item);				
-			}
-			else if(_Ammo_Secondary == null)
-			{
-				_Inv.GetAmmo(Item, out _Ammo_Secondary, out _Bullet_Secondary);
-				_Inv.Equip(1, string.Empty, Item);
-			}
 		}
 
 		if(Item == "Heart")
@@ -378,6 +360,54 @@ public class PlayerContoller2D : CharController2D {
 
 		//Debug.Log("Nom nom: " + Item);
 		_Inv.AddItem(Item);
+	}
+	
+	public void SetInfo(PlayerInfo info)
+	{
+		_Inv.Clear();
+		
+		Debug.Log("Player Loading");
+		if(info.HasWeapon)
+		{
+			Debug.Log("Player Has Weapon");
+			_anim.SetTrigger("WeaponArmed");
+			_anim.SetBool("HasGun", true);
+			
+			if(info.PrimaryWeapon != "")
+			{
+				Debug.Log("Player Armed Primary " + info.PrimaryWeapon);
+				//_Inv.GetAmmo(info.PrimaryWeapon, out _Ammo_Primary, out _Bullet_Primary);
+				//_Inv.Equip(0, string.Empty, info.PrimaryWeapon);				
+			}
+			if(info.SecondaryWeapon != "")
+			{
+				Debug.Log("Player Armed Secondary " + info.SecondaryWeapon);
+				//_Inv.GetAmmo(info.SecondaryWeapon, out _Ammo_Secondary, out _Bullet_Secondary);
+				//_Inv.Equip(1, string.Empty, info.SecondaryWeapon);
+			}
+		}
+		
+		Health = info.Health * _maxHealth;
+		_healthBar.Health = info.Health;		
+	}
+	
+	public PlayerInfo GetInfo()
+	{
+		PlayerInfo info = new PlayerInfo();
+		info.HasWeapon = _anim.GetBool("HasGun");
+		info.Health = _healthBar.Health;
+		
+		return info;
+	}
+	
+	public void SetPrimaryAmmo(Bullet bullet)
+	{
+		_Bullet_Primary = bullet;
+	}
+	
+	public void SetSecondaryAmmo(Bullet bullet)
+	{
+		_Bullet_Secondary = bullet;
 	}
 
 	public override void ApplyDamage(DamageDescription damage)

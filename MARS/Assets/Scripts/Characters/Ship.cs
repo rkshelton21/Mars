@@ -36,10 +36,15 @@ public class Ship : MonoBehaviour {
 			{
 				GUIController.ShowConsole();
 				_messages.gameObject.SetActive(false);
-				launchMessage.SetMessage("Click to Launch");
+				launchMessage.SetMessage("Click (Or press Space) to Launch");
 				launchMessageOn = true;
 			}
 		}				
+		
+		if(Input.GetKey(KeyCode.Space))
+		{
+			MessageClicked();
+		}
 	}
 	
 	public void MessageClicked()

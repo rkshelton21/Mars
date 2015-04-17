@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -15,35 +15,28 @@ public class Inventory : MonoBehaviour {
 
 	public InventoryItem _primaryWeapon = null;
 	public InventoryItem _secondaryWeapon = null;
-
+	private PlayerContoller2D _player = null;
 	private HUD _Hud;
 
 	// Use this for initialization
 	void Start () 
 	{
 		_Hud = GameObject.Find("HUD").GetComponent<HUD>();	
-		_inventoryGrid = transform.FindChild("InventoryGrid");
+		_inventoryGrid = transform.FindChild("InventoryGrid");		
+		GetPlayer();
+		
 		Hide ();
 		
-		foreach(var item in SupportedItems)
+		Clear ();
+	}
+	
+	private PlayerContoller2D GetPlayer()
+	{
+		if(_player == null)
 		{
-			var name = item.name.Replace("_Bullet", "");
-			name = name.Replace("Consumable_", "");
-			var slotObj = (Transform)Instantiate(InventorySlotTemplate, new Vector3(), Quaternion.identity);
-			var script = slotObj.GetComponent<InventoryItemSlotScript>();
-			slotObj.SetParent(_inventoryGrid);
-			
-			_ItemSlotScripts.Add(name, script);
-			script.SetItem(new InventoryItem(item.gameObject));			
-			script.SetCount(0);
+			_player = GameObject.Find("Player").GetComponent<PlayerContoller2D>();
 		}
-		
-		foreach(var item in SupportedAmmo)
-		{
-			var name = item.name.Replace("_Bullet", "");
-			name = name.Replace("Consumable_", "");
-			AmmoStock.Add(new BulletType(){ Name = name, Bullet = item });			
-		}
+		return _player;
 	}
 
 	public void Toggle()
@@ -68,7 +61,47 @@ public class Inventory : MonoBehaviour {
 		var c = transform.GetChild(0);
 		c.gameObject.SetActive(false); 
 	}
-
+	
+	public void Clear()
+	{
+		_primaryWeapon = null;
+		_secondaryWeapon = null;
+		
+		_Hud.Set(0, null);
+		_Hud.Set(1, null);
+		
+		foreach(var item in SupportedItems)
+		{
+			var name = item.name.Replace("_Bullet", "");
+			name = name.Replace("Consumable_", "");
+			
+			if(!_ItemSlotScripts.ContainsKey(name))
+			{
+				var slotObj = (Transform)Instantiate(InventorySlotTemplate, new Vector3(), Quaternion.identity);
+				var script = slotObj.GetComponent<InventoryItemSlotScript>();
+				slotObj.SetParent(_inventoryGrid);			
+			
+				script.SetItem(new InventoryItem(item.gameObject));			
+				script.SetCount(0);
+				
+				_ItemSlotScripts.Add(name, script);
+			}
+			else
+			{
+				var script = _ItemSlotScripts[name];
+				script.SetItem(new InventoryItem(item.gameObject));			
+				script.SetCount(0);
+			}			
+		}
+		
+		foreach(var item in SupportedAmmo)
+		{
+			var name = item.name.Replace("_Bullet", "");
+			name = name.Replace("Consumable_", "");
+			AmmoStock.Add(new BulletType(){ Name = name, Bullet = item });			
+		}
+	}
+	
 	public void SetItemCount(string name, int count)
 	{
 		var itemMatch = _ItemSlotScripts[name];
@@ -78,6 +111,17 @@ public class Inventory : MonoBehaviour {
 		}
 		else
 		{
+			if(_primaryWeapon != null && _primaryWeapon.ItemName == name && count == 0)
+			{
+				Debug.Log("Cleared primary");
+				_Hud.Set(0, null);
+			}
+			
+			if(_secondaryWeapon != null && _secondaryWeapon.ItemName == name && count == 0)
+			{
+				_Hud.Set(1, null);
+			}
+			
 			itemMatch.SetCount(count);
 		}
 	}
@@ -89,10 +133,35 @@ public class Inventory : MonoBehaviour {
 			Debug.LogError("Item (" + name +  ") not supported in inventory.");
 		}
 
+		if(name.Contains("Gun") && (_primaryWeapon == null || _primaryWeapon.ItemName == ""))
+		{
+			Debug.Log("A");
+			Equip(0, string.Empty, name);
+			foreach(var b in AmmoStock)
+			{
+				if(b.Name == name)
+				{
+					GetPlayer().SetPrimaryAmmo(b.Bullet.GetComponent<Bullet>());					
+				}
+			}
+						
+		}
+		
 		var itemMatch = _ItemSlotScripts[name];
 		itemMatch.IncrementCount();
 
 		//Debug.Log("Name:" + _primaryWeapon.ItemName + ":" + name + ":" + itemMatch.ItemName);
+	}
+	
+	public List<KeyValuePair<string, int>> GetItems()
+	{
+		var items = new List<KeyValuePair<string, int>>();
+		var i = 0;
+		foreach(var slot in _ItemSlotScripts)
+		{
+			items.Add(new KeyValuePair<string, int>(slot.Key, slot.Value.GetItem().ItemCount));
+		}
+		return items;		
 	}
 
 	public bool SwapWeapons()

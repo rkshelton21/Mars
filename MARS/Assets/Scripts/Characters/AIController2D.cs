@@ -7,7 +7,7 @@ public class AIController2D : CharController2D {
 	protected BoxCollider2D _boxCollider;
 	protected BoxCollider2D _deathCollider;
 	protected BoxCollider2D _overlapCollider;
-	protected CircleCollider2D _circleCollider;
+	protected CircleCollider2D[] _circleColliders;
 	protected int _id;
 	protected float Health = 10;
 	protected bool Dying = false;
@@ -16,13 +16,13 @@ public class AIController2D : CharController2D {
 	protected Transform _target;
 	protected System.Random _rand;
 	protected float MaxTargetDistance = 0.5f;
-	protected float _maxAudioDistance = 1.5f;
+	protected float _maxAudioDistance = 0.5f;
 
 	public override void Init()
 	{
 		_healthBar = GetComponentInChildren<HealthBar>();
 		_boxCollider = GetComponent<BoxCollider2D>();
-		_circleCollider = GetComponent<CircleCollider2D>();	
+		_circleColliders = GetComponents<CircleCollider2D>();	
 		_overlapCollider = transform.FindChild("Overlap Collider").GetComponent<BoxCollider2D>();
 		_deathCollider = transform.FindChild("DeathCollider").GetComponent<BoxCollider2D>();
 
@@ -58,6 +58,7 @@ public class AIController2D : CharController2D {
 				float delayTime = Random.Range (0, 1);
 				// Play the audio with a delay
 				audioSources[0].PlayDelayed (delayTime);
+				audioSources[0].pitch = Random.Range (0.8f, 1.8f);
 			}
 		}
 	}
@@ -111,9 +112,7 @@ public class AIController2D : CharController2D {
 					return 0;
 				}
 			}
-		}
-		
-		private set{}
+		}		
 	}
 
 	public override void UpdateAnimations()
@@ -173,9 +172,7 @@ public class AIController2D : CharController2D {
 		get
 		{
 			return false;
-		}
-		
-		private set{}
+		}		
 	}
 
 	public override void Collide(Collision2D collision)
@@ -235,6 +232,9 @@ public class AIController2D : CharController2D {
 
 	public override void ApplyDamage(DamageDescription damage)
 	{
+		if(Dying)
+			return;
+			
 		_attackTimer = AttackCooldown;
 
 		if (ImpactClip != null) 
@@ -259,7 +259,10 @@ public class AIController2D : CharController2D {
 		{
 			if(!Dying)
 			{
-				_circleCollider.enabled = false;
+				for(int i=0; i<_circleColliders.Length; i++)
+				{
+					_circleColliders[i].enabled = false;
+				}
 				_boxCollider.enabled = false;
 				_deathCollider.enabled = true;
 				_healthBar.transform.gameObject.SetActive(false);
@@ -278,26 +281,40 @@ public class AIController2D : CharController2D {
 			{
 				_boxCollider.enabled = false;
 			}
-			if(_circleCollider != null)
+			if(_circleColliders != null)
 			{
-				_circleCollider.enabled = false;
+				for(int i=0; i<_circleColliders.Length; i++)
+				{
+					_circleColliders[i].enabled = false;
+				}				
 			}
 			//rigidbody2D.gravityScale = 0f;
 
 			this.enabled = false;
 
 			if(DestroyOnDeath)
+			{
 				Destroy(gameObject, 1.75f);
+				Debug.Log("Destroy");
+			}
+			else
+			{
+				Debug.Log("Dead Body");
+				ObjectPooler.Current.Initialize("DeadBody", 1, transform.position, new DeadBodyParams(){ BodyRenderer = _renderer, Countdown = 1.5f});
+			}
 		}
 		else
 		{
-			_anim.SetTrigger("Hit");
+			if(_anim != null)
+			{
+				_anim.SetTrigger("Hit");			
+			}
 		}
 
 		damage.Reflect(_id, 2.5f, 1.0f);
 		if(_healthBar != null)
 		{
-			_healthBar.SetHealth(Health / _maxHealth);
+			_healthBar.SetHealth(Health / _maxHealth);			
 		}
 	}
 

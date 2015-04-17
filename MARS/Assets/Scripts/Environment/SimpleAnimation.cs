@@ -10,7 +10,9 @@ public class SimpleAnimation : MonoBehaviour {
 	private float _timeTillNextSprite;
 	private SpriteRenderer _renderer;
 	public float StartDelay = 0.0f;
-
+	public float MaxStart = 0.0f;
+	public bool RandomStart = false;
+	
 	public virtual void CycleComplete(){
 		}
 
@@ -19,7 +21,13 @@ public class SimpleAnimation : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		_timeTillNextSprite = SpriteDuration + StartDelay;	
+		var delay = StartDelay;
+		if(RandomStart)
+		{
+			delay = Random.Range(StartDelay, MaxStart);
+		}
+		
+		_timeTillNextSprite = SpriteDuration + delay;	
 		_renderer = this.GetComponent<SpriteRenderer> ();
 		if (_renderer == null)
 			Debug.LogError ("Could not find sprite renderer to animate.");

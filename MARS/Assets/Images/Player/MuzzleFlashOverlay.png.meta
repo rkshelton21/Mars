@@ -1,0 +1,5379 @@
+fileFormatVersion: 2
+guid: fae517b5341db75499cafda6baae182e
+timeCreated: 1428170442
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: MuzzleFlashOverlay_0
+    21300002: MuzzleFlashOverlay_1
+    21300004: MuzzleFlashOverlay_2
+    21300006: MuzzleFlashOverlay_3
+    21300008: MuzzleFlashOverlay_4
+    21300010: MuzzleFlashOverlay_5
+    21300012: MuzzleFlashOverlay_6
+    21300014: MuzzleFlashOverlay_7
+    21300016: MuzzleFlashOverlay_8
+    21300018: MuzzleFlashOverlay_9
+    21300020: MuzzleFlashOverlay_10
+    21300022: MuzzleFlashOverlay_11
+    21300024: MuzzleFlashOverlay_12
+    21300026: MuzzleFlashOverlay_13
+    21300028: MuzzleFlashOverlay_14
+    21300030: MuzzleFlashOverlay_15
+    21300032: MuzzleFlashOverlay_16
+    21300034: MuzzleFlashOverlay_17
+    21300036: MuzzleFlashOverlay_18
+    21300038: MuzzleFlashOverlay_19
+    21300040: MuzzleFlashOverlay_20
+    21300042: MuzzleFlashOverlay_21
+    21300044: MuzzleFlashOverlay_22
+    21300046: MuzzleFlashOverlay_23
+    21300048: MuzzleFlashOverlay_24
+    21300050: MuzzleFlashOverlay_25
+    21300052: MuzzleFlashOverlay_26
+    21300054: MuzzleFlashOverlay_27
+    21300056: MuzzleFlashOverlay_28
+    21300058: MuzzleFlashOverlay_29
+    21300060: MuzzleFlashOverlay_30
+    21300062: MuzzleFlashOverlay_31
+    21300064: MuzzleFlashOverlay_32
+    21300066: MuzzleFlashOverlay_33
+    21300068: MuzzleFlashOverlay_34
+    21300070: MuzzleFlashOverlay_35
+    21300072: MuzzleFlashOverlay_36
+    21300074: MuzzleFlashOverlay_37
+    21300076: MuzzleFlashOverlay_38
+    21300078: MuzzleFlashOverlay_39
+    21300080: MuzzleFlashOverlay_40
+    21300082: MuzzleFlashOverlay_41
+    21300084: MuzzleFlashOverlay_42
+    21300086: MuzzleFlashOverlay_43
+    21300088: MuzzleFlashOverlay_44
+    21300090: MuzzleFlashOverlay_45
+    21300092: MuzzleFlashOverlay_46
+    21300094: MuzzleFlashOverlay_47
+    21300096: MuzzleFlashOverlay_48
+    21300098: MuzzleFlashOverlay_49
+    21300100: MuzzleFlashOverlay_50
+    21300102: MuzzleFlashOverlay_51
+    21300104: MuzzleFlashOverlay_52
+    21300106: MuzzleFlashOverlay_53
+    21300108: MuzzleFlashOverlay_54
+    21300110: MuzzleFlashOverlay_55
+    21300112: MuzzleFlashOverlay_56
+    21300114: MuzzleFlashOverlay_57
+    21300116: MuzzleFlashOverlay_58
+    21300118: MuzzleFlashOverlay_59
+    21300120: MuzzleFlashOverlay_60
+    21300122: MuzzleFlashOverlay_61
+    21300124: MuzzleFlashOverlay_62
+    21300126: MuzzleFlashOverlay_63
+    21300128: MuzzleFlashOverlay_64
+    21300130: MuzzleFlashOverlay_65
+    21300132: MuzzleFlashOverlay_66
+    21300134: MuzzleFlashOverlay_67
+    21300136: MuzzleFlashOverlay_68
+    21300138: MuzzleFlashOverlay_69
+    21300140: MuzzleFlashOverlay_70
+    21300142: MuzzleFlashOverlay_71
+    21300144: MuzzleFlashOverlay_72
+    21300146: MuzzleFlashOverlay_73
+    21300148: MuzzleFlashOverlay_74
+    21300150: MuzzleFlashOverlay_75
+    21300152: MuzzleFlashOverlay_76
+    21300154: MuzzleFlashOverlay_77
+    21300156: MuzzleFlashOverlay_78
+    21300158: MuzzleFlashOverlay_79
+    21300160: MuzzleFlashOverlay_80
+    21300162: MuzzleFlashOverlay_81
+    21300164: MuzzleFlashOverlay_82
+    21300166: MuzzleFlashOverlay_83
+    21300168: MuzzleFlashOverlay_84
+    21300170: MuzzleFlashOverlay_85
+    21300172: MuzzleFlashOverlay_86
+    21300174: MuzzleFlashOverlay_87
+    21300176: MuzzleFlashOverlay_88
+    21300178: MuzzleFlashOverlay_89
+    21300180: MuzzleFlashOverlay_90
+    21300182: MuzzleFlashOverlay_91
+    21300184: MuzzleFlashOverlay_92
+    21300186: MuzzleFlashOverlay_93
+    21300188: MuzzleFlashOverlay_94
+    21300190: MuzzleFlashOverlay_95
+    21300192: MuzzleFlashOverlay_96
+    21300194: MuzzleFlashOverlay_97
+    21300196: MuzzleFlashOverlay_98
+    21300198: MuzzleFlashOverlay_99
+    21300200: MuzzleFlashOverlay_100
+    21300202: MuzzleFlashOverlay_101
+    21300204: MuzzleFlashOverlay_102
+    21300206: MuzzleFlashOverlay_103
+    21300208: MuzzleFlashOverlay_104
+    21300210: MuzzleFlashOverlay_105
+    21300212: MuzzleFlashOverlay_106
+    21300214: MuzzleFlashOverlay_107
+    21300216: MuzzleFlashOverlay_108
+    21300218: MuzzleFlashOverlay_109
+    21300220: MuzzleFlashOverlay_110
+    21300222: MuzzleFlashOverlay_111
+    21300224: MuzzleFlashOverlay_112
+    21300226: MuzzleFlashOverlay_113
+    21300228: MuzzleFlashOverlay_114
+    21300230: MuzzleFlashOverlay_115
+    21300232: MuzzleFlashOverlay_116
+    21300234: MuzzleFlashOverlay_117
+    21300236: MuzzleFlashOverlay_118
+    21300238: MuzzleFlashOverlay_119
+    21300240: MuzzleFlashOverlay_120
+    21300242: MuzzleFlashOverlay_121
+    21300244: MuzzleFlashOverlay_122
+    21300246: MuzzleFlashOverlay_123
+    21300248: MuzzleFlashOverlay_124
+    21300250: MuzzleFlashOverlay_125
+    21300252: MuzzleFlashOverlay_126
+    21300254: MuzzleFlashOverlay_127
+    21300256: MuzzleFlashOverlay_128
+    21300258: MuzzleFlashOverlay_129
+    21300260: MuzzleFlashOverlay_130
+    21300262: MuzzleFlashOverlay_131
+    21300264: MuzzleFlashOverlay_132
+    21300266: MuzzleFlashOverlay_133
+    21300268: MuzzleFlashOverlay_134
+    21300270: MuzzleFlashOverlay_135
+    21300272: MuzzleFlashOverlay_136
+    21300274: MuzzleFlashOverlay_137
+    21300276: MuzzleFlashOverlay_138
+    21300278: MuzzleFlashOverlay_139
+    21300280: MuzzleFlashOverlay_140
+    21300282: MuzzleFlashOverlay_141
+    21300284: MuzzleFlashOverlay_142
+    21300286: MuzzleFlashOverlay_143
+    21300288: MuzzleFlashOverlay_144
+    21300290: MuzzleFlashOverlay_145
+    21300292: MuzzleFlashOverlay_146
+    21300294: MuzzleFlashOverlay_147
+    21300296: MuzzleFlashOverlay_148
+    21300298: MuzzleFlashOverlay_149
+    21300300: MuzzleFlashOverlay_150
+    21300302: MuzzleFlashOverlay_151
+    21300304: MuzzleFlashOverlay_152
+    21300306: MuzzleFlashOverlay_153
+    21300308: MuzzleFlashOverlay_154
+    21300310: MuzzleFlashOverlay_155
+    21300312: MuzzleFlashOverlay_156
+    21300314: MuzzleFlashOverlay_157
+    21300316: MuzzleFlashOverlay_158
+    21300318: MuzzleFlashOverlay_159
+    21300320: MuzzleFlashOverlay_160
+    21300322: MuzzleFlashOverlay_161
+    21300324: MuzzleFlashOverlay_162
+    21300326: MuzzleFlashOverlay_163
+    21300328: MuzzleFlashOverlay_164
+    21300330: MuzzleFlashOverlay_165
+    21300332: MuzzleFlashOverlay_166
+    21300334: MuzzleFlashOverlay_167
+    21300336: MuzzleFlashOverlay_168
+    21300338: MuzzleFlashOverlay_169
+    21300340: MuzzleFlashOverlay_170
+    21300342: MuzzleFlashOverlay_171
+    21300344: MuzzleFlashOverlay_172
+    21300346: MuzzleFlashOverlay_173
+    21300348: MuzzleFlashOverlay_174
+    21300350: MuzzleFlashOverlay_175
+    21300352: MuzzleFlashOverlay_176
+    21300354: MuzzleFlashOverlay_177
+    21300356: MuzzleFlashOverlay_178
+    21300358: MuzzleFlashOverlay_179
+    21300360: MuzzleFlashOverlay_180
+    21300362: MuzzleFlashOverlay_181
+    21300364: MuzzleFlashOverlay_182
+    21300366: MuzzleFlashOverlay_183
+    21300368: MuzzleFlashOverlay_184
+    21300370: MuzzleFlashOverlay_185
+    21300372: MuzzleFlashOverlay_186
+    21300374: MuzzleFlashOverlay_187
+    21300376: MuzzleFlashOverlay_188
+    21300378: MuzzleFlashOverlay_189
+    21300380: MuzzleFlashOverlay_190
+    21300382: MuzzleFlashOverlay_191
+    21300384: MuzzleFlashOverlay_192
+    21300386: MuzzleFlashOverlay_193
+    21300388: MuzzleFlashOverlay_194
+    21300390: MuzzleFlashOverlay_195
+    21300392: MuzzleFlashOverlay_196
+    21300394: MuzzleFlashOverlay_197
+    21300396: MuzzleFlashOverlay_198
+    21300398: MuzzleFlashOverlay_199
+    21300400: MuzzleFlashOverlay_200
+    21300402: MuzzleFlashOverlay_201
+    21300404: MuzzleFlashOverlay_202
+    21300406: MuzzleFlashOverlay_203
+    21300408: MuzzleFlashOverlay_204
+    21300410: MuzzleFlashOverlay_205
+    21300412: MuzzleFlashOverlay_206
+    21300414: MuzzleFlashOverlay_207
+    21300416: MuzzleFlashOverlay_208
+    21300418: MuzzleFlashOverlay_209
+    21300420: MuzzleFlashOverlay_210
+    21300422: MuzzleFlashOverlay_211
+    21300424: MuzzleFlashOverlay_212
+    21300426: MuzzleFlashOverlay_213
+    21300428: MuzzleFlashOverlay_214
+    21300430: MuzzleFlashOverlay_215
+    21300432: MuzzleFlashOverlay_216
+    21300434: MuzzleFlashOverlay_217
+    21300436: MuzzleFlashOverlay_218
+    21300438: MuzzleFlashOverlay_219
+    21300440: MuzzleFlashOverlay_220
+    21300442: MuzzleFlashOverlay_221
+    21300444: MuzzleFlashOverlay_222
+    21300446: MuzzleFlashOverlay_223
+    21300448: MuzzleFlashOverlay_224
+    21300450: MuzzleFlashOverlay_225
+    21300452: MuzzleFlashOverlay_226
+    21300454: MuzzleFlashOverlay_227
+    21300456: MuzzleFlashOverlay_228
+    21300458: MuzzleFlashOverlay_229
+    21300460: MuzzleFlashOverlay_230
+    21300462: MuzzleFlashOverlay_231
+    21300464: MuzzleFlashOverlay_232
+    21300466: MuzzleFlashOverlay_233
+    21300468: MuzzleFlashOverlay_234
+    21300470: MuzzleFlashOverlay_235
+    21300472: MuzzleFlashOverlay_236
+    21300474: MuzzleFlashOverlay_237
+    21300476: MuzzleFlashOverlay_238
+    21300478: MuzzleFlashOverlay_239
+    21300480: MuzzleFlashOverlay_240
+    21300482: MuzzleFlashOverlay_241
+    21300484: MuzzleFlashOverlay_242
+    21300486: MuzzleFlashOverlay_243
+    21300488: MuzzleFlashOverlay_244
+    21300490: MuzzleFlashOverlay_245
+    21300492: MuzzleFlashOverlay_246
+    21300494: MuzzleFlashOverlay_247
+    21300496: MuzzleFlashOverlay_248
+    21300498: MuzzleFlashOverlay_249
+    21300500: MuzzleFlashOverlay_250
+    21300502: MuzzleFlashOverlay_251
+    21300504: MuzzleFlashOverlay_252
+    21300506: MuzzleFlashOverlay_253
+    21300508: MuzzleFlashOverlay_254
+    21300510: MuzzleFlashOverlay_255
+    21300512: MuzzleFlashOverlay_256
+    21300514: MuzzleFlashOverlay_257
+    21300516: MuzzleFlashOverlay_258
+    21300518: MuzzleFlashOverlay_259
+    21300520: MuzzleFlashOverlay_260
+    21300522: MuzzleFlashOverlay_261
+    21300524: MuzzleFlashOverlay_262
+    21300526: MuzzleFlashOverlay_263
+    21300528: MuzzleFlashOverlay_264
+    21300530: MuzzleFlashOverlay_265
+    21300532: MuzzleFlashOverlay_266
+    21300534: MuzzleFlashOverlay_267
+    21300536: MuzzleFlashOverlay_268
+    21300538: MuzzleFlashOverlay_269
+    21300540: MuzzleFlashOverlay_270
+    21300542: MuzzleFlashOverlay_271
+    21300544: MuzzleFlashOverlay_272
+    21300546: MuzzleFlashOverlay_273
+    21300548: MuzzleFlashOverlay_274
+    21300550: MuzzleFlashOverlay_275
+    21300552: MuzzleFlashOverlay_276
+    21300554: MuzzleFlashOverlay_277
+    21300556: MuzzleFlashOverlay_278
+    21300558: MuzzleFlashOverlay_279
+    21300560: MuzzleFlashOverlay_280
+    21300562: MuzzleFlashOverlay_281
+    21300564: MuzzleFlashOverlay_282
+    21300566: MuzzleFlashOverlay_283
+    21300568: MuzzleFlashOverlay_284
+    21300570: MuzzleFlashOverlay_285
+    21300572: MuzzleFlashOverlay_286
+    21300574: MuzzleFlashOverlay_287
+    21300576: MuzzleFlashOverlay_288
+    21300578: MuzzleFlashOverlay_289
+    21300580: MuzzleFlashOverlay_290
+    21300582: MuzzleFlashOverlay_291
+    21300584: MuzzleFlashOverlay_292
+    21300586: MuzzleFlashOverlay_293
+    21300588: MuzzleFlashOverlay_294
+    21300590: MuzzleFlashOverlay_295
+    21300592: MuzzleFlashOverlay_296
+    21300594: MuzzleFlashOverlay_297
+    21300596: MuzzleFlashOverlay_298
+    21300598: MuzzleFlashOverlay_299
+    21300600: MuzzleFlashOverlay_300
+    21300602: MuzzleFlashOverlay_301
+    21300604: MuzzleFlashOverlay_302
+    21300606: MuzzleFlashOverlay_303
+    21300608: MuzzleFlashOverlay_304
+    21300610: MuzzleFlashOverlay_305
+    21300612: MuzzleFlashOverlay_306
+    21300614: MuzzleFlashOverlay_307
+    21300616: MuzzleFlashOverlay_308
+    21300618: MuzzleFlashOverlay_309
+    21300620: MuzzleFlashOverlay_310
+    21300622: MuzzleFlashOverlay_311
+    21300624: MuzzleFlashOverlay_312
+    21300626: MuzzleFlashOverlay_313
+    21300628: MuzzleFlashOverlay_314
+    21300630: MuzzleFlashOverlay_315
+    21300632: MuzzleFlashOverlay_316
+    21300634: MuzzleFlashOverlay_317
+    21300636: MuzzleFlashOverlay_318
+    21300638: MuzzleFlashOverlay_319
+    21300640: MuzzleFlashOverlay_320
+    21300642: MuzzleFlashOverlay_321
+    21300644: MuzzleFlashOverlay_322
+    21300646: MuzzleFlashOverlay_323
+    21300648: MuzzleFlashOverlay_324
+    21300650: MuzzleFlashOverlay_325
+    21300652: MuzzleFlashOverlay_326
+    21300654: MuzzleFlashOverlay_327
+    21300656: MuzzleFlashOverlay_328
+    21300658: MuzzleFlashOverlay_329
+    21300660: MuzzleFlashOverlay_330
+    21300662: MuzzleFlashOverlay_331
+    21300664: MuzzleFlashOverlay_332
+    21300666: MuzzleFlashOverlay_333
+    21300668: MuzzleFlashOverlay_334
+    21300670: MuzzleFlashOverlay_335
+    21300672: MuzzleFlashOverlay_336
+    21300674: MuzzleFlashOverlay_337
+    21300676: MuzzleFlashOverlay_338
+    21300678: MuzzleFlashOverlay_339
+    21300680: MuzzleFlashOverlay_340
+    21300682: MuzzleFlashOverlay_341
+    21300684: MuzzleFlashOverlay_342
+    21300686: MuzzleFlashOverlay_343
+    21300688: MuzzleFlashOverlay_344
+    21300690: MuzzleFlashOverlay_345
+    21300692: MuzzleFlashOverlay_346
+    21300694: MuzzleFlashOverlay_347
+    21300696: MuzzleFlashOverlay_348
+    21300698: MuzzleFlashOverlay_349
+    21300700: MuzzleFlashOverlay_350
+    21300702: MuzzleFlashOverlay_351
+    21300704: MuzzleFlashOverlay_352
+    21300706: MuzzleFlashOverlay_353
+    21300708: MuzzleFlashOverlay_354
+    21300710: MuzzleFlashOverlay_355
+    21300712: MuzzleFlashOverlay_356
+    21300714: MuzzleFlashOverlay_357
+    21300716: MuzzleFlashOverlay_358
+    21300718: MuzzleFlashOverlay_359
+    21300720: MuzzleFlashOverlay_360
+    21300722: MuzzleFlashOverlay_361
+    21300724: MuzzleFlashOverlay_362
+    21300726: MuzzleFlashOverlay_363
+    21300728: MuzzleFlashOverlay_364
+    21300730: MuzzleFlashOverlay_365
+    21300732: MuzzleFlashOverlay_366
+    21300734: MuzzleFlashOverlay_367
+    21300736: MuzzleFlashOverlay_368
+    21300738: MuzzleFlashOverlay_369
+    21300740: MuzzleFlashOverlay_370
+    21300742: MuzzleFlashOverlay_371
+    21300744: MuzzleFlashOverlay_372
+    21300746: MuzzleFlashOverlay_373
+    21300748: MuzzleFlashOverlay_374
+    21300750: MuzzleFlashOverlay_375
+    21300752: MuzzleFlashOverlay_376
+    21300754: MuzzleFlashOverlay_377
+    21300756: MuzzleFlashOverlay_378
+    21300758: MuzzleFlashOverlay_379
+    21300760: MuzzleFlashOverlay_380
+    21300762: MuzzleFlashOverlay_381
+    21300764: MuzzleFlashOverlay_382
+    21300766: MuzzleFlashOverlay_383
+    21300768: MuzzleFlashOverlay_384
+    21300770: MuzzleFlashOverlay_385
+    21300772: MuzzleFlashOverlay_386
+    21300774: MuzzleFlashOverlay_387
+    21300776: MuzzleFlashOverlay_388
+    21300778: MuzzleFlashOverlay_389
+    21300780: MuzzleFlashOverlay_390
+    21300782: MuzzleFlashOverlay_391
+    21300784: MuzzleFlashOverlay_392
+    21300786: MuzzleFlashOverlay_393
+    21300788: MuzzleFlashOverlay_394
+    21300790: MuzzleFlashOverlay_395
+    21300792: MuzzleFlashOverlay_396
+    21300794: MuzzleFlashOverlay_397
+    21300796: MuzzleFlashOverlay_398
+    21300798: MuzzleFlashOverlay_399
+    21300800: MuzzleFlashOverlay_400
+    21300802: MuzzleFlashOverlay_401
+    21300804: MuzzleFlashOverlay_402
+    21300806: MuzzleFlashOverlay_403
+    21300808: MuzzleFlashOverlay_404
+    21300810: MuzzleFlashOverlay_405
+    21300812: MuzzleFlashOverlay_406
+    21300814: MuzzleFlashOverlay_407
+    21300816: MuzzleFlashOverlay_408
+    21300818: MuzzleFlashOverlay_409
+    21300820: MuzzleFlashOverlay_410
+    21300822: MuzzleFlashOverlay_411
+    21300824: MuzzleFlashOverlay_412
+    21300826: MuzzleFlashOverlay_413
+    21300828: MuzzleFlashOverlay_414
+    21300830: MuzzleFlashOverlay_415
+    21300832: MuzzleFlashOverlay_416
+    21300834: MuzzleFlashOverlay_417
+    21300836: MuzzleFlashOverlay_418
+    21300838: MuzzleFlashOverlay_419
+    21300840: MuzzleFlashOverlay_420
+    21300842: MuzzleFlashOverlay_421
+    21300844: MuzzleFlashOverlay_422
+    21300846: MuzzleFlashOverlay_423
+    21300848: MuzzleFlashOverlay_424
+    21300850: MuzzleFlashOverlay_425
+    21300852: MuzzleFlashOverlay_426
+    21300854: MuzzleFlashOverlay_427
+    21300856: MuzzleFlashOverlay_428
+    21300858: MuzzleFlashOverlay_429
+    21300860: MuzzleFlashOverlay_430
+    21300862: MuzzleFlashOverlay_431
+    21300864: MuzzleFlashOverlay_432
+    21300866: MuzzleFlashOverlay_433
+    21300868: MuzzleFlashOverlay_434
+    21300870: MuzzleFlashOverlay_435
+    21300872: MuzzleFlashOverlay_436
+    21300874: MuzzleFlashOverlay_437
+    21300876: MuzzleFlashOverlay_438
+    21300878: MuzzleFlashOverlay_439
+    21300880: MuzzleFlashOverlay_440
+    21300882: MuzzleFlashOverlay_441
+    21300884: MuzzleFlashOverlay_442
+    21300886: MuzzleFlashOverlay_443
+    21300888: MuzzleFlashOverlay_444
+    21300890: MuzzleFlashOverlay_445
+    21300892: MuzzleFlashOverlay_446
+    21300894: MuzzleFlashOverlay_447
+    21300896: MuzzleFlashOverlay_448
+    21300898: MuzzleFlashOverlay_449
+    21300900: MuzzleFlashOverlay_450
+    21300902: MuzzleFlashOverlay_451
+    21300904: MuzzleFlashOverlay_452
+    21300906: MuzzleFlashOverlay_453
+    21300908: MuzzleFlashOverlay_454
+    21300910: MuzzleFlashOverlay_455
+    21300912: MuzzleFlashOverlay_456
+    21300914: MuzzleFlashOverlay_457
+    21300916: MuzzleFlashOverlay_458
+    21300918: MuzzleFlashOverlay_459
+    21300920: MuzzleFlashOverlay_460
+    21300922: MuzzleFlashOverlay_461
+    21300924: MuzzleFlashOverlay_462
+    21300926: MuzzleFlashOverlay_463
+    21300928: MuzzleFlashOverlay_464
+    21300930: MuzzleFlashOverlay_465
+    21300932: MuzzleFlashOverlay_466
+    21300934: MuzzleFlashOverlay_467
+    21300936: MuzzleFlashOverlay_468
+    21300938: MuzzleFlashOverlay_469
+    21300940: MuzzleFlashOverlay_470
+    21300942: MuzzleFlashOverlay_471
+    21300944: MuzzleFlashOverlay_472
+    21300946: MuzzleFlashOverlay_473
+    21300948: MuzzleFlashOverlay_474
+    21300950: MuzzleFlashOverlay_475
+    21300952: MuzzleFlashOverlay_476
+    21300954: MuzzleFlashOverlay_477
+    21300956: MuzzleFlashOverlay_478
+    21300958: MuzzleFlashOverlay_479
+    21300960: MuzzleFlashOverlay_480
+    21300962: MuzzleFlashOverlay_481
+    21300964: MuzzleFlashOverlay_482
+    21300966: MuzzleFlashOverlay_483
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: MuzzleFlashOverlay_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 979
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_1
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 979
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_2
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 979
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_3
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 979
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_4
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 979
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_5
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 979
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_6
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 979
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_7
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 979
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_8
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 979
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_9
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 979
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_10
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 979
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_11
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 979
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_12
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 979
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_13
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 979
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_14
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 979
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_15
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 979
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_16
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 979
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_17
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 979
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_18
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 979
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_19
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 979
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_20
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 979
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_21
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 979
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 934
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_23
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 934
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_24
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 934
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_25
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 934
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_26
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 934
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_27
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 934
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_28
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 934
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_29
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 934
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_30
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 934
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_31
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 934
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_32
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 934
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_33
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 934
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_34
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 934
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_35
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 934
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_36
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 934
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_37
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 934
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_38
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 934
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_39
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 934
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_40
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 934
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_41
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 934
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_42
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 934
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_43
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 934
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 889
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_45
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 889
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_46
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 889
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_47
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 889
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_48
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 889
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_49
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 889
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_50
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 889
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_51
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 889
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_52
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 889
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_53
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 889
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_54
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 889
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_55
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 889
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_56
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 889
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_57
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 889
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_58
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 889
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_59
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 889
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_60
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 889
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_61
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 889
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_62
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 889
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_63
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 889
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_64
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 889
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_65
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 889
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 844
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_67
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 844
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_68
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 844
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_69
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 844
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_70
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 844
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_71
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 844
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_72
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 844
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_73
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 844
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_74
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 844
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_75
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 844
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_76
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 844
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_77
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 844
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_78
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 844
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_79
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 844
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_80
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 844
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_81
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 844
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_82
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 844
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_83
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 844
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_84
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 844
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_85
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 844
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_86
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 844
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_87
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 844
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 799
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_89
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 799
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_90
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 799
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_91
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 799
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_92
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 799
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_93
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 799
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_94
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 799
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_95
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 799
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_96
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 799
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_97
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 799
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_98
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 799
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_99
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 799
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_100
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 799
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_101
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 799
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_102
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 799
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_103
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 799
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_104
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 799
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_105
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 799
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_106
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 799
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_107
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 799
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_108
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 799
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_109
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 799
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_110
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 754
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_111
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 754
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_112
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 754
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_113
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 754
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_114
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 754
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_115
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 754
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_116
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 754
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_117
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 754
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_118
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 754
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_119
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 754
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_120
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 754
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_121
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 754
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_122
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 754
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_123
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 754
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_124
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 754
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_125
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 754
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_126
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 754
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_127
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 754
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_128
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 754
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_129
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 754
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_130
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 754
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_131
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 754
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_132
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 709
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_133
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 709
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_134
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 709
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_135
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 709
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_136
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 709
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_137
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 709
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_138
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 709
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_139
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 709
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_140
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 709
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_141
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 709
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_142
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 709
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_143
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 709
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_144
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 709
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_145
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 709
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_146
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 709
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_147
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 709
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_148
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 709
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_149
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 709
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_150
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 709
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_151
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 709
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_152
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 709
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_153
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 709
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_154
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 664
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_155
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 664
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_156
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 664
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_157
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 664
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_158
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 664
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_159
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 664
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_160
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 664
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_161
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 664
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_162
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 664
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_163
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 664
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_164
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 664
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_165
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 664
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_166
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 664
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_167
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 664
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_168
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 664
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_169
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 664
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_170
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 664
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_171
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 664
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_172
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 664
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_173
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 664
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_174
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 664
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_175
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 664
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_176
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 619
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_177
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 619
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_178
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 619
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_179
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 619
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_180
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 619
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_181
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 619
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_182
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 619
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_183
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 619
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_184
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 619
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_185
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 619
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_186
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 619
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_187
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 619
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_188
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 619
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_189
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 619
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_190
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 619
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_191
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 619
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_192
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 619
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_193
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 619
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_194
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 619
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_195
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 619
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_196
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 619
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_197
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 619
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_198
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 574
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_199
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 574
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_200
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 574
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_201
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 574
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_202
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 574
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_203
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 574
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_204
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 574
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_205
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 574
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_206
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 574
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_207
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 574
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_208
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 574
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_209
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 574
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_210
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 574
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_211
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 574
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_212
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 574
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_213
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 574
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_214
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 574
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_215
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 574
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_216
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 574
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_217
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 574
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_218
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 574
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_219
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 574
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_220
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 529
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_221
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 529
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_222
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 529
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_223
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 529
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_224
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 529
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_225
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 529
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_226
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 529
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_227
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 529
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_228
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 529
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_229
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 529
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_230
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 529
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_231
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 529
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_232
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 529
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_233
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 529
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_234
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 529
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_235
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 529
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_236
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 529
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_237
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 529
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_238
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 529
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_239
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 529
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_240
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 529
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_241
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 529
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_242
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 484
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_243
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 484
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_244
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 484
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_245
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 484
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_246
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 484
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_247
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 484
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_248
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 484
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_249
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 484
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_250
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 484
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_251
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 484
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_252
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 484
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_253
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 484
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_254
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 484
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_255
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 484
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_256
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 484
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_257
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 484
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_258
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 484
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_259
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 484
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_260
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 484
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_261
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 484
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_262
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 484
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_263
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 484
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_264
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 439
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_265
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 439
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_266
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 439
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_267
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 439
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_268
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 439
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_269
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 439
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_270
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 439
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_271
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 439
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_272
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 439
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_273
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 439
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_274
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 439
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_275
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 439
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_276
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 439
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_277
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 439
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_278
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 439
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_279
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 439
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_280
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 439
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_281
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 439
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_282
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 439
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_283
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 439
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_284
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 439
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_285
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 439
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_286
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 394
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_287
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 394
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_288
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 394
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_289
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 394
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_290
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 394
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_291
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 394
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_292
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 394
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_293
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 394
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_294
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 394
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_295
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 394
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_296
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 394
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_297
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 394
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_298
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 394
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_299
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 394
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_300
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 394
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_301
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 394
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_302
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 394
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_303
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 394
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_304
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 394
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_305
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 394
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_306
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 394
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_307
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 394
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_308
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 349
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_309
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 349
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_310
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 349
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_311
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 349
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_312
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 349
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_313
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 349
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_314
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 349
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_315
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 349
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_316
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 349
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_317
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 349
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_318
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 349
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_319
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 349
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_320
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 349
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_321
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 349
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_322
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 349
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_323
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 349
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_324
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 349
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_325
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 349
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_326
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 349
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_327
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 349
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_328
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 349
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_329
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 349
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_330
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 304
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_331
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 304
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_332
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 304
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_333
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 304
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_334
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 304
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_335
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 304
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_336
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 304
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_337
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 304
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_338
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 304
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_339
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 304
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_340
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 304
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_341
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 304
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_342
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 304
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_343
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 304
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_344
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 304
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_345
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 304
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_346
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 304
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_347
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 304
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_348
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 304
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_349
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 304
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_350
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 304
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_351
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 304
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_352
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 259
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_353
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 259
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_354
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 259
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_355
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 259
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_356
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 259
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_357
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 259
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_358
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 259
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_359
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 259
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_360
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 259
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_361
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 259
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_362
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 259
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_363
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 259
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_364
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 259
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_365
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 259
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_366
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 259
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_367
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 259
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_368
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 259
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_369
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 259
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_370
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 259
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_371
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 259
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_372
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 259
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_373
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 259
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_374
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 214
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_375
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 214
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_376
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 214
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_377
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 214
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_378
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 214
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_379
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 214
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_380
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 214
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_381
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 214
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_382
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 214
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_383
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 214
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_384
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 214
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_385
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 214
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_386
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 214
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_387
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 214
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_388
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 214
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_389
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 214
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_390
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 214
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_391
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 214
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_392
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 214
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_393
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 214
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_394
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 214
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_395
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 214
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_396
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 169
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_397
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 169
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_398
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 169
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_399
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 169
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_400
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 169
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_401
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 169
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_402
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 169
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_403
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 169
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_404
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 169
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_405
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 169
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_406
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 169
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_407
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 169
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_408
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 169
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_409
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 169
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_410
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 169
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_411
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 169
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_412
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 169
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_413
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 169
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_414
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 169
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_415
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 169
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_416
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 169
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_417
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 169
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_418
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 124
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_419
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 124
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_420
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 124
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_421
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 124
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_422
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 124
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_423
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 124
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_424
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 124
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_425
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 124
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_426
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 124
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_427
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 124
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_428
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 124
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_429
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 124
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_430
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 124
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_431
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 124
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_432
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 124
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_433
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 124
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_434
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 124
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_435
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 124
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_436
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 124
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_437
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 124
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_438
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 124
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_439
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 124
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_440
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 79
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_441
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 79
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_442
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 79
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_443
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 79
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_444
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 79
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_445
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 79
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_446
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 79
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_447
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 79
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_448
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 79
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_449
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 79
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_450
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 79
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_451
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 79
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_452
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 79
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_453
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 79
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_454
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 79
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_455
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 79
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_456
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 79
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_457
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 79
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_458
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 79
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_459
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 79
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_460
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 79
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_461
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 79
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_462
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 34
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_463
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 34
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_464
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 34
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_465
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 34
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_466
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 34
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_467
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 34
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_468
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 34
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_469
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 34
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_470
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 34
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_471
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 34
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_472
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 34
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_473
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 34
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_474
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 34
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_475
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 34
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_476
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 34
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_477
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 34
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_478
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 34
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_479
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 34
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_480
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 34
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_481
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 34
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_482
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 34
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MuzzleFlashOverlay_483
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 34
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

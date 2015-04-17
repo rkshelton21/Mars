@@ -10,7 +10,7 @@ public class CharController2D : MonoBehaviour {
 	protected AudioSource ImpactSource = null;
 	public int ImpactClipIndex = -1;
 	protected Rigidbody2D _body = null;
-	private SpriteRenderer _renderer;
+	protected SpriteRenderer _renderer;
 	protected Color _teamColor = Color.white;
 	public Color ParticleColor = Color.red;
 	
@@ -148,12 +148,12 @@ public class CharController2D : MonoBehaviour {
 
 	void PerformJumpIfRequired()
 	{
-		if((IsGrounded || !_doubleJump) && JumpIsPressed)
+		if(((IsGrounded || _TimeOffGround < 0.05f) || !_doubleJump) && JumpIsPressed)
 		{
 			//Debug.Log("Jump");
 			var tempJumpSpeed = JumpSpeed;
 			//set double jump flag if needed
-			if(!_doubleJump && !IsGrounded)
+			if(!_doubleJump && !(IsGrounded || _TimeOffGround < 0.05f))
 				_doubleJump = true;
 			
 			//update animation
@@ -189,7 +189,7 @@ public class CharController2D : MonoBehaviour {
 		ProcessInput ();
 		//Set character input
 		_move = HorizontalInput;	
-		DebugVelocity.x = _move;
+		
 		//Get movement input
 		float appliedMovement = _move;
 
@@ -241,9 +241,7 @@ public class CharController2D : MonoBehaviour {
 				//t = (1 / (diffX / targetV.x)) * appliedMovement * MaxSpeed;
 				//t = Mathf.Clamp(t, -MaxSpeed*10f, MaxSpeed*10f);
 			}
-			//DebugVelocity.x = t;
-			//DebugVelocity.y = diffX;
-
+			
 			var newV = new Vector2(appliedMovement*MaxSpeed + t, _body.velocity.y);
 			_body.velocity = newV;*/
 
@@ -254,24 +252,16 @@ public class CharController2D : MonoBehaviour {
 			if(currSpeed < targetSpeed)
 			{
 				_velocityModifier += velocityChange * Time.deltaTime * appliedMovement;
-				//DebugVelocity.x = 1;
 			}
 			if(currSpeed > targetSpeed)
 			{
 				_velocityModifier -= velocityChange * Time.deltaTime * appliedMovement;
-				//DebugVelocity.x = -1;
 			}
 
-			_body.velocity = new Vector2(appliedMovement*MaxSpeed + _velocityModifier, _body.velocity.y);
-
-			//DebugVelocity.x = _velocityModifier;
-			//DebugVelocity.y = appliedMovement;
-			//DebugVelocity.z = _velocityModifier;//appliedMovement*MaxSpeed;
+			_body.velocity = new Vector2(appliedMovement*MaxSpeed + _velocityModifier, _body.velocity.y);		
 		}
 		else
 		{
-			DebugVelocity.x = _contact_normal.x;
-			DebugVelocity.y = _contact_normal.y;
 			_body.velocity = new Vector2(appliedMovement*MaxSpeed, _body.velocity.y);			
 			//boost right
 			if(appliedMovement > 0 && _contact_normal.x < -0.1f)
@@ -298,15 +288,20 @@ public class CharController2D : MonoBehaviour {
 		_IsOnRegularGround = false;
 		_attacking = false;
 		//GroundTest = IsGrounded;
+		
+		//_position_previous = _position_current;
+		//_position_current = _body.position;
+		//_movement_speed = Mathf.Abs(_position_current.x - _position_previous.x) * Time.fixedTime;
 	}
 
 	void FixedUpdate()
 	{
 		//Pre_Update();
-		//_position_previous = _position_current;
-		//_position_current = _body.position;
+		_position_previous = _position_current;
+		_position_current = _body.position;
+		_movement_speed = (_position_current.x - _position_previous.x) * Time.deltaTime;
 		
-		//_movement_speed = Mathf.Abs(_position_current.x - _position_previous.x) * Time.fixedTime;
+		DebugVelocity.x = _movement_speed;
 	}
 
 	public void SetTeam(string teamName)

@@ -22,7 +22,8 @@ public class Bullet : MonoBehaviour, IDamageResponse {
 	private Rigidbody2D _rigidBody;
 	protected AudioClip ImpactClip = null;
 	protected AudioSource ImpactSource = null;
-
+	private Vector2 _contactPoint = new Vector2();
+	
 	// Use this for initialization
 	void Start () 
 	{
@@ -124,6 +125,7 @@ public class Bullet : MonoBehaviour, IDamageResponse {
 
 		if(collider.tag == "Enemy" && !_dying)
 		{
+			_contactPoint = collision.contacts[0].point;
 			var instance = collider.transform;
 			if(instance.parent != null)
 				instance = instance.parent;
@@ -158,6 +160,8 @@ public class Bullet : MonoBehaviour, IDamageResponse {
 		if(collider.tag == "Enemy" && !_dying)
 		{
 			var instance = collider.transform;
+			_contactPoint = instance.position;
+			
 			if(instance.parent != null)
 				instance = instance.parent;
 			if(instance.parent != null)
@@ -193,12 +197,15 @@ public class Bullet : MonoBehaviour, IDamageResponse {
 		//Debug.Log(victimId + " " + TotalDamage);
 		
 		TotalDamage -= reduction;
+		TotalDamage = 0;
 		if(TotalDamage <= 0)
 		{
+			//Debug.LogError("Bam");
+			transform.position = _contactPoint;
 			_rigidBody.velocity = new Vector2();
 			_dying = true;
 			_boxCollider.enabled = false;
-			Destroy(gameObject, 0.5f);
+			Destroy(gameObject, 5.5f);
 			_anim.SetTrigger("Explode");
 			ImpactSource.PlayOneShot(ImpactClip);
 
@@ -211,16 +218,16 @@ public class Bullet : MonoBehaviour, IDamageResponse {
 		int maxYForce = (int)(100f * deflection);
 		int direction = FacingRight ? 1 : -1;
 
-		System.Random r = new System.Random(System.Guid.NewGuid().GetHashCode());
-		int xForce = r.Next(minXForce, maxXForce);
-		int yForce = r.Next(minYForce, maxYForce);
-		yForce = r.Next(2) == 0 ? yForce : -yForce;
+		//System.Random r = new System.Random(System.Guid.NewGuid().GetHashCode());
+		//int xForce = r.Next(minXForce, maxXForce);
+		//int yForce = r.Next(minYForce, maxYForce);
+		//yForce = r.Next(2) == 0 ? yForce : -yForce;
 		
-		_rigidBody.velocity = new Vector2(0, 0);
-		if(!_dying)
-		{
+		//_rigidBody.velocity = new Vector2(0, 0);
+		//if(!_dying)
+		//{
 			//_rigidBody.AddForce(new Vector2(xForce*direction, yForce));
-			_rigidBody.AddForce(ShotForce);
-		}
+			//_rigidBody.AddForce(ShotForce);
+		//}
 	}
 }

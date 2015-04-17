@@ -8,7 +8,7 @@ public class Drip : SimpleAnimation
 	// Use this for initialization
 	public override void Init() 
 	{
-		_spawner = GetComponentInChildren<Spawner> ();
+		_spawner = transform.parent.gameObject.GetComponentInChildren<Spawner> ();
 		if (_spawner == null)
 			Debug.LogError ("Could not find spawner.");
 

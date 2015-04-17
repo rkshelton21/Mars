@@ -1,9 +1,49 @@
 Base path: D:/CApps (x86)/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-2-9356
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-2-12636
 Cmd: getPlatforms
-Unhandled exception: Readfile from pipe failed. GLE=The pipe has been ended.
-
-
-Quitting shader compiler process
-
-Crashed!
+Cmd: compileSnippet
+  error: 2 plat 1 at (1): Compiled shader code uses too many instruction slots (116). Max. allowed by the target (ps_2_0) is 96.\nCompiling Fragment program
+  error: 2 plat 1 at (97): Too many math instructions for SM2.0 (114 needed, max is 64). Try #pragma target 3.0\nCompiling Fragment program
+  api=1 type=1 insize=3346 outsize=0 kw= ok=0
+Cmd: compileSnippet
+  api=8 type=0 insize=14306 outsize=8865 kw=DIRECTIONAL SHADOWS_SCREEN SHADOWS_NATIVE LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=14306 outsize=6175 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=14306 outsize=2779 kw=DIRECTIONAL SHADOWS_SCREEN SHADOWS_NATIVE LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=7914 outsize=4095 kw=POINT_COOKIE ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=7914 outsize=4883 kw=SPOT PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=7914 outsize=3323 kw=POINT_COOKIE ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=7914 outsize=3015 kw=POINT PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=6672 outsize=1016 kw= ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=12590 outsize=6768 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF PIXELSNAP_ON HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=12590 outsize=2072 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=12780 outsize=5598 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=12780 outsize=2462 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  error: 2 plat 1 at (1): Compiled shader code uses too many instruction slots (116). Max. allowed by the target (ps_2_0) is 96.\nCompiling Fragment program
+  error: 2 plat 1 at (97): Too many math instructions for SM2.0 (114 needed, max is 64). Try #pragma target 3.0\nCompiling Fragment program
+  api=1 type=1 insize=3346 outsize=0 kw= ok=0
+Cmd: compileSnippet
+  api=8 type=0 insize=2240 outsize=2267 kw=DUMMY ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=1619 outsize=1625 kw= ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=541 outsize=658 kw=SHADOWS_DEPTH ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=6810 outsize=8645 kw=DIRECTIONAL SHADOWS_SCREEN SHADOWS_NATIVE LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=3647 outsize=3876 kw=POINT_COOKIE ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=3647 outsize=1723 kw=DIRECTIONAL ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=2805 outsize=3567 kw= ok=1

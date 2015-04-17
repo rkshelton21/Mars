@@ -21,7 +21,7 @@ public class Slug : AIController2D {
 
 		_rand = new System.Random(System.Guid.NewGuid().GetHashCode());
 		_boxCollider = GetComponent<BoxCollider2D>();
-		_circleCollider = GetComponent<CircleCollider2D>();	
+		_circleColliders = GetComponents<CircleCollider2D>();	
 		_id = transform.GetInstanceID();
 
 		_maxHealth = Health;

@@ -36,25 +36,25 @@ public class SimpleParallax : MonoBehaviour {
 		var p = transform.position;
 		if(FollowCamera)
 		{
-			if (Offset + _initialX != 0)
+			if ((Offset + _initialX) != 0)
 			{
-				p.x = (Cam.position.x - _camInitialX) / Offset + _initialX;
+				p.x = (Cam.position.x - _camInitialX) / (Offset + _initialX);
 			}
 
-			if (Offset + _initialY != 0 && !LockY)
+			if ((Offset + _initialY) != 0 && !LockY)
 			{
-				p.y = (Cam.position.y - _camInitialY) / Offset + _initialY;
+				p.y = (Cam.position.y - _camInitialY) / (Offset + _initialY);
 			}
 		}
 		else
 		{
-			if (Offset + _initialX != 0)
+			if ((Offset + _initialX) != 0)
 			{
-				p.x = (_camInitialX - Cam.position.x) / Offset + _initialX;		
+				p.x = (_camInitialX - Cam.position.x) / (Offset + _initialX);		
 			}
-			if (Offset + _initialY != 0 && !LockY)
+			if ((Offset + _initialY) != 0 && !LockY)
 			{
-				p.y = (_camInitialY - Cam.position.y) / Offset + _initialY;		
+				p.y = (_camInitialY - Cam.position.y) / (Offset + _initialY);		
 			}
 		}
 

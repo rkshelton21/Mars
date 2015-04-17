@@ -50,7 +50,7 @@ public class Block : MonoBehaviour {
 		{
 			v = Quaternion.Euler(0, 0, Random.Range(70f, 20f)) * dir.normalized;
 		}
-		_rigidBody.velocity = v.normalized * 2f;
+		_rigidBody.velocity = v.normalized * 1.2f;
 		_renderer.color = c;
 		//Debug.Log(v);
 		

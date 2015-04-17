@@ -3,7 +3,9 @@ using System.Collections;
 
 public class Door : MonoBehaviour {
 
-	private bool _enabled = false;
+	public bool _enabled = false;
+	public bool LoadPreviousLevel = false;
+	
 	// Use this for initialization
 	void Start () {
 	
@@ -11,14 +13,22 @@ public class Door : MonoBehaviour {
 
 	void Update()
 	{
-		if (Input.GetKey (KeyCode.Z) && _enabled) 
+		if (Input.GetButton("Jump") && _enabled) 
 		{
+			PlayerData.SaveGame();
 			var i = Application.loadedLevel;
-			Application.LoadLevel(i+1);
+			if(!LoadPreviousLevel)
+			{
+				Application.LoadLevel(i+1);
+			}
+			else
+			{
+				Application.LoadLevel(i-1);
+			}
 		}
 	}
 
-	void OnTriggerLeave2D(Collider2D collider)
+	void OnTriggerExit2D(Collider2D collider)
 	{
 		if (collider.tag == "Player") 
 		{
